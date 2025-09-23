@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Queue Page</title>
+
+  <style>
+    :root{
+      --bg:#0D0D0F;
+      --white:#F4F4F4;
+      --grey:#767676;
+      --accent:#424E8B;
+
+      /* типографика с автоматическим масштабом */
+      --fz-24: clamp(16px, 2.2vw, 24px);
+      --fz-22: clamp(15px, 2vw, 22px);
+      --fz-20: clamp(14px, 1.8vw, 20px);
+      --fz-18: clamp(13px, 1.6vw, 18px);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    html,body{
+      width:100%;
+      height:100%;
+      overflow:hidden;                   /* не скроллится */
+      background:var(--bg);
+      color:var(--white);
+      font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    }
+
+    /* корневой контейнер на всю высоту, учитываем вырезы (iPhone) */
+    .page{
+      position:relative;
+      width:100vw;
+      height:100svh;                     /* корректная высота на мобилах */
+      padding: max(24px, env(safe-area-inset-top))
+               max(24px, env(safe-area-inset-right))
+               max(24px, env(safe-area-inset-bottom))
+               max(24px, env(safe-area-inset-left));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .container{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      gap: clamp(24px, 5vh, 40px);
+      max-width:min(90vw, 760px);
+      margin:auto;
+    }
+
+    .welcome{
+      font-weight:500;
+      color:var(--grey);
+      font-size:var(--fz-24);
+      line-height:1.1;
+    }
+
+    /* логотип: адаптивная ширина, фиксируем максимальную */
+    .logo img{
+      display:block;
+      width: clamp(160px, 22vw, 243px);
+      height:auto;
+      object-fit:contain;
+      margin: 8px auto 0;
+    }
+
+    .queue-text{
+      font-weight:400;
+      font-size:var(--fz-24);
+      line-height:1.25;
+      color:var(--white);
+      max-width: 720px;
+    }
+
+    .eta-block{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap: clamp(10px, 2vh, 14px);
+      margin-top: clamp(12px, 3vh, 30px);
+    }
+
+    .eta-line{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap: 12px;
+      flex-wrap:wrap;
+      font-weight:500;
+      font-size:var(--fz-22);
+      line-height:1.2;
+    }
+
+    .eta-badge{
+      background:var(--accent);
+      border-radius:6px;
+      padding: 8px 14px;
+      font-weight:500;
+      font-size:var(--fz-18);
+      color:#fff;
+      white-space:nowrap;
+    }
+
+    .note{
+      font-size:var(--fz-20);
+      color:var(--grey);
+      line-height:1.2;
+      max-width: 640px;
+    }
+
+    /* мелкие точности под совсем маленькие экраны */
+    @media (max-width: 420px){
+      .eta-badge{ padding:6px 10px; border-radius:5px; }
+      .container{ gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <div class="welcome">Welcome to</div>
+
+      <!-- вставь свой путь к логотипу -->
+      <div class="logo">
+        <img src="../../images/main_logo.png" alt="Awazon Market logo">
+      </div>
+
+      <p class="queue-text">
+        You have been placed in a queue, awaiting forwarding to the platform
+      </p>
+
+      <div class="eta-block">
+        <div class="eta-line">
+          <span>Your estimated wait time is</span>
+          <span class="eta-badge">&lt; 3 minutes</span>
+        </div>
+        <div class="note">
+          Please do not refresh the page, you will be automatically redirected.
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

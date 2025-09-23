@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awazon Market</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<input id="navToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+
+<input id="profileToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+
+<input id="priceToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+
+<input id="catToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+
+
+  <!-- 🔹 Верхняя панель -->
+  <header class="topbar">
+    <div class="container">
+      <!-- Логотип -->
+      <a class="logo" href="index.html">
+        <img src="images/main_logo.png" alt="awazon market">
+      </a>
+      <label class="burger-btn" for="navToggle" aria-label="Open menu">
+  <span></span><span></span><span></span>
+</label>
+      <!-- Левый блок навигации -->
+      <nav class="nav-left">
+
+<div class="cat">
+  <!-- клик по всей плашке открывает/закрывает -->
+  <label for="catToggle" class="btnCat btn-categories">
+    <span class="grid-ico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span>Categories</span>
+  </label>
+
+  <!-- прозрачная подложка для закрытия по клику вне (без затемнения) -->
+  <label for="catToggle" class="cat-backdrop" aria-hidden="true"></label>
+
+  <!-- сама панель -->
+  <!-- скрытые радиокнопки для переключения вкладок -->
+   <input class="cat-tab" type="radio" name="catTab" id="cat0" checked>
+
+    <input class="cat-tab" type="radio" name="catTab" id="cat1">
+    <input class="cat-tab" type="radio" name="catTab" id="cat2">
+<input class="cat-tab" type="radio" name="catTab" id="cat3">
+<input class="cat-tab" type="radio" name="catTab" id="cat4">
+<input class="cat-tab" type="radio" name="catTab" id="cat5">
+
+<nav class="cat-panel" aria-label="Categories">
+  <div class="cat-grid">
+    <!-- Левая колонка -->
+    <ul class="cat-left">
+        
+      <li><label for="cat1" class="cat-item"><span>Category1</span><i class="chev"></i></label></li>
+      <li><label for="cat2" class="cat-item"><span>Category2</span><i class="chev"></i></label></li>
+      <li><label for="cat3" class="cat-item"><span>Category3</span><i class="chev"></i></label></li>
+      <li><label for="cat4" class="cat-item"><span>Category4</span><i class="chev"></i></label></li>
+      <li><label for="cat5" class="cat-item"><span>Category5</span><i class="chev"></i></label></li>
+    </ul>
+
+    <!-- Правая колонка (по одной «вкладке» на категорию) -->
+    <div class="cat-right">
+      <!-- Cat1 -->
+      <div class="cat-view" data-id="cat1">
+        <h4 class="cat-title">Category1</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>Subcategory1</span><b class="sub-badge">699</b></li>
+          <li class="sub-item"><span>Subcategory2</span><b class="sub-badge">56</b></li>
+          <li class="sub-item"><span>Subcategory3</span><b class="sub-badge">12</b></li>
+          <li class="sub-item"><span>Subcategory4</span><b class="sub-badge">240</b></li>
+          <li class="sub-item"><span>Subcategory5</span><b class="sub-badge">89</b></li>
+        </ul>
+      </div>
+
+      <!-- Cat2 -->
+      <div class="cat-view" data-id="cat2">
+        <h4 class="cat-title">Category2</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>Phones</span><b class="sub-badge">120</b></li>
+          <li class="sub-item"><span>Laptops</span><b class="sub-badge">42</b></li>
+          <li class="sub-item"><span>Accessories</span><b class="sub-badge">311</b></li>
+        </ul>
+      </div>
+
+      <!-- Cat3 -->
+      <div class="cat-view" data-id="cat3">
+        <h4 class="cat-title">Category3</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>Sub A</span><b class="sub-badge">18</b></li>
+          <li class="sub-item"><span>Sub B</span><b class="sub-badge">7</b></li>
+        </ul>
+      </div>
+
+      <!-- Cat4 -->
+      <div class="cat-view" data-id="cat4">
+        <h4 class="cat-title">Category4</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>Alpha</span><b class="sub-badge">64</b></li>
+          <li class="sub-item"><span>Beta</span><b class="sub-badge">19</b></li>
+          <li class="sub-item"><span>Gamma</span><b class="sub-badge">4</b></li>
+        </ul>
+      </div>
+
+      <!-- Cat5 -->
+      <div class="cat-view" data-id="cat5">
+        <h4 class="cat-title">Category5</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>One</span><b class="sub-badge">8</b></li>
+          <li class="sub-item"><span>Two</span><b class="sub-badge">3</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+</div>
+
+        <a class="nav-link" href="pages/VendorPage.html">Vendors</a>
+        <a class="nav-link" href="pages/Support1.html">AI Assistant</a>
+        <a class="nav-link" href="pages/Support2.html">Help Center</a>
+      </nav>
+
+      <!-- Правый блок -->
+      <div class="nav-right">
+        <!-- Баланс -->
+        <div class="price">
+  <!-- клик по плашке открывает/закрывает меню -->
+  <label class="balance-pill" for="priceToggle">
+    <img src="images/btc_logo.png" alt="" class="btc-ico" />
+    <span>0.0000197 BTC / 12.15 $</span>
+    <span class="chevron" aria-hidden="true"></span>
+  </label>
+
+  <!-- клик вне — закроет (подложка) -->
+  <label for="priceToggle" class="price-backdrop" aria-hidden="true"></label>
+
+  <!-- выпадающее меню цен -->
+  <nav class="price-menu" aria-label="Price menu" role="menu">
+    <div class="price-menu__head">
+      <img src="images/btc_logo.png" alt="" class="pm-ico">
+      <span class="pm-base">BTC</span>
+      <span class="pm-sum">0.0000197</span>
+      <span class="pm-split">/</span>
+      <span class="pm-fiat">12.15$</span>
+    </div>
+
+    <ul class="price-list">
+      <li class="price-item"><span class="pi-left"><img src="images/btc_logo.png" class="pi-ico" alt="">BTC</span><span class="pi-val">0.00000197</span></li>
+      <li class="price-item"><span class="pi-left"><img src="images/litecoin_logo.png" class="pi-ico" alt="">LTC</span><span class="pi-val">2.54122001</span></li>
+      <li class="price-item"><span class="pi-left"><img src="images/monero_logo.png" class="pi-ico" alt="">XMR</span><span class="pi-val">0.00005419</span></li>
+      <li class="price-item"><span class="pi-left"><img src="images/btc_cash_logo.png" class="pi-ico" alt="">BCH</span><span class="pi-val">0.000012511</span></li>
+    </ul>
+  </nav>
+</div>
+
+
+        <!-- Действия -->
+        <div class="actions">
+          <a href="pages/Cart.html"><button class="icon-btn" aria-label="Cart">
+            <img src="images/cart.png" alt="" />
+          </button></a>
+
+          <a href="pages/Messeges1.html"><button class="icon-btn has-badge" aria-label="Messages">
+            <img src="images/mail.png" alt="" />
+            <span class="badge">2</span>
+          </button></a>
+
+          <a href="pages/Notif.html"><button class="icon-btn" aria-label="Notifications">
+            <img src="images/bell.png" alt="" />
+          </button></a>
+        </div>
+
+        <!-- Профиль -->
+        <div class="user">
+  <span class="username">username</span>
+
+  <!-- клик по этому label переключает #profileToggle -->
+  <label class="avatar-wrap" for="profileToggle">
+    <img src="images/avatar.png" alt="" class="avatar" />
+    <span class="small-chevron" aria-hidden="true"></span>
+  </label>
+
+  <!-- подложка для закрытия по клику вне (тоже label к чекбоксу) -->
+  <label for="profileToggle" class="profile-backdrop" aria-hidden="true"></label>
+
+  <!-- само меню -->
+  <nav class="profile-menu" aria-label="Profile menu">
+    <ul class="pm-list">
+  <li>
+    <a class="pm-link" href="/pages/MyProfile.html">
+      <img class="pm-ico" src="images/profileImg.png" alt="">
+      <span>Profile</span>
+    </a>
+  </li>
+
+  <li class="is-active">
+    <a class="pm-link" href="/pages/MyOrder1.html">
+      <img class="pm-ico" src="images/orderImg.png" alt="">
+      <span>Orders</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="pm-link" href="/pages/Wallet.html">
+      <img class="pm-ico" src="images/walletImg.png" alt="">
+      <span>Wallet</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="pm-link" href="/pages/Settings.html">
+      <img class="pm-ico" src="images/settingsIMG.png" alt="">
+      <span>Settings</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="pm-link" href="/pages/Notif.html">
+      <img class="pm-ico" src="images/motifIMG.png" alt="">
+      <span>Jabber Notifications</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="pm-link" href="/pages/Afilate.html">
+      <img class="pm-ico" src="images/afilateIMG.png" alt="">
+      <span>Affiliate System</span>
+    </a>
+  </li>
+
+  <li class="pm-sep"></li>
+
+  <li>
+    <a class="pm-link danger" href="pages/SignUp/Login1.html">
+      <img class="pm-ico" src="images/exitImg.png" alt="">
+      <span>Log Out</span>
+    </a>
+  </li>
+</ul>
+
+  </nav>
+</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 🔹 Crypto Ticker -->
+  <section class="ticker-strip">
+    <div class="container ticker">
+      <!-- BTC -->
+      <div class="coin">
+        <img src="images/btc_logo.png" alt="Bitcoin" class="coin-icon">
+        <div class="coin-body">
+          <div class="coin-row">
+            <span class="coin-name">Bitcoin (BTC)</span>
+            <span class="delta down"><i></i> 6.9%, 24h</span>
+          </div>
+          <div class="coin-price">$117,709.77</div>
+        </div>
+      </div>
+
+      <!-- LTC -->
+      <div class="coin">
+        
+         <img src="images/litecoin_logo.png" alt="Bitcoin" class="coin-icon">
+        <div class="coin-body">
+          <div class="coin-row">
+            <span class="coin-name">Litecoin (LTC)</span>
+            <span class="delta down"><i></i> 6.9%, 24h</span>
+          </div>
+          <div class="coin-price">$108.63</div>
+        </div>
+      </div>
+
+      <!-- XMR -->
+      <div class="coin">
+       <img src="images/monero_logo.png" alt="Monero" class="coin-icon">
+        <div class="coin-body">
+          <div class="coin-row">
+            <span class="coin-name">Monero (XMR)</span>
+            <span class="delta up"><i></i> 6.9%, 24h</span>
+          </div>
+          <div class="coin-price">$314.51</div>
+        </div>
+      </div>
+
+      <!-- BCH -->
+      <div class="coin">
+        <img src="images/btc_cash_logo.png" alt="Bitcoin Cash" class="coin-icon">
+        <div class="coin-body">
+          <div class="coin-row">
+            <span class="coin-name">Bitcoin Cash (BCH)</span>
+            <span class="delta up"><i></i> 6.9%, 24h</span>
+          </div>
+          <div class="coin-price">$564.32</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+<!-- 🔹 Feature Banner -->
+<section class="feature-banner">
+  <div class="banner-content">
+    <div class="banner-text">
+      <span class="feature-label">New Feature</span>
+      <h2 class="feature-title">Guess the number and get product for 2% of price</h2>
+      <button class="read-more-btn">Read More</button>
+    </div>
+    <div class="banner-image">
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Search field -->
+<form class="search-field" id="search" action="/pages/search.html" method="get">
+  <input type="text" class="search-input" name="q" placeholder="Search..." />
+  <button class="search-btn" aria-label="Search" type="submit">
+    <img src="images/search.png" alt="Search" class="search-icon">
+  </button>
+</form>
+
+
+
+
+
+
+
+<!-- Best Products -->
+<section class="best-products">
+  <div class="bp-container">
+    <div class="bp-head">
+      <h2 class="bp-title">Best Products</h2>
+      <a href="/pages/AllProducts.html" class="bp-all">All Products
+        <svg class="bp-all__chev" width="14" height="14" viewBox="0 0 24 24" fill="none">
+          <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="products-grid">
+      <!-- CARD 1 -->
+      <article class="product-card">
+        <div class="product-card__media">
+          <img src="images/telegram_premium.png" alt="Telegram Premium" class="product-card__media-img">
+        </div>
+
+        <div class="product-card__meta">
+          <span class="vendor">SocialMediaGang</span>
+          <span class="stats-badge">
+            <span class="stats-badge__pos">180</span>
+            <span class="stats-badge__neu">10</span>
+            <span class="stats-badge__neg">30</span>
+          </span>
+        </div>
+
+        <p class="product-card__title">Telegram Premium Instant gift 12 months</p>
+
+        <div class="product-card__chips">
+          <span class="chip">Category</span>
+        </div>
+
+        <div class="product-card__footer">
+          <span class="price">39.99 $</span>
+          <span class="stock">995 in stock</span>
+        </div>
+      </article>
+
+      <!-- CARD 2 -->
+      <article class="product-card">
+        <div class="product-card__media">
+          <img src="images/telegram_premium.png" alt="Telegram Premium" class="product-card__media-img">
+        </div>
+        <div class="product-card__meta">
+          <span class="vendor">SocialMediaGang</span>
+          <span class="stats-badge">
+            <span class="stats-badge__pos">172</span>
+            <span class="stats-badge__neu">9</span>
+            <span class="stats-badge__neg">22</span>
+          </span>
+        </div>
+        <p class="product-card__title">Telegram Premium Instant gift 12 months</p>
+        <div class="product-card__chips"><span class="chip">Category</span></div>
+        <div class="product-card__footer"><span class="price">39.99 $</span><span class="stock">995 in stock</span></div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="product-card">
+        <div class="product-card__media">
+          <img src="images/telegram_premium.png" alt="Telegram Premium" class="product-card__media-img">
+        </div>
+        <div class="product-card__meta">
+          <span class="vendor">SocialMediaGang</span>
+          <span class="stats-badge">
+            <span class="stats-badge__pos">160</span>
+            <span class="stats-badge__neu">12</span>
+            <span class="stats-badge__neg">15</span>
+          </span>
+        </div>
+        <p class="product-card__title">Telegram Premium Instant gift 12 months</p>
+        <div class="product-card__chips"><span class="chip">Category</span></div>
+        <div class="product-card__footer"><span class="price">39.99 $</span><span class="stock">995 in stock</span></div>
+      </article>
+
+      <!-- CARD 4 -->
+      <article class="product-card">
+        <div class="product-card__media">
+          <img src="images/telegram_premium.png" alt="Telegram Premium" class="product-card__media-img">
+        </div>
+        <div class="product-card__meta">
+          <span class="vendor">SocialMediaGang</span>
+          <span class="stats-badge">
+            <span class="stats-badge__pos">190</span>
+            <span class="stats-badge__neu">7</span>
+            <span class="stats-badge__neg">28</span>
+          </span>
+        </div>
+        <p class="product-card__title">Telegram Premium Instant gift 12 months</p>
+        <div class="product-card__chips"><span class="chip">Category</span></div>
+        <div class="product-card__footer"><span class="price">39.99 $</span><span class="stock">995 in stock</span></div>
+      </article>
+
+      <!-- CARD 5 -->
+      <article class="product-card">
+        <div class="product-card__media">
+          <img src="images/telegram_premium.png" alt="Telegram Premium" class="product-card__media-img">
+        </div>
+        <div class="product-card__meta">
+          <span class="vendor">SocialMediaGang</span>
+          <span class="stats-badge">
+            <span class="stats-badge__pos">176</span>
+            <span class="stats-badge__neu">8</span>
+            <span class="stats-badge__neg">19</span>
+          </span>
+        </div>
+        <p class="product-card__title">Telegram Premium Instant gift 12 months</p>
+        <div class="product-card__chips"><span class="chip">Category</span></div>
+        <div class="product-card__footer"><span class="price">39.99 $</span><span class="stock">995 in stock</span></div>
+      </article>
+
+      <!-- CARD 6 -->
+      <article class="product-card">
+        <div class="product-card__media">
+          <img src="images/telegram_premium.png" alt="Telegram Premium" class="product-card__media-img">
+        </div>
+        <div class="product-card__meta">
+          <span class="vendor">SocialMediaGang</span>
+          <span class="stats-badge">
+            <span class="stats-badge__pos">181</span>
+            <span class="stats-badge__neu">11</span>
+            <span class="stats-badge__neg">31</span>
+          </span>
+        </div>
+        <p class="product-card__title">Telegram Premium Instant gift 12 months</p>
+        <div class="product-card__chips"><span class="chip">Category</span></div>
+        <div class="product-card__footer"><span class="price">39.99 $</span><span class="stock">995 in stock</span></div>
+      </article>
+
+      <!-- CARD 7 -->
+      <article class="product-card">
+        <div class="product-card__media">
+          <img src="images/telegram_premium.png" alt="Telegram Premium" class="product-card__media-img">
+        </div>
+        <div class="product-card__meta">
+          <span class="vendor">SocialMediaGang</span>
+          <span class="stats-badge">
+            <span class="stats-badge__pos">175</span>
+            <span class="stats-badge__neu">10</span>
+            <span class="stats-badge__neg">26</span>
+          </span>
+        </div>
+        <p class="product-card__title">Telegram Premium Instant gift 12 months</p>
+        <div class="product-card__chips"><span class="chip">Category</span></div>
+        <div class="product-card__footer"><span class="price">39.99 $</span><span class="stock">995 in stock</span></div>
+      </article>
+
+      <!-- CARD 8 -->
+      <article class="product-card">
+        <div class="product-card__media">
+          <img src="images/telegram_premium.png" alt="Telegram Premium" class="product-card__media-img">
+        </div>
+        <div class="product-card__meta">
+          <span class="vendor">SocialMediaGang</span>
+          <span class="stats-badge">
+            <span class="stats-badge__pos">168</span>
+            <span class="stats-badge__neu">12</span>
+            <span class="stats-badge__neg">24</span>
+          </span>
+        </div>
+        <p class="product-card__title">Telegram Premium Instant gift 12 months</p>
+        <div class="product-card__chips"><span class="chip">Category</span></div>
+        <div class="product-card__footer"><span class="price">39.99 $</span><span class="stock">995 in stock</span></div>
+      </article>
+
+      <!-- CARD 9 -->
+      <article class="product-card">
+        <div class="product-card__media">
+          <img src="images/telegram_premium.png" alt="Telegram Premium" class="product-card__media-img">
+        </div>
+        <div class="product-card__meta">
+          <span class="vendor">SocialMediaGang</span>
+          <span class="stats-badge">
+            <span class="stats-badge__pos">171</span>
+            <span class="stats-badge__neu">9</span>
+            <span class="stats-badge__neg">18</span>
+          </span>
+        </div>
+        <p class="product-card__title">Telegram Premium Instant gift 12 months</p>
+        <div class="product-card__chips"><span class="chip">Category</span></div>
+        <div class="product-card__footer"><span class="price">39.99 $</span><span class="stock">995 in stock</span></div>
+      </article>
+
+      <!-- CARD 10 -->
+      <article class="product-card">
+        <div class="product-card__media">
+          <img src="images/telegram_premium.png" alt="Telegram Premium" class="product-card__media-img">
+        </div>
+        <div class="product-card__meta">
+          <span class="vendor">SocialMediaGang</span>
+          <span class="stats-badge">
+            <span class="stats-badge__pos">164</span>
+            <span class="stats-badge__neu">8</span>
+            <span class="stats-badge__neg">20</span>
+          </span>
+        </div>
+        <p class="product-card__title">Telegram Premium Instant gift 12 months</p>
+        <div class="product-card__chips"><span class="chip">Category</span></div>
+        <div class="product-card__footer"><span class="price">39.99 $</span><span class="stock">995 in stock</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- Best Vendors -->
+<section class="best-vendors">
+  <div class="bv-container">
+    <div class="bv-head">
+      <h2 class="bv-title">Best Vendors</h2>
+      <a href="/pages/AllVendors.html" class="bv-all">
+        All Vendors
+        <svg class="bv-all__chev" width="14" height="14" viewBox="0 0 24 24" fill="none">
+          <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="vendors-grid">
+      <!-- 1 -->
+      <article class="vendor-card">
+        <div class="vendor-cover">
+          <img src="images/sonic.png" alt="">
+        </div>
+
+        <div class="vendor-body">
+          <div class="vendor-row">
+            <span class="vendor-name">SocialMediaGang</span>
+            <span class="v-stats">
+              <span class="v-pos">18</span>
+              <span class="v-neu">1</span>
+              <span class="v-neg">4</span>
+            </span>
+          </div>
+
+          <div class="vendor-sub">
+            <span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span>
+          </div>
+
+          <div class="vendor-chips">
+            <span class="chip">Category</span>
+            <span class="chip">Category</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- СКОПИРОВАТЬ карточку ещё 9 раз (поменяй картинки/имена при желании) -->
+      <article class="vendor-card"><div class="vendor-cover"><img src="images/ent_explorer.png" alt=""></div><div class="vendor-body"><div class="vendor-row"><span class="vendor-name">SocialMediaGang</span><span class="v-stats"><span class="v-pos">18</span><span class="v-neu">1</span><span class="v-neg">4</span></span></div><div class="vendor-sub"><span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span></div><div class="vendor-chips"><span class="chip">Category</span><span class="chip">Category</span></div></div></article>
+      <article class="vendor-card"><div class="vendor-cover"><img src="images/wishin.png" alt=""></div><div class="vendor-body"><div class="vendor-row"><span class="vendor-name">SocialMediaGang</span><span class="v-stats"><span class="v-pos">18</span><span class="v-neu">1</span><span class="v-neg">4</span></span></div><div class="vendor-sub"><span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span></div><div class="vendor-chips"><span class="chip">Category</span><span class="chip">Category</span></div></div></article>
+      <article class="vendor-card"><div class="vendor-cover"><img src="images/sonic.png" alt=""></div><div class="vendor-body"><div class="vendor-row"><span class="vendor-name">SocialMediaGang</span><span class="v-stats"><span class="v-pos">18</span><span class="v-neu">1</span><span class="v-neg">4</span></span></div><div class="vendor-sub"><span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span></div><div class="vendor-chips"><span class="chip">Category</span><span class="chip">Category</span></div></div></article>
+      <article class="vendor-card"><div class="vendor-cover"><img src="images/sonic.png" alt=""></div><div class="vendor-body"><div class="vendor-row"><span class="vendor-name">SocialMediaGang</span><span class="v-stats"><span class="v-pos">18</span><span class="v-neu">1</span><span class="v-neg">4</span></span></div><div class="vendor-sub"><span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span></div><div class="vendor-chips"><span class="chip">Category</span><span class="chip">Category</span></div></div></article>
+
+      </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- ===== Footer ===== -->
+<footer class="am-footer">
+  <div class="am-ft__wrap">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <div class="am-ft__brand">
+      <div class="am-ft__tag">Digital Anonymous Marketplace</div>
+
+      <a class="am-ft__logo" href="index.html">
+        <img src="images/main_logo.png" alt="awazon market">
+      </a>
+
+      <a href="/pages/VendorPage.html" class="am-ft__cta">Become Vendor</a>
+
+      <div class="am-ft__minor">
+        <a href="#">Mirrors</a>
+        <a href="#">Canary</a>
+        <a href="#">PGP</a>
+      </div>
+    </div>
+
+    <!-- ПРАВЫЙ БЛОК (3 колонки) -->
+    <nav class="am-ft__grid">
+      <div class="am-ft__col">
+        <h4 class="am-ft__title">Menu</h4>
+        <a class="am-ft__link" href="index.html">Home</a>
+        <a class="am-ft__link" href="/pages/ProductPage.html">Products</a>
+        <a class="am-ft__link" href="/pages/VendorPage.html">Vendors</a>
+        <a class="am-ft__link" href="/pages/Support1.html">Help Center &amp; FAQ</a>
+        <a class="am-ft__link" href="/pages/">Forum</a>
+        <a class="am-ft__link" href="#">Deadpool</a>
+      </div>
+
+      <div class="am-ft__col">
+        <h4 class="am-ft__title">Categories</h4>
+        <a class="am-ft__link" href="#">Category1</a>
+        <a class="am-ft__link" href="#">Category2</a>
+        <a class="am-ft__link" href="#">Category3</a>
+        <a class="am-ft__link" href="#">Category4</a>
+        <a class="am-ft__link" href="#">Category5</a>
+        <a class="am-ft__link" href="#">Category6</a>
+      </div>
+
+      <div class="am-ft__col">
+        <h4 class="am-ft__title">Account Menu</h4>
+        <a class="am-ft__link" href="pages/MyProfile.html">Profile</a>
+        <a class="am-ft__link" href="pages/MyOrder1.html">Orders</a>
+        <a class="am-ft__link" href="pages/Wallet.html">Wallet</a>
+        <a class="am-ft__link" href="pages/Withdraw.html">Settings</a>
+        <a class="am-ft__link" href="pages/Notif.html">Jabber Notifications</a>
+        <a class="am-ft__link" href="pages/Afilate.html">Affiliate System</a>
+      </div>
+    </nav>
+  </div>
+</footer>
+
+<!-- чекбокс-свитч для мобильного меню -->
+
+
+
+<nav class="mobile-nav" aria-label="Main menu">
+  <label for="navToggle" class="mobile-nav__backdrop" aria-hidden="true"></label>
+  <div class="mobile-nav__panel" role="dialog">
+    <div class="mnav-head">
+      <a class="mnav-logo" href="index.html"><img src="images/main_logo.png" alt="awazon market"></a>
+      <label for="navToggle" class="mnav-close" aria-label="Close menu"><span></span><span></span></label>
+    </div>
+
+    <!-- ИКОНКИ ДЕЙСТВИЙ -->
+    <div class="mnav-actions mnav-actions--row">
+      <a href="pages/Cart.html" class="mnav-action"><img src="images/cart.png" alt=""> Cart</a>
+      <a href="pages/Messeges1.html" class="mnav-action"><img src="images/mail.png" alt=""> Messages</a>
+      <a href="pages/Notif.html" class="mnav-action"><img src="images/bell.png" alt=""> Notifications</a>
+    </div>
+
+    <!-- ССЫЛКИ -->
+    <ul class="mnav-list">
+      <li><a class="mnav-link" href="pages/VendorPage.html">Vendors</a></li>
+      <li><a class="mnav-link" href="pages/Support1.html">AI Assistant</a></li>
+      <li><a class="mnav-link" href="pages/Support2.html">Help Center</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

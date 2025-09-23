@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awazon Market</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<input id="navToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+
+<input id="profileToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+
+<input id="priceToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+
+<input id="catToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+
+
+  <!-- 🔹 Верхняя панель -->
+  <!-- 🔹 Верхняя панель -->
+<header class="topbar">
+  <div class="container">
+
+    <!-- Back кнопка -->
+    <a href="../index.html" class="back-btn">
+      <span class="back-icon" aria-hidden="true"></span>
+      Back to Market
+    </a>
+
+    <!-- Логотип -->
+    <a class="logo" href="../index.html">
+      <img src="../images/main_logo.png" alt="awazon market">
+    </a>
+
+    <label class="burger-btn" for="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    <!-- Левый блок навигации -->
+    <nav class="nav-left">
+
+    </nav>
+
+    <!-- Правый блок -->
+    <div class="nav-right">
+      <!-- Баланс -->
+      <div class="price">
+        <label class="balance-pill" for="priceToggle">
+          <img src="../images/btc_logo.png" alt="" class="btc-ico" />
+          <span>0.0000197 BTC / 12.15 $</span>
+          <span class="chevron" aria-hidden="true"></span>
+        </label>
+        <label for="priceToggle" class="price-backdrop" aria-hidden="true"></label>
+        <nav class="price-menu" aria-label="Price menu" role="menu">
+          <div class="price-menu__head">
+            <img src="../images/btc_logo.png" alt="" class="pm-ico">
+            <span class="pm-base">BTC</span>
+            <span class="pm-sum">0.0000197</span>
+            <span class="pm-split">/</span>
+            <span class="pm-fiat">12.15$</span>
+          </div>
+          <ul class="price-list">
+            <li class="price-item"><span class="pi-left"><img src="../images/btc_logo.png" class="pi-ico" alt="">BTC</span><span class="pi-val">0.00000197</span></li>
+            <li class="price-item"><span class="pi-left"><img src="../images/litecoin_logo.png" class="pi-ico" alt="">LTC</span><span class="pi-val">2.54122001</span></li>
+            <li class="price-item"><span class="pi-left"><img src="../images/monero_logo.png" class="pi-ico" alt="">XMR</span><span class="pi-val">0.00005419</span></li>
+            <li class="price-item"><span class="pi-left"><img src="../images/btc_cash_logo.png" class="pi-ico" alt="">BCH</span><span class="pi-val">0.000012511</span></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Действия -->
+     
+
+      <!-- Профиль -->
+      <div class="user">
+        <span class="username">username</span>
+        <label class="avatar-wrap" for="profileToggle">
+          <img src="../images/avatar.png" alt="" class="avatar" />
+          <span class="small-chevron" aria-hidden="true"></span>
+        </label>
+        <label for="profileToggle" class="profile-backdrop" aria-hidden="true"></label>
+        <nav class="profile-menu" aria-label="Profile menu">
+          <ul class="pm-list">
+            <li>
+              <a class="pm-link" href="./MyProfile.html">
+                <img class="pm-ico" src="../images/profileImg.png" alt="">
+                <span>Profile</span>
+              </a>
+            </li>
+            <li class="is-active">
+              <a class="pm-link" href="./MyOrder1.html">
+                <img class="pm-ico" src="../images/orderImg.png" alt="">
+                <span>Orders</span>
+              </a>
+            </li>
+            <li>
+              <a class="pm-link" href="./Wallet.html">
+                <img class="pm-ico" src="../images/walletImg.png" alt="">
+                <span>Wallet</span>
+              </a>
+            </li>
+            <li>
+              <a class="pm-link" href="./Settings.html">
+                <img class="pm-ico" src="../images/settingsIMG.png" alt="">
+                <span>Settings</span>
+              </a>
+            </li>
+            <li>
+              <a class="pm-link" href="./Notif.html">
+                <img class="pm-ico" src="../images/motifIMG.png" alt="">
+                <span>Jabber Notifications</span>
+              </a>
+            </li>
+            <li>
+              <a class="pm-link" href="./Afilate.html">
+                <img class="pm-ico" src="../images/afilateIMG.png" alt="">
+                <span>Affiliate System</span>
+              </a>
+            </li>
+            <li class="pm-sep"></li>
+            <li>
+              <a class="pm-link danger" href="./SignUp/Login1.html">
+                <img class="pm-ico" src="../images/exitImg.png" alt="">
+                <span>Log Out</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- 🔹 Crypto Ticker -->
+  <section class="ticker-strip">
+    <div class="container ticker">
+      <!-- BTC -->
+      <div class="coin">
+        <img src="../images/btc_logo.png" alt="Bitcoin" class="coin-icon">
+        <div class="coin-body">
+          <div class="coin-row">
+            <span class="coin-name">Bitcoin (BTC)</span>
+            <span class="delta down"><i></i> 6.9%, 24h</span>
+          </div>
+          <div class="coin-price">$117,709.77</div>
+        </div>
+      </div>
+
+      <!-- LTC -->
+      <div class="coin">
+        
+         <img src="../images/litecoin_logo.png" alt="Bitcoin" class="coin-icon">
+        <div class="coin-body">
+          <div class="coin-row">
+            <span class="coin-name">Litecoin (LTC)</span>
+            <span class="delta down"><i></i> 6.9%, 24h</span>
+          </div>
+          <div class="coin-price">$108.63</div>
+        </div>
+      </div>
+
+      <!-- XMR -->
+      <div class="coin">
+       <img src="../images/monero_logo.png" alt="Monero" class="coin-icon">
+        <div class="coin-body">
+          <div class="coin-row">
+            <span class="coin-name">Monero (XMR)</span>
+            <span class="delta up"><i></i> 6.9%, 24h</span>
+          </div>
+          <div class="coin-price">$314.51</div>
+        </div>
+      </div>
+
+      <!-- BCH -->
+      <div class="coin">
+        <img src="../images/btc_cash_logo.png" alt="Bitcoin Cash" class="coin-icon">
+        <div class="coin-body">
+          <div class="coin-row">
+            <span class="coin-name">Bitcoin Cash (BCH)</span>
+            <span class="delta up"><i></i> 6.9%, 24h</span>
+          </div>
+          <div class="coin-price">$564.32</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+ <h1 class="h">Conversations</h1>
+
+    <section class="convos">
+      <!-- LEFT: conversations list -->
+      <aside class="list">
+        <div class="search">
+          <input class="search__input" placeholder="Search by username..." />
+          <button class="search__btn" aria-label="Search">
+            <span class="ico ico-search"></span>
+          </button>
+        </div>
+
+        <ul class="threads">
+          <li class="thread">
+            <span class="ava"></span>
+            <div class="thread__meta">
+              <div class="thread__top">
+                <span class="username muted">username</span>
+                <time class="time muted">Today</time>
+              </div>
+              <div class="last">Last Message</div>
+            </div>
+          </li>
+
+          <li class="thread">
+            <span class="ava"></span>
+            <div class="thread__meta">
+              <div class="thread__top">
+                <span class="username muted">username</span>
+                <time class="time muted">07.05.2025</time>
+              </div>
+              <div class="last muted">You: Last Message</div>
+            </div>
+          </li>
+
+          <li class="thread">
+            <span class="ava"></span>
+            <div class="thread__meta">
+              <div class="thread__top">
+                <span class="username muted">username</span>
+                <time class="time muted">07.05.2025</time>
+              </div>
+              <div class="last">Last Message</div>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- RIGHT: chat pane -->
+      <section class="chat">
+        <header class="chat__head">
+          <div class="chat__user">
+            <span class="ava"></span>
+            <span class="chat__username">Username</span>
+          </div>
+          <button class="btn btn-ghost">
+            <span class="ico ico-trash"></span>
+            Delete Conversation
+          </button>
+        </header>
+
+        <div class="rule"></div>
+
+        <div class="chat__scroll">
+          <article class="msg">
+            <span class="ava"></span>
+            <div class="msg__wrap">
+              <div class="msg__meta">
+                <span class="muted">username</span>
+                <time class="muted">23:15 25.08.2025</time>
+              </div>
+              <div class="msg__text">Message</div>
+            </div>
+          </article>
+
+          <article class="msg">
+            <span class="ava"></span>
+            <div class="msg__wrap">
+              <div class="msg__meta">
+                <span class="muted">username</span>
+                <time class="muted">23:15 25.08.2025</time>
+              </div>
+              <div class="msg__text">Message</div>
+            </div>
+          </article>
+
+          <article class="msg">
+            <span class="ava"></span>
+            <div class="msg__wrap">
+              <div class="msg__meta">
+                <span class="muted">username</span>
+                <time class="muted">23:15 25.08.2025</time>
+              </div>
+              <div class="msg__text">Message</div>
+            </div>
+          </article>
+
+          <article class="msg">
+            <span class="ava"></span>
+            <div class="msg__wrap">
+              <div class="msg__meta">
+                <span class="muted">username</span>
+                <time class="muted">23:15 25.08.2025</time>
+              </div>
+              <div class="msg__text">
+                MessageMessageMessageMessageMessageMessageMessageMessageMessage
+                MessageMessageMessageMessageMessageMessageMessageMessageMessage
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="rule"></div>
+
+        <form class="composer" onsubmit="return false;">
+          <input class="composer__input" placeholder="Write a message..." />
+          <button class="btn">Send</button>
+        </form>
+      </section>
+    </section>
+
+
+
+
+<nav class="mobile-nav" aria-label="Main menu">
+  <label for="navToggle" class="mobile-nav__backdrop" aria-hidden="true"></label>
+  <div class="mobile-nav__panel" role="dialog">
+    <div class="mnav-head">
+      <a class="mnav-logo" href="../index.html"><img src="../images/main_logo.png" alt="awazon market"></a>
+      <label for="navToggle" class="mnav-close" aria-label="Close menu"><span></span><span></span></label>
+    </div>
+
+    <!-- ИКОНКИ ДЕЙСТВИЙ -->
+    <div class="mnav-actions mnav-actions--row">
+      <a href="./Cart.html" class="mnav-action"><img src="../images/cart.png" alt=""> Cart</a>
+      <a href="./Messeges1.html" class="mnav-action"><img src="../images/mail.png" alt=""> Messages</a>
+      <a href="./Notif.html" class="mnav-action"><img src="../images/bell.png" alt=""> Notifications</a>
+    </div>
+
+    <!-- ССЫЛКИ -->
+    <ul class="mnav-list">
+      <li><a class="mnav-link" href="./VendorPage.html">Vendors</a></li>
+      <li><a class="mnav-link" href="./Support1.html">AI Assistant</a></li>
+      <li><a class="mnav-link" href="./Support2.html">Help Center</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
