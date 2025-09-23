@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awazon Market</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<input id="navToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+
+<input id="profileToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+
+<input id="priceToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+
+<input id="catToggle" class="nav-toggle" type="checkbox" aria-hidden="true" />
+
+
+  <!-- 🔹 Верхняя панель -->
+  <header class="topbar">
+    <div class="container">
+      <!-- Логотип -->
+      <a class="logo" href="../index.html">
+        <img src="../images/main_logo.png" alt="awazon market">
+      </a>
+      <label class="burger-btn" for="navToggle" aria-label="Open menu">
+  <span></span><span></span><span></span>
+</label>
+      <!-- Левый блок навигации -->
+      <nav class="nav-left">
+
+<div class="cat">
+  <!-- клик по всей плашке открывает/закрывает -->
+  <label for="catToggle" class="btn btn-categories">
+    <span class="grid-ico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span>Categories</span>
+  </label>
+
+  <!-- прозрачная подложка для закрытия по клику вне (без затемнения) -->
+  <label for="catToggle" class="cat-backdrop" aria-hidden="true"></label>
+
+  <!-- сама панель -->
+  <!-- скрытые радиокнопки для переключения вкладок -->
+   <input class="cat-tab" type="radio" name="catTab" id="cat0" checked>
+
+    <input class="cat-tab" type="radio" name="catTab" id="cat1">
+    <input class="cat-tab" type="radio" name="catTab" id="cat2">
+<input class="cat-tab" type="radio" name="catTab" id="cat3">
+<input class="cat-tab" type="radio" name="catTab" id="cat4">
+<input class="cat-tab" type="radio" name="catTab" id="cat5">
+
+<nav class="cat-panel" aria-label="Categories">
+  <div class="cat-grid">
+    <!-- Левая колонка -->
+    <ul class="cat-left">
+        
+      <li><label for="cat1" class="cat-item"><span>Category1</span><i class="chev"></i></label></li>
+      <li><label for="cat2" class="cat-item"><span>Category2</span><i class="chev"></i></label></li>
+      <li><label for="cat3" class="cat-item"><span>Category3</span><i class="chev"></i></label></li>
+      <li><label for="cat4" class="cat-item"><span>Category4</span><i class="chev"></i></label></li>
+      <li><label for="cat5" class="cat-item"><span>Category5</span><i class="chev"></i></label></li>
+    </ul>
+
+    <!-- Правая колонка (по одной «вкладке» на категорию) -->
+    <div class="cat-right">
+      <!-- Cat1 -->
+      <div class="cat-view" data-id="cat1">
+        <h4 class="cat-title">Category1</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>Subcategory1</span><b class="sub-badge">699</b></li>
+          <li class="sub-item"><span>Subcategory2</span><b class="sub-badge">56</b></li>
+          <li class="sub-item"><span>Subcategory3</span><b class="sub-badge">12</b></li>
+          <li class="sub-item"><span>Subcategory4</span><b class="sub-badge">240</b></li>
+          <li class="sub-item"><span>Subcategory5</span><b class="sub-badge">89</b></li>
+        </ul>
+      </div>
+
+      <!-- Cat2 -->
+      <div class="cat-view" data-id="cat2">
+        <h4 class="cat-title">Category2</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>Phones</span><b class="sub-badge">120</b></li>
+          <li class="sub-item"><span>Laptops</span><b class="sub-badge">42</b></li>
+          <li class="sub-item"><span>Accessories</span><b class="sub-badge">311</b></li>
+        </ul>
+      </div>
+
+      <!-- Cat3 -->
+      <div class="cat-view" data-id="cat3">
+        <h4 class="cat-title">Category3</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>Sub A</span><b class="sub-badge">18</b></li>
+          <li class="sub-item"><span>Sub B</span><b class="sub-badge">7</b></li>
+        </ul>
+      </div>
+
+      <!-- Cat4 -->
+      <div class="cat-view" data-id="cat4">
+        <h4 class="cat-title">Category4</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>Alpha</span><b class="sub-badge">64</b></li>
+          <li class="sub-item"><span>Beta</span><b class="sub-badge">19</b></li>
+          <li class="sub-item"><span>Gamma</span><b class="sub-badge">4</b></li>
+        </ul>
+      </div>
+
+      <!-- Cat5 -->
+      <div class="cat-view" data-id="cat5">
+        <h4 class="cat-title">Category5</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>One</span><b class="sub-badge">8</b></li>
+          <li class="sub-item"><span>Two</span><b class="sub-badge">3</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+</div>
+
+        <a class="nav-link" href="./VendorPage.html">Vendors</a>
+        <a class="nav-link" href="./Support1.html">AI Assistant</a>
+        <a class="nav-link" href="./Support2.html">Help Center</a>
+      </nav>
+
+      <!-- Правый блок -->
+      <div class="nav-right">
+        <!-- Баланс -->
+        <div class="price">
+  <!-- клик по плашке открывает/закрывает меню -->
+  <label class="balance-pill" for="priceToggle">
+    <img src="../images/btc_logo.png" alt="" class="btc-ico" />
+    <span>0.0000197 BTC / 12.15 $</span>
+    <span class="chevron" aria-hidden="true"></span>
+  </label>
+
+  <!-- клик вне — закроет (подложка) -->
+  <label for="priceToggle" class="price-backdrop" aria-hidden="true"></label>
+
+  <!-- выпадающее меню цен -->
+  <nav class="price-menu" aria-label="Price menu" role="menu">
+    <div class="price-menu__head">
+      <img src="../images/btc_logo.png" alt="" class="pm-ico">
+      <span class="pm-base">BTC</span>
+      <span class="pm-sum">0.0000197</span>
+      <span class="pm-split">/</span>
+      <span class="pm-fiat">12.15$</span>
+    </div>
+
+    <ul class="price-list">
+      <li class="price-item"><span class="pi-left"><img src="../images/btc_logo.png" class="pi-ico" alt="">BTC</span><span class="pi-val">0.00000197</span></li>
+      <li class="price-item"><span class="pi-left"><img src="../images/litecoin_logo.png" class="pi-ico" alt="">LTC</span><span class="pi-val">2.54122001</span></li>
+      <li class="price-item"><span class="pi-left"><img src="../images/monero_logo.png" class="pi-ico" alt="">XMR</span><span class="pi-val">0.00005419</span></li>
+      <li class="price-item"><span class="pi-left"><img src="../images/btc_cash_logo.png" class="pi-ico" alt="">BCH</span><span class="pi-val">0.000012511</span></li>
+    </ul>
+  </nav>
+</div>
+
+
+        <!-- Действия -->
+        <div class="actions">
+          <a href="./Cart.html"><button class="icon-btn" aria-label="Cart">
+            <img src="../images/cart.png" alt="" />
+          </button></a>
+
+          <a href="./Messeges1.html"><button class="icon-btn has-badge" aria-label="Messages">
+            <img src="../images/mail.png" alt="" />
+            <span class="badge">2</span>
+          </button></a>
+
+          <a href="./Notif.html"><button class="icon-btn" aria-label="Notifications">
+            <img src="../images/bell.png" alt="" />
+          </button></a>
+        </div>
+
+        <!-- Профиль -->
+        <div class="user">
+  <span class="username">username</span>
+
+  <!-- клик по этому label переключает #profileToggle -->
+  <label class="avatar-wrap" for="profileToggle">
+    <img src="../images/avatar.png" alt="" class="avatar" />
+    <span class="small-chevron" aria-hidden="true"></span>
+  </label>
+
+  <!-- подложка для закрытия по клику вне (тоже label к чекбоксу) -->
+  <label for="profileToggle" class="profile-backdrop" aria-hidden="true"></label>
+
+  <!-- само меню -->
+  <nav class="profile-menu" aria-label="Profile menu">
+    <ul class="pm-list">
+  <li>
+    <a class="pm-link" href="./MyProfile.html">
+      <img class="pm-ico" src="../images/profileImg.png" alt="">
+      <span>Profile</span>
+    </a>
+  </li>
+
+  <li class="is-active">
+    <a class="pm-link" href="./MyOrder1.html">
+      <img class="pm-ico" src="../images/orderImg.png" alt="">
+      <span>Orders</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="pm-link" href="./Wallet.html">
+      <img class="pm-ico" src="../images/walletImg.png" alt="">
+      <span>Wallet</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="pm-link" href="./Settings.html">
+      <img class="pm-ico" src="../images/settingsIMG.png" alt="">
+      <span>Settings</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="pm-link" href="./Notif.html">
+      <img class="pm-ico" src="../images/motifIMG.png" alt="">
+      <span>Jabber Notifications</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="pm-link" href="./Afilate.html">
+      <img class="pm-ico" src="../images/afilateIMG.png" alt="">
+      <span>Affiliate System</span>
+    </a>
+  </li>
+
+  <li class="pm-sep"></li>
+
+  <li>
+    <a class="pm-link danger" href="./SignUp/Login1.html">
+      <img class="pm-ico" src="../images/exitImg.png" alt="">
+      <span>Log Out</span>
+    </a>
+  </li>
+</ul>
+
+  </nav>
+</div>
+      </div>
+    </div>
+  </header>
+<section class="jabber-setup container">
+  <div class="jabber-setup__grid">
+    <!-- ЛЕВОЕ МЕНЮ -->
+    <aside class="left-menu card">
+      <a class="menu-item" href="./MyProfile.html"><img class="mi-ico" src="../images/profileImg.png" alt=""><span>Profile</span></a>
+      <a class="menu-item" href="./MyOrder1.html"><img class="mi-ico" src="../images/orderImg.png" alt=""><span>Orders</span></a>
+      <a class="menu-item" href="./Wallet.html"><img class="mi-ico" src="../images/walletImg.png" alt=""><span>Wallet</span></a>
+      <a class="menu-item" href="./Settings.html"><img class="mi-ico" src="../images/settingsIMG.png" alt=""><span>Settings</span></a>
+      <a class="menu-item is-active" href="./Notif.html"><img class="mi-ico" src="../images/motifIMG.png" alt=""><span>Jabber Notifications</span></a>
+      <a class="menu-item" href="./Afilate.html"><img class="mi-ico" src="../images/afilateIMG.png" alt=""><span>Affiliate System</span></a>
+    </aside>
+
+    <!-- КОНТЕНТ -->
+    <main class="jabber-setup__main">
+      <a class="back-link" href="./Notif.html"><span class="back-link__chev"></span>Back</a>
+
+      <h1 class="page-title">Jabber notifications</h1>
+      <p class="page-sub">
+        If you have no idea what Jabber is or how to use it, please read the <a class="link" href="#">FAQ</a>
+        page and visit the Jabber Server section.
+      </p>
+
+      <h3 class="h3">Jabber Connection Settings</h3>
+      <div class="copy">
+        <p>
+          Depending on your Jabber client go to Advanced Connection settings and set port to 5222 and hostname / server
+          to either:
+          <br><br>
+          Our permanent onion: <span class="mono">vtdvi5cgk7zte7xan7qvrjfkfkbz3bh5qec5jv4s7h2tyfc7wed5kdad.onion</span><br>
+          If you are using the onion server, you need to have Tor proxy <span class="mono">127.0.0.1:9050</span> running.
+          On the phone you can use Orbot (Android).
+          <br>
+          <span class="mono">jabber.odinchat.su</span> (CLEARNET, still protected by enforced end-to-end encryption).
+          <br><br>
+          By default your client may try to connect via clearnet so make sure you change host / server. When connecting
+          via onions you may get a certificate error / host mismatch, this is normal.
+          <br><br>
+          Please add <span class="mono">notification-bot@jabber.odinchat.su</span> to your contact list and send a test
+          message to verify your Jabber account is working.
+        </p>
+      </div>
+
+      <h3 class="h3">Enable Notifications</h3>
+      <ol class="steps">
+        <li>Set a password for your Jabber account below</li>
+        <li>Add <span class="mono">notification-bot@jabber.odinchat.su</span> to your contact list</li>
+        <li>Hit the “Send Test Message” button to make sure everything works fine</li>
+        <li>Set Jabber Notifications to Active under the settings below</li>
+      </ol>
+
+      <label class="field-label" for="jabber-pass">Enter password for jabber account</label>
+      <input id="jabber-pass" type="password" class="input input--lg" placeholder="••••••••">
+
+      <button class="btn-primary btn-primary--lg w-100-mobile">Set password</button>
+    </main>
+
+    <!-- ПРАВЫЙ БЛОК С УЧЁТКОЙ -->
+    <aside class="jabber-setup__card card">
+      <p class="hint">
+        Jabber username: <span class="mono">username@jabber.odinchat.su</span><br>
+        Jabber password: <span class="mono">Password you set</span>
+      </p>
+    </aside>
+  </div>
+</section>
+
+<!-- чекбокс-свитч для мобильного меню -->
+
+
+
+<nav class="mobile-nav" aria-label="Main menu">
+  <label for="navToggle" class="mobile-nav__backdrop" aria-hidden="true"></label>
+  <div class="mobile-nav__panel" role="dialog">
+    <div class="mnav-head">
+      <a class="mnav-logo" href="../index.html"><img src="../images/main_logo.png" alt="awazon market"></a>
+      <label for="navToggle" class="mnav-close" aria-label="Close menu"><span></span><span></span></label>
+    </div>
+
+    <!-- ИКОНКИ ДЕЙСТВИЙ -->
+    <div class="mnav-actions mnav-actions--row">
+      <a href="./Cart.html" class="mnav-action"><img src="../images/cart.png" alt=""> Cart</a>
+      <a href="./Messeges1.html" class="mnav-action"><img src="../images/mail.png" alt=""> Messages</a>
+      <a href="./Notif.html" class="mnav-action"><img src="../images/bell.png" alt=""> Notifications</a>
+    </div>
+
+    <!-- ССЫЛКИ -->
+    <ul class="mnav-list">
+      <li><a class="mnav-link" href="./VendorPage.html">Vendors</a></li>
+      <li><a class="mnav-link" href="./Support1.html">AI Assistant</a></li>
+      <li><a class="mnav-link" href="./Support2.html">Help Center</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

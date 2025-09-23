@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Log In</title>
+
+  <style>
+    :root{
+      --bg:#0D0D0F; --panel:#101012; --stroke:#1C1C21; --banner:#111114;
+      --text:#F4F4F4; --muted:#767676; --muted-2:#B2B4C4; --accent:#424E8B;
+      --fz-24:clamp(18px,2.2vw,24px); --fz-18:clamp(15px,1.6vw,18px); --fz-16:clamp(14px,1.4vw,16px);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{
+      width:100%; height:100%;
+      overflow-x:hidden;    /* без гориз. скролла */
+      overflow-y:auto;      /* вертикаль можно */
+      background:var(--bg); color:var(--text);
+      font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    }
+
+    .page{
+      width:100vw; min-height:100svh;
+      display:flex; justify-content:center; align-items:flex-start;
+      padding:32px 24px 96px;
+    }
+    .wrap{
+      width:min(613px,100%);
+      display:flex; flex-direction:column; align-items:center; gap:32px;
+    }
+
+    /* ЛОГО */
+    .brand{ height:48px; display:flex; align-items:center; justify-content:center; }
+    .brand img{ width:223px; height:48px; object-fit:contain; display:block; }
+
+    /* Заголовок + PGP */
+    .header{ width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .title{ font-weight:600; font-size:var(--fz-24); }
+    .btn-secondary{
+      padding:8px 14px; height:32px; border-radius:6px;
+      background:#1C1C21; color:var(--muted-2);
+      font-weight:500; font-size:var(--fz-16); border:none; cursor:pointer;
+    }
+
+    .divider{ width:100%; height:1px; background:var(--banner); }
+
+    /* Поля */
+    .form{ width:100%; display:flex; flex-direction:column; gap:16px; }
+    .label{ color:var(--muted); font-size:var(--fz-16); margin-bottom:8px; }
+
+    .input,.select,.textarea{
+      width:100%; height:48px; display:flex; align-items:center;
+      padding:0 16px; background:var(--panel);
+      border:1px solid var(--stroke); border-radius:6px;
+      color:var(--text); font-size:var(--fz-16); outline:none;
+      transition:border-color .15s, box-shadow .15s;
+    }
+    .textarea{ height:105px; padding:10px 16px; resize:none; }
+    .input::placeholder,.textarea::placeholder{ color:var(--muted); }
+    .input:focus,.select:focus,.textarea:focus{
+      border-color:var(--accent); box-shadow:0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent);
+    }
+
+    /* Селект */
+    select.select{
+      -webkit-appearance:none; appearance:none;
+      background-color:var(--panel) !important; color:var(--text) !important;
+      padding:0 44px 0 16px; line-height:48px; cursor:pointer;
+      border:1px solid var(--stroke); border-radius:6px;
+      background-image:
+        linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+        linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+      background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%;
+      background-size:6px 6px, 6px 6px; background-repeat:no-repeat;
+    }
+    select.select::-ms-expand{ display:none; }
+    select.select option{ background:var(--panel); color:var(--text); }
+
+    /* Кнопки */
+    .actions{ display:flex; flex-direction:column; gap:12px; margin-top:8px; }
+    .btn-primary,.btn-ghost{
+      height:50px; border-radius:6px; border:none; cursor:pointer;
+      display:flex; align-items:center; justify-content:center;
+      font-weight:500; font-size:var(--fz-18);
+    }
+    .btn-primary{ background:var(--accent); color:#fff; }
+    .btn-ghost{ background:#1C1C21; color:var(--muted-2); }
+
+    .links{
+      margin-top:8px;
+      display:flex; justify-content:center;
+    }
+    .link{
+      font-size:14px; color:#C8CAE0; text-decoration:none;
+    }
+    .link:hover{ text-decoration:underline; }
+
+    /* адаптив */
+    @media (max-width:640px){
+      .page{ padding:24px 16px 72px; }
+    }
+
+    /* iOS dark form fixes */
+    :root{ color-scheme: dark; }
+    input.input:-webkit-autofill,
+    input.input:-webkit-autofill:focus{
+      -webkit-text-fill-color: var(--text) !important;
+      -webkit-box-shadow: 0 0 0px 1000px var(--panel) inset !important;
+      box-shadow: 0 0 0px 1000px var(--panel) inset !important;
+      caret-color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="wrap">
+      <!-- ЛОГО -->
+      <div class="brand">
+        <img src="../../images/main_logo.png" alt="awazon market logo">
+      </div>
+
+      <!-- Заголовок + PGP -->
+      <div class="header">
+        <h1 class="title">Log In</h1>
+        <button class="btn-secondary" type="button">Login with PGP Key</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Форма -->
+      <form class="form" autocomplete="off">
+        <input class="input" type="text" placeholder="Username" autocomplete="username">
+        <input class="input" type="password" placeholder="Password" autocomplete="current-password">
+
+        <div>
+          <div class="label">Stay logged in</div>
+          <select class="select">
+            <option>For 15 minutes</option>
+            <option>For 1 hour</option>
+            <option>For 1 day</option>
+            <option>Until I log out</option>
+          </select>
+        </div>
+
+        <div>
+          <div class="label">Captcha (case sensitive)</div>
+          <!-- место под картинку капчи -->
+          <div class="input" style="height:105px; padding:0 16px; align-items:center; color:var(--muted);"> </div>
+        </div>
+
+        <input class="input" type="text" placeholder="Enter the code shown above">
+
+        <div class="actions">
+          <button class="btn-primary" type="submit">Log In</button>
+          <button class="btn-ghost" type="button">Create an Account</button>
+        </div>
+
+        <div class="links">
+          <a class="link" href="#">Forgot password?</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

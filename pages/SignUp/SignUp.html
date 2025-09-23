@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Sign Up</title>
+  <style>
+    :root{
+      --bg:#0D0D0F;
+      --panel:#101012;
+      --stroke:#1C1C21;
+      --text:#F4F4F4;
+      --muted:#767676;
+      --accent:#424E8B;
+
+      --w-form:565px;   /* целевая ширина формы как на макете */
+      --h-field:48px;
+      --h-button:50px;
+      --radius:6px;
+      --gap:16px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{
+      width:100%;height:100%;
+      overflow-x:hidden;            /* без горизонтального скролла */
+      overflow-y:auto;              /* вертикальный можно */
+      background:var(--bg); color:var(--text);
+      font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    }
+
+    /* Центровка как на скрине */
+    .page{
+      min-height:100svh;
+      display:flex; justify-content:center; align-items:flex-start;
+      padding-top:48px; padding-bottom:96px;
+    }
+    .stack{
+      width:min(880px,100%);               /* вся колонка (с логотипом и табами) */
+      display:flex; flex-direction:column; align-items:center;
+    }
+
+    /* Логотип */
+    .logo{ height:64px; display:flex; align-items:center; justify-content:center; }
+    .logo img{ height:46px; width:auto; display:block; }
+
+    /* Табы */
+    .tabs{ display:flex; gap:56px; margin-top:8px; margin-bottom:24px; }
+    .tab{
+      background:none; border:none; cursor:default;
+      font-size:18px; font-weight:500; color:#B1B8D2; padding:8px 2px;
+    }
+    .tab.active{ color:#FFFFFF; font-weight:600; } /* просто выделение текстом */
+
+    /* Форма — строго по ширине макета */
+    .form{
+      width:var(--w-form);
+      display:flex; flex-direction:column; gap:var(--gap);
+    }
+
+    .row-2{ display:grid; grid-template-columns:1fr 1fr; gap:var(--gap); }
+
+    .label{ font-size:14px; color:var(--muted); margin-top:4px; }
+
+    .input,.textarea{
+      width:100%; height:var(--h-field);
+      background:var(--panel); border:1px solid var(--stroke); border-radius:var(--radius);
+      color:var(--text); font-size:16px; outline:none; padding:0 16px;
+      display:flex; align-items:center; transition:border-color .15s, box-shadow .15s;
+    }
+    .textarea{ height:105px; padding:10px 16px; resize:none; }
+    .input::placeholder,.textarea::placeholder{ color:var(--muted); }
+    .input:focus,.textarea:focus,.select-wrap:focus-within{
+      border-color:var(--accent);
+      box-shadow:0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent);
+    }
+
+    /* Селект — обёртка + собственная стрелка (устойчиво к injected CSS) */
+    .select-wrap{
+      width:100%; height:var(--h-field);
+      background:var(--panel); border:1px solid var(--stroke); border-radius:var(--radius);
+      position:relative; display:flex; align-items:center; padding:0 16px;
+    }
+    .select-wrap::after{
+      content:""; position:absolute; right:14px; top:50%; transform:translateY(-50%) rotate(45deg);
+      width:8px; height:8px; border-right:2px solid #B9BAC8; border-bottom:2px solid #B9BAC8; pointer-events:none;
+    }
+    select.select{
+      width:100%; height:100%;
+      appearance:none; -webkit-appearance:none; -moz-appearance:none;
+      background:transparent !important; color:var(--text) !important;
+      border:0 !important; outline:0 !important;
+      padding-right:28px; font-size:16px; cursor:pointer;
+    }
+    select.select option{ background:var(--panel); color:var(--text); }
+
+    /* Кнопка */
+    .btn{
+      height:var(--h-button);
+      border:none; border-radius:var(--radius);
+      background:var(--accent); color:#fff; font-size:18px; font-weight:500;
+      display:flex; align-items:center; justify-content:center; cursor:pointer;
+      margin-top:4px;
+    }
+
+    /* Адаптация под мобильные */
+    @media (max-width:740px){
+      :root{ --w-form: min(565px, 100% - 32px); }
+      .row-2{ grid-template-columns:1fr; }
+      .tabs{ gap:40px; }
+    }
+
+    /* Дарк-автозаливка (Safari/iOS) */
+    :root{ color-scheme: dark; }
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus{
+      -webkit-text-fill-color: var(--text) !important;
+      -webkit-box-shadow: 0 0 0px 1000px var(--panel) inset !important;
+      box-shadow: 0 0 0px 1000px var(--panel) inset !important;
+      caret-color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="stack">
+      <!-- ЛОГО -->
+      <div class="logo">
+        <img src="../../images/main_logo.png" alt="awazon market logo">
+      </div>
+
+      <!-- ТАБЫ -->
+      <div class="tabs">
+        <button class="tab">Log In</button>
+        <button class="tab active">Sign Up</button>
+      </div>
+
+      <!-- ФОРМА (размер и расположение как на скрине) -->
+      <form class="form" autocomplete="off">
+        <input class="input" type="text" placeholder="Username" autocomplete="new-username">
+        <input class="input" type="password" placeholder="Password" autocomplete="new-password">
+        <input class="input" type="password" value="••••••••" aria-label="Password active example">
+
+        <div class="row-2">
+          <input class="input" type="password" placeholder="Withdrawal PIN" inputmode="numeric" maxlength="6">
+          <input class="input" type="password" placeholder="Repeat Withdrawal PIN" inputmode="numeric" maxlength="6">
+        </div>
+
+        <div class="label">Default currency</div>
+        <div class="select-wrap">
+          <select class="select" aria-label="Default currency"
+                  style="background:transparent !important; color:var(--text) !important;">
+            <option>United States Dollar (USD)</option>
+            <option>Euro (EUR)</option>
+            <option>British Pound (GBP)</option>
+            <option>Russian Ruble (RUB)</option>
+          </select>
+        </div>
+
+        <div class="label">Language</div>
+        <div class="select-wrap">
+          <select class="select" aria-label="Language"
+                  style="background:transparent !important; color:var(--text) !important;">
+            <option>English</option>
+            <option>Русский</option>
+            <option>Deutsch</option>
+            <option>Español</option>
+          </select>
+        </div>
+
+        <div class="label">Captcha (case sensitive)</div>
+        <textarea class="textarea" placeholder="Captcha image placeholder"></textarea>
+
+        <input class="input" type="text" placeholder="Enter the code shown above">
+
+        <button class="btn" type="submit">Sign Up</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
