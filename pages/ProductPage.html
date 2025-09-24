@@ -348,25 +348,40 @@
 
     <!-- правая колонка: информация о товаре -->
     <div class="pv-info">
-      <div class="pv-topchips">
-        <div class="pv-chip">17210 units in stock</div>
-        <div class="pv-chip">0 reviews</div>
-      </div>
-
       <h1 class="pv-title">
         Telegram Premium Instant gift Telegram Premium Instant gifttelegram
         Premium Instant gift Telegram Premium Instant gift
+        
       </h1>
 
+        <div class="pv-topchips">
+        <div class="pv-chip">17210 units in stock</div>
+        <div class="pv-chip">0 reviews</div>
+      </div>
+      
       <div class="pv-priceRow">
         <div class="pv-price">39.99 $</div>
 
-        <div class="pv-crypto">
-          <span class="pv-crypto__logo" aria-hidden="true"></span>
-          <span class="pv-crypto__base">BTC</span>
-          <span class="pv-crypto__rate">39.99$ ~ 0.0000197</span>
-          <span class="pv-chev" aria-hidden="true"></span>
-        </div>
+        <div class="price-dropdown">
+  <input type="checkbox" id="toggleDropdown" class="dropdown-toggle">
+  <label for="toggleDropdown" class="dropdown-btn">
+    <div class="icon-container">
+      <img class="icon" src="../images/btc_logo.png" alt="">
+      <span>Bitcoin</span>
+    </div>
+    <span class="span2">0.0000197 BTC</span>
+    <img class="chevron" src="../images/chev_down.png" alt="">
+  </label>
+  
+  <div class="dropdown-content">
+    <ul>
+      <li><img class="icon" src="../images/btc_logo.png" alt=""><a class = "help2">BTC</a> 0.00000197</li>
+      <li><img class="icon" src="../images/litecoin_logo.png" alt=""><a class = "help2">LTC</a> 2.54122001</li>
+      <li><img class="icon" src="../images/monero_logo.png" alt=""><a class = "help2">XMR</a> 0.00005419</li>
+      <li><img class="icon" src="../images/btc_cash_logo.png" alt=""><a class = "help2">BCH</a> 0.000012511</li>
+    </ul>
+  </div>
+</div>
       </div>
 
       <div class="pv-meta">
@@ -383,9 +398,9 @@
 <div class="pv-buy">
   <div class="pv-col">
     <label class="pv-label">Shipping Method</label>
-    <button class="pv-select pv-w303">
+    <button class="pv-select ">
       <span>Instant Delivery - 0.01 $</span>
-      <i class="pv-chev" aria-hidden="true"></i>
+      <img class="cselect__chev" src="../images/StrelkaVniz.png" alt="">
     </button>
   </div>
 
@@ -473,14 +488,16 @@
     </article>
 
     <!-- пагинация -->
-<div class="pv-pager">
-  <button class="pv-pager__arrow" aria-label="prev"><span class="pv-icon">‹</span></button>
-  <button class="pv-page is-current">1</button>
-  <button class="pv-page">2</button>
-  <button class="pv-page">3</button>
-  <button class="pv-page">4</button>
-  <button class="pv-pager__arrow pv-pager__arrow--next" aria-label="next"><span class="pv-icon">›</span></button>
-</div>
+<nav class="pagination" aria-label="Pagination">
+        <button class="page-btn prev" aria-label="Previous page"> <img src="../images/StrelkaVlevo.png" alt="Prev"></button>
+        <a class="page is-active" href="#">1</a>
+        <a class="page" href="#">2</a>
+        <a class="page" href="#">3</a>
+        <a class="page" href="#">4</a>
+        <span class="page dots">...</span>
+        <a class="page" href="#">198</a>
+        <button class="page-btn next" aria-label="Next page"><img src="../images/StrelkaVpravo.png" alt="Next"></button>
+      </nav>
 
 
   </section>

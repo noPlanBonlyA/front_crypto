@@ -35,7 +35,7 @@
 
 <div class="cat">
   <!-- клик по всей плашке открывает/закрывает -->
-  <label for="catToggle" class="btn btn-categories">
+  <label for="catToggle" class="btnCat btn-categories">
     <span class="grid-ico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
     <span>Categories</span>
   </label>
@@ -257,33 +257,35 @@
 
 
 
-
-
-  <section class="aff-page">
-  <div class="aff-grid">
-
+  <section class="profilepage container">
+  <div class="pp-grid">
     <!-- ЛЕВОЕ МЕНЮ -->
-    <aside class="aff-menu" aria-label="User menu">
-      <a href="#" class="menu-item"><img class="mi-ico" src="#" alt="" aria-hidden="true"><span>Profile</span></a>
-      <a href="#" class="menu-item is-active"><img class="mi-ico" src="#" alt="" aria-hidden="true"><span>Orders</span></a>
-      <a href="#" class="menu-item"><img class="mi-ico" src="#" alt="" aria-hidden="true"><span>Wallet</span></a>
-      <a href="#" class="menu-item"><img class="mi-ico" src="#" alt="" aria-hidden="true"><span>Settings</span></a>
-      <a href="#" class="menu-item"><img class="mi-ico" src="#" alt="" aria-hidden="true"><span>Jabber Notifications</span></a>
-      <a href="#" class="menu-item"><img class="mi-ico" src="#" alt="" aria-hidden="true"><span>Affiliate System</span></a>
+    <aside class="pp-menu card" style="height: 320px; padding: 0px; border-radius: 0px;">
+      <ul class="pp-menu__list">
+        <li><a class="pp-link" href="./MyProfile.html"><img src="../images/profileImg.png" alt=""> <span>Profile</span></a></li>
+        <li class="is-active"><a class="pp-link" href="./MyOrder1.html"><img src="../images/orderImg.png" alt=""> <span>Orders</span></a></li>
+        <li><a class="pp-link" href="./Wallet.html"><img src="../images/walletImg.png" alt=""> <span>Wallet</span></a></li>
+        <li><a class="pp-link" href="./Settings.html"><img src="../images/settingsIMG.png" alt=""> <span>Settings</span></a></li>
+        <li><a class="pp-link" href="./Notif.html"><img src="../images/motifIMG.png" alt=""> <span>Jabber Notifications</span></a></li>
+        <li><a class="pp-link" href="./Afilate.html"><img src="../images/afilateIMG.png" alt=""> <span>Affiliate System</span></a></li>
+      </ul>
     </aside>
 
-    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <!-- ПРАВАЯ КОЛОНКА -->
+    
+    <!-- ПРАВАЯ ЧАСТЬ -->
     <main class="aff-main">
       <h1 class="title">Affiliate System</h1>
       <p class="subtitle">
         Share your referral link with others. When they register and make purchases, you will
-        earn % of our commission
+        <span style="color:white;">earn % of our commission</span>
       </p>
 
       <!-- Реферальная ссылка -->
       <label class="label" for="refLink">Your referral link</label>
       <div class="aff-ref w-988">
         <input id="refLink" class="aff-input" type="text" value="https://siteurl/?ref=username" readonly>
+        <br>
         <button class="aff-copy" type="button">Copy</button>
       </div>
 
@@ -304,6 +306,7 @@
           <div class="kpi-title">Your Percent from sales</div>
           <div class="note">25% of our commission (4% of the total order value)</div>
         </article>
+        
       </div>
 
       <!-- Таблица приглашённых -->
@@ -374,9 +377,9 @@
         </tbody>
       </table>
     </main>
-
   </div>
 </section>
+
 
 <!-- чекбокс-свитч для мобильного меню -->
 

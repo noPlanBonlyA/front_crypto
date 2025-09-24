@@ -21,179 +21,430 @@
 
 
   <!-- 🔹 Верхняя панель -->
-  <!-- 🔹 Верхняя панель -->
-<header class="topbar">
-  <div class="container">
+  <header class="topbar">
+    <div class="container">
+      <!-- Логотип -->
+      <a class="logo" href="../index.html">
+        <img src="../images/main_logo.png" alt="awazon market">
+      </a>
+      <label class="burger-btn" for="navToggle" aria-label="Open menu">
+  <span></span><span></span><span></span>
+</label>
+      <!-- Левый блок навигации -->
+      <nav class="nav-left">
 
-    <!-- Back кнопка -->
-    <a href="../index.html" class="back-btn">
-      <span class="back-icon" aria-hidden="true"></span>
-      Back to Market
-    </a>
+<div class="cat">
+  <!-- клик по всей плашке открывает/закрывает -->
+  <label for="catToggle" class="btnCat btn-categories">
+    <span class="grid-ico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span>Categories</span>
+  </label>
 
-    <!-- Логотип -->
-    <a class="logo" href="../index.html">
-      <img src="../images/main_logo.png" alt="awazon market">
-    </a>
+  <!-- прозрачная подложка для закрытия по клику вне (без затемнения) -->
+  <label for="catToggle" class="cat-backdrop" aria-hidden="true"></label>
 
-    <label class="burger-btn" for="navToggle" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </label>
+  <!-- сама панель -->
+  <!-- скрытые радиокнопки для переключения вкладок -->
+   <input class="cat-tab" type="radio" name="catTab" id="cat0" checked>
 
-    <!-- Левый блок навигации -->
-    <nav class="nav-left">
+    <input class="cat-tab" type="radio" name="catTab" id="cat1">
+    <input class="cat-tab" type="radio" name="catTab" id="cat2">
+<input class="cat-tab" type="radio" name="catTab" id="cat3">
+<input class="cat-tab" type="radio" name="catTab" id="cat4">
+<input class="cat-tab" type="radio" name="catTab" id="cat5">
 
-    </nav>
+<nav class="cat-panel" aria-label="Categories">
+  <div class="cat-grid">
+    <!-- Левая колонка -->
+    <ul class="cat-left">
+        
+      <li><label for="cat1" class="cat-item"><span>Category1</span><i class="chev"></i></label></li>
+      <li><label for="cat2" class="cat-item"><span>Category2</span><i class="chev"></i></label></li>
+      <li><label for="cat3" class="cat-item"><span>Category3</span><i class="chev"></i></label></li>
+      <li><label for="cat4" class="cat-item"><span>Category4</span><i class="chev"></i></label></li>
+      <li><label for="cat5" class="cat-item"><span>Category5</span><i class="chev"></i></label></li>
+    </ul>
 
-    <!-- Правый блок -->
-    <div class="nav-right">
-      <!-- Баланс -->
-      <div class="price">
-        <label class="balance-pill" for="priceToggle">
-          <img src="../images/btc_logo.png" alt="" class="btc-ico" />
-          <span>0.0000197 BTC / 12.15 $</span>
-          <span class="chevron" aria-hidden="true"></span>
-        </label>
-        <label for="priceToggle" class="price-backdrop" aria-hidden="true"></label>
-        <nav class="price-menu" aria-label="Price menu" role="menu">
-          <div class="price-menu__head">
-            <img src="../images/btc_logo.png" alt="" class="pm-ico">
-            <span class="pm-base">BTC</span>
-            <span class="pm-sum">0.0000197</span>
-            <span class="pm-split">/</span>
-            <span class="pm-fiat">12.15$</span>
-          </div>
-          <ul class="price-list">
-            <li class="price-item"><span class="pi-left"><img src="../images/btc_logo.png" class="pi-ico" alt="">BTC</span><span class="pi-val">0.00000197</span></li>
-            <li class="price-item"><span class="pi-left"><img src="../images/litecoin_logo.png" class="pi-ico" alt="">LTC</span><span class="pi-val">2.54122001</span></li>
-            <li class="price-item"><span class="pi-left"><img src="../images/monero_logo.png" class="pi-ico" alt="">XMR</span><span class="pi-val">0.00005419</span></li>
-            <li class="price-item"><span class="pi-left"><img src="../images/btc_cash_logo.png" class="pi-ico" alt="">BCH</span><span class="pi-val">0.000012511</span></li>
-          </ul>
-        </nav>
+    <!-- Правая колонка (по одной «вкладке» на категорию) -->
+    <div class="cat-right">
+      <!-- Cat1 -->
+      <div class="cat-view" data-id="cat1">
+        <h4 class="cat-title">Category1</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>Subcategory1</span><b class="sub-badge">699</b></li>
+          <li class="sub-item"><span>Subcategory2</span><b class="sub-badge">56</b></li>
+          <li class="sub-item"><span>Subcategory3</span><b class="sub-badge">12</b></li>
+          <li class="sub-item"><span>Subcategory4</span><b class="sub-badge">240</b></li>
+          <li class="sub-item"><span>Subcategory5</span><b class="sub-badge">89</b></li>
+        </ul>
       </div>
 
-      <!-- Действия -->
-     
+      <!-- Cat2 -->
+      <div class="cat-view" data-id="cat2">
+        <h4 class="cat-title">Category2</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>Phones</span><b class="sub-badge">120</b></li>
+          <li class="sub-item"><span>Laptops</span><b class="sub-badge">42</b></li>
+          <li class="sub-item"><span>Accessories</span><b class="sub-badge">311</b></li>
+        </ul>
+      </div>
 
-      <!-- Профиль -->
-      <div class="user">
-        <span class="username">username</span>
-        <label class="avatar-wrap" for="profileToggle">
-          <img src="../images/avatar.png" alt="" class="avatar" />
-          <span class="small-chevron" aria-hidden="true"></span>
-        </label>
-        <label for="profileToggle" class="profile-backdrop" aria-hidden="true"></label>
-        <nav class="profile-menu" aria-label="Profile menu">
-          <ul class="pm-list">
-            <li>
-              <a class="pm-link" href="./MyProfile.html">
-                <img class="pm-ico" src="../images/profileImg.png" alt="">
-                <span>Profile</span>
-              </a>
-            </li>
-            <li class="is-active">
-              <a class="pm-link" href="./MyOrder1.html">
-                <img class="pm-ico" src="../images/orderImg.png" alt="">
-                <span>Orders</span>
-              </a>
-            </li>
-            <li>
-              <a class="pm-link" href="./Wallet.html">
-                <img class="pm-ico" src="../images/walletImg.png" alt="">
-                <span>Wallet</span>
-              </a>
-            </li>
-            <li>
-              <a class="pm-link" href="./Settings.html">
-                <img class="pm-ico" src="../images/settingsIMG.png" alt="">
-                <span>Settings</span>
-              </a>
-            </li>
-            <li>
-              <a class="pm-link" href="./Notif.html">
-                <img class="pm-ico" src="../images/motifIMG.png" alt="">
-                <span>Jabber Notifications</span>
-              </a>
-            </li>
-            <li>
-              <a class="pm-link" href="./Afilate.html">
-                <img class="pm-ico" src="../images/afilateIMG.png" alt="">
-                <span>Affiliate System</span>
-              </a>
-            </li>
-            <li class="pm-sep"></li>
-            <li>
-              <a class="pm-link danger" href="./SignUp/Login1.html">
-                <img class="pm-ico" src="../images/exitImg.png" alt="">
-                <span>Log Out</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <!-- Cat3 -->
+      <div class="cat-view" data-id="cat3">
+        <h4 class="cat-title">Category3</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>Sub A</span><b class="sub-badge">18</b></li>
+          <li class="sub-item"><span>Sub B</span><b class="sub-badge">7</b></li>
+        </ul>
+      </div>
+
+      <!-- Cat4 -->
+      <div class="cat-view" data-id="cat4">
+        <h4 class="cat-title">Category4</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>Alpha</span><b class="sub-badge">64</b></li>
+          <li class="sub-item"><span>Beta</span><b class="sub-badge">19</b></li>
+          <li class="sub-item"><span>Gamma</span><b class="sub-badge">4</b></li>
+        </ul>
+      </div>
+
+      <!-- Cat5 -->
+      <div class="cat-view" data-id="cat5">
+        <h4 class="cat-title">Category5</h4>
+        <ul class="sub-list">
+          <li class="sub-item"><span>One</span><b class="sub-badge">8</b></li>
+          <li class="sub-item"><span>Two</span><b class="sub-badge">3</b></li>
+        </ul>
       </div>
     </div>
   </div>
-</header>
+</nav>
+
+</div>
+
+        <a class="nav-link" href="./VendorPage.html">Vendors</a>
+        <a class="nav-link" href="./Support1.html">AI Assistant</a>
+        <a class="nav-link" href="./Support2.html">Help Center</a>
+      </nav>
+
+      <!-- Правый блок -->
+      <div class="nav-right">
+        <!-- Баланс -->
+        <div class="price">
+  <!-- клик по плашке открывает/закрывает меню -->
+  <label class="balance-pill" for="priceToggle">
+    <img src="../images/btc_logo.png" alt="" class="btc-ico" />
+    <span>0.0000197 BTC / 12.15 $</span>
+    <span class="chevron" aria-hidden="true"></span>
+  </label>
+
+  <!-- клик вне — закроет (подложка) -->
+  <label for="priceToggle" class="price-backdrop" aria-hidden="true"></label>
+
+  <!-- выпадающее меню цен -->
+  <nav class="price-menu" aria-label="Price menu" role="menu">
+    <div class="price-menu__head">
+      <img src="../images/btc_logo.png" alt="" class="pm-ico">
+      <span class="pm-base">BTC</span>
+      <span class="pm-sum">0.0000197</span>
+      <span class="pm-split">/</span>
+      <span class="pm-fiat">12.15$</span>
+    </div>
+
+    <ul class="price-list">
+      <li class="price-item"><span class="pi-left"><img src="../images/btc_logo.png" class="pi-ico" alt="">BTC</span><span class="pi-val">0.00000197</span></li>
+      <li class="price-item"><span class="pi-left"><img src="../images/litecoin_logo.png" class="pi-ico" alt="">LTC</span><span class="pi-val">2.54122001</span></li>
+      <li class="price-item"><span class="pi-left"><img src="../images/monero_logo.png" class="pi-ico" alt="">XMR</span><span class="pi-val">0.00005419</span></li>
+      <li class="price-item"><span class="pi-left"><img src="../images/btc_cash_logo.png" class="pi-ico" alt="">BCH</span><span class="pi-val">0.000012511</span></li>
+    </ul>
+  </nav>
+</div>
 
 
-  <!-- 🔹 Crypto Ticker -->
-  <section class="ticker-strip">
-    <div class="container ticker">
-      <!-- BTC -->
-      <div class="coin">
-        <img src="../images/btc_logo.png" alt="Bitcoin" class="coin-icon">
-        <div class="coin-body">
-          <div class="coin-row">
-            <span class="coin-name">Bitcoin (BTC)</span>
-            <span class="delta down"><i></i> 6.9%, 24h</span>
-          </div>
-          <div class="coin-price">$117,709.77</div>
+        <!-- Действия -->
+        <div class="actions">
+          <a href="./Cart.html"><button class="icon-btn" aria-label="Cart">
+            <img src="../images/cart.png" alt="" />
+          </button></a>
+
+          <a href="./Messeges1.html"><button class="icon-btn has-badge" aria-label="Messages">
+            <img src="../images/mail.png" alt="" />
+            <span class="badge">2</span>
+          </button></a>
+
+          <a href="./Notif.html"><button class="icon-btn" aria-label="Notifications">
+            <img src="../images/bell.png" alt="" />
+          </button></a>
         </div>
-      </div>
 
-      <!-- LTC -->
-      <div class="coin">
-        
-         <img src="../images/litecoin_logo.png" alt="Bitcoin" class="coin-icon">
-        <div class="coin-body">
-          <div class="coin-row">
-            <span class="coin-name">Litecoin (LTC)</span>
-            <span class="delta down"><i></i> 6.9%, 24h</span>
-          </div>
-          <div class="coin-price">$108.63</div>
-        </div>
-      </div>
+        <!-- Профиль -->
+        <div class="user">
+  <span class="username">username</span>
 
-      <!-- XMR -->
-      <div class="coin">
-       <img src="../images/monero_logo.png" alt="Monero" class="coin-icon">
-        <div class="coin-body">
-          <div class="coin-row">
-            <span class="coin-name">Monero (XMR)</span>
-            <span class="delta up"><i></i> 6.9%, 24h</span>
-          </div>
-          <div class="coin-price">$314.51</div>
-        </div>
-      </div>
+  <!-- клик по этому label переключает #profileToggle -->
+  <label class="avatar-wrap" for="profileToggle">
+    <img src="../images/avatar.png" alt="" class="avatar" />
+    <span class="small-chevron" aria-hidden="true"></span>
+  </label>
 
-      <!-- BCH -->
-      <div class="coin">
-        <img src="../images/btc_cash_logo.png" alt="Bitcoin Cash" class="coin-icon">
-        <div class="coin-body">
-          <div class="coin-row">
-            <span class="coin-name">Bitcoin Cash (BCH)</span>
-            <span class="delta up"><i></i> 6.9%, 24h</span>
-          </div>
-          <div class="coin-price">$564.32</div>
-        </div>
+  <!-- подложка для закрытия по клику вне (тоже label к чекбоксу) -->
+  <label for="profileToggle" class="profile-backdrop" aria-hidden="true"></label>
+
+  <!-- само меню -->
+  <nav class="profile-menu" aria-label="Profile menu">
+    <ul class="pm-list">
+  <li>
+    <a class="pm-link" href="./MyProfile.html">
+      <img class="pm-ico" src="../images/profileImg.png" alt="">
+      <span>Profile</span>
+    </a>
+  </li>
+
+  <li class="is-active">
+    <a class="pm-link" href="./MyOrder1.html">
+      <img class="pm-ico" src="../images/orderImg.png" alt="">
+      <span>Orders</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="pm-link" href="./Wallet.html">
+      <img class="pm-ico" src="../images/walletImg.png" alt="">
+      <span>Wallet</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="pm-link" href="./Settings.html">
+      <img class="pm-ico" src="../images/settingsIMG.png" alt="">
+      <span>Settings</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="pm-link" href="./Notif.html">
+      <img class="pm-ico" src="../images/motifIMG.png" alt="">
+      <span>Jabber Notifications</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="pm-link" href="./Afilate.html">
+      <img class="pm-ico" src="../images/afilateIMG.png" alt="">
+      <span>Affiliate System</span>
+    </a>
+  </li>
+
+  <li class="pm-sep"></li>
+
+  <li>
+    <a class="pm-link danger" href="./SignUp/Login1.html">
+      <img class="pm-ico" src="../images/exitImg.png" alt="">
+      <span>Log Out</span>
+    </a>
+  </li>
+</ul>
+
+  </nav>
+</div>
       </div>
     </div>
+  </header>
+
+
+
+
+
+
+
+  <section class="profilepage container">
+  <div class="pp-grid">
+    <!-- ЛЕВОЕ МЕНЮ -->
+    <aside class="pp-menu card" style="height: 320px; padding: 0px; border-radius: 0px;">
+      <ul class="pp-menu__list">
+        <li><a class="pp-link" href="./MyProfile.html"><img src="../images/profileImg.png" alt=""> <span>Profile</span></a></li>
+        <li class="is-active"><a class="pp-link" href="./MyOrder1.html"><img src="../images/orderImg.png" alt=""> <span>Orders</span></a></li>
+        <li><a class="pp-link" href="./Wallet.html"><img src="../images/walletImg.png" alt=""> <span>Wallet</span></a></li>
+        <li><a class="pp-link" href="./Settings.html"><img src="../images/settingsIMG.png" alt=""> <span>Settings</span></a></li>
+        <li><a class="pp-link" href="./Notif.html"><img src="../images/motifIMG.png" alt=""> <span>Jabber Notifications</span></a></li>
+        <li><a class="pp-link" href="./Afilate.html"><img src="../images/afilateIMG.png" alt=""> <span>Affiliate System</span></a></li>
+      </ul>
+    </aside>
+
+    <!-- ПРАВАЯ КОЛОНКА -->
+    
+    <!-- ПРАВАЯ ЧАСТЬ -->
+    <main class="wallet-main" style="width: 1000px;">
+     <section class="orders-body">
+    <div class="orders-head">
+      <h1 class="orders-title">My orders</h1>
+
+      <nav class="orders-tabs">
+        <a class="ot-link is-underline" href="#">All</a>
+        <a class="ot-link" href="#">Pending</a>
+        <a class="ot-link" href="#">Shipped</a>
+        <a class="ot-link" href="#">Disputed</a>
+        <a class="ot-link" href="#">Completed</a>
+        <a class="ot-link" href="#">Cancelled</a>
+      </nav>
+    </div>
+
+    <!-- Карточка заказа -->
+     <article class="order-card">
+      <img class="order-thumb" src="../images/telegram_premium.png" alt="">
+      <div class="order-main">
+        <div class="order-top">
+          <div class="order-top__left"><span class="badge status pending-buyer">Pending Buyer</span></div>
+          <button class="btn-view">View Order</button>
+        </div>
+        <div class="order-mid">
+          <h3 class="order-title">Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds</h3>
+          <div class="order-spec">
+            <div >Price: 5.00 $ / unit</div>
+            <div >Quantity: 10 units</div>
+            <div>Delivery Method: Instant Delivery (0.01 $)</div>
+            <div>Order Date: 17.08.2025 | 10:48</div>
+          </div>
+        </div>
+        <div class="order-right">
+         <div class="order-sum">0.00014115 LTC / 16.54$</div>
+          <div class="order-id" style="display:flex;"><div class="order-timer" style="margin-right: 242px;">Time remaining: 1 day 23 hours 53 minutes</div>Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. Pending Vendor -->
+    <article class="order-card">
+      <img class="order-thumb" src="../images/telegram_premium.png" alt="">
+      <div class="order-main">
+        <div class="order-top">
+          <div class="order-top__left"><span class="badge status pending-vendor">Pending Vendor</span></div>
+          <button class="btn-view">View Order</button>
+        </div>
+        <div class="order-mid">
+          <h3 class="order-title">Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds</h3>
+          <div class="order-spec">
+            <div >Price: 5.00 $ / unit</div>
+            <div >Quantity: 10 units</div>
+            <div>Delivery Method: Instant Delivery (0.01 $)</div>
+            <div>Order Date: 17.08.2025 | 10:48</div>
+          </div>
+          
+        </div>
+        
+        <div class="order-right">
+            
+          <div class="order-sum">0.00014115 LTC / 16.54$</div>
+          <div class="order-id" style="display:flex;"><div class="order-timer" style="margin-right: 242px;">Time remaining: 1 day 23 hours 53 minutes</div>Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. Shipped -->
+    <article class="order-card">
+      <img class="order-thumb" src="../images/telegram_premium.png" alt="">
+      <div class="order-main">
+        <div class="order-top">
+          <div class="order-top__left"><span class="badge status shipped">Shipped</span></div>
+          <button class="btn-view">View Order</button>
+        </div>
+        <div class="order-mid">
+          <h3 class="order-title">Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds</h3>
+          <div class="order-spec">
+            <div >Price: 5.00 $ / unit</div>
+            <div >Quantity: 10 units</div>
+            <div>Delivery Method: Instant Delivery (0.01 $)</div>
+            <div>Order Date: 17.08.2025 | 10:48</div>
+          </div>
+        </div>
+        <div class="order-right">
+         <div class="order-sum">0.00014115 LTC / 16.54$</div>
+          <div class="order-id" style="display:flex;"><div class="order-timer" style="margin-right: 242px;">Time remaining: 1 day 23 hours 53 minutes</div>Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
+        
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. Disputed -->
+    <article class="order-card">
+      <img class="order-thumb" src="../images/telegram_premium.png" alt="">
+      <div class="order-main">
+        <div class="order-top">
+          <div class="order-top__left"><span class="badge status disputed">Disputed</span></div>
+          <button class="btn-view">View Order</button>
+        </div>
+        <div class="order-mid">
+          <h3 class="order-title">Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds</h3>
+          <div class="order-spec">
+            <div >Price: 5.00 $ / unit</div>
+            <div >Quantity: 10 units</div>
+            <div>Delivery Method: Instant Delivery (0.01 $)</div>
+            <div>Order Date: 17.08.2025 | 10:48</div>
+          </div>
+        </div>
+        <div class="order-right">
+          <div class="order-sum">0.00014115 BTC / 16.54$</div>
+          <div class="order-id">Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. Cancelled -->
+    <article class="order-card">
+      <img class="order-thumb" src="../images/telegram_premium.png" alt="">
+      <div class="order-main">
+        <div class="order-top">
+          <div class="order-top__left"><span class="badge status cancelled">Cancelled</span></div>
+          <button class="btn-view">View Order</button>
+        </div>
+        <div class="order-mid">
+          <h3 class="order-title">Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds</h3>
+          <div class="order-spec">
+            <div >Price: 5.00 $ / unit</div>
+            <div >Quantity: 10 units</div>
+            <div>Delivery Method: Instant Delivery (0.01 $)</div>
+            <div>Order Date: 17.08.2025 | 10:48</div>
+          </div>
+        </div>
+        <div class="order-right">
+          <div class="order-sum">0.00014115 BTC / 16.54$</div>
+          <div class="order-id">Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. Completed -->
+    <article class="order-card">
+      <img class="order-thumb" src="../images/telegram_premium.png" alt="">
+      <div class="order-main">
+        <div class="order-top">
+          <div class="order-top__left"><span class="badge status completed">Completed</span></div>
+          <button class="btn-view">View Order</button>
+        </div>
+        <div class="order-mid">
+          <h3 class="order-title">Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds</h3>
+          <div class="order-spec">
+            <div >Price: 5.00 $ / unit</div>
+            <div >Quantity: 10 units</div>
+            <div>Delivery Method: Instant Delivery (0.01 $)</div>
+            <div>Order Date: 17.08.2025 | 10:48</div>
+          </div>
+        </div>
+        <div class="order-right">
+          <div class="order-sum">0.00014115 BTC / 16.54$</div>
+          <div class="order-id">Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- дублируй .order-card для остальных записей -->
   </section>
+    </main>
+  </div>
+</section>
 
-  
 
-
-
+<!-- чекбокс-свитч для мобильного меню -->
 
 
 

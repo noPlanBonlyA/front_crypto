@@ -310,7 +310,7 @@
   <div class="cart-head">
     <h1 class="cart-title">Shopping Cart</h1>
     <button class="cart-btn-ghost">
-      <img class="icon" src="../images/cart.png" alt="" />
+      
       <span>Confirm Update Cart</span>
     </button>
   </div>
@@ -480,16 +480,27 @@
 
       <h2 class="aside-title">Payment Method</h2>
 
-      <button class="pay-select">
-        <div class="left">
-          <img class="icon" src="../images/btc_logo.png" alt="">
-          <span>Bitcoin</span>
-        </div>
-        <div class="right">
-          <span>0.0000197 BTC</span>
-          <img class="icon" src="../images/chev_down.png" alt="">
-        </div>
-      </button>
+      <div class="price-dropdown">
+  <input type="checkbox" id="toggleDropdown" class="dropdown-toggle">
+  <label for="toggleDropdown" class="dropdown-btn">
+    <div class="icon-container">
+      <img class="icon" src="../images/btc_logo.png" alt="">
+      <span>Bitcoin</span>
+    </div>
+    <span class="span2">0.0000197 BTC</span>
+    <img class="chevron" src="../images/chev_down.png" alt="">
+  </label>
+  
+  <div class="dropdown-content">
+    <ul>
+      <li><img class="icon" src="../images/btc_logo.png" alt=""><a class = "help2">BTC</a> 0.00000197</li>
+      <li><img class="icon" src="../images/litecoin_logo.png" alt=""><a class = "help2">LTC</a> 2.54122001</li>
+      <li><img class="icon" src="../images/monero_logo.png" alt=""><a class = "help2">XMR</a> 0.00005419</li>
+      <li><img class="icon" src="../images/btc_cash_logo.png" alt=""><a class = "help2">BCH</a> 0.000012511</li>
+    </ul>
+  </div>
+</div>
+
 
       <button class="pay-cta">Confirm Payment</button>
 

@@ -308,17 +308,12 @@
 
 
 
-<section class="all-products grid-view">
+<section class="best-products">
 
   <!-- Поиск -->
-  <div class="ap-search">
-    <input type="text" placeholder="Search..." />
-    <button aria-label="Search">
-      <img src="/images/search.png" alt="" />
-    </button>
-  </div>
+  
 
-  <div class="ap-wrap">
+  <div class="ap-wrap container">
     <!-- ЛЕВАЯ КОЛОНКА -->
     <aside class="ap-side">
       <nav class="ap-cats">
@@ -335,153 +330,358 @@
       <hr class="ap-sep" />
 
       <!-- Фильтры -->
-      <div class="ap-filters">
-        <div class="f-block">
-          <div class="f-title">Type</div>
-          <label class="radio"><input type="radio" name="type" checked><span>All Types</span></label>
-          <label class="radio"><input type="radio" name="type"><span>Physical</span></label>
-          <label class="radio"><input type="radio" name="type"><span>Digital</span></label>
-        </div>
-
-        <div class="f-block">
-          <div class="f-title">Destination</div>
-          <div class="select"><span>Worldwide</span><i></i></div>
-        </div>
-
-        <div class="f-block">
-          <div class="f-title">Price</div>
-          <div class="row2">
-            <div class="field"><span class="muted">from</span><span class="suffix">$</span></div>
-            <div class="field"><span class="muted">to</span><span class="suffix">$</span></div>
-          </div>
-        </div>
-
-        <div class="f-block">
-          <div class="f-title">Amount</div>
-          <div class="select"><span>All</span><i></i></div>
-          <div class="row2">
-            <div class="field"><span class="muted">from</span></div>
-            <div class="field"><span class="muted">to</span></div>
-          </div>
-        </div>
-
-        <button class="btn btn--primary full">Find offers</button>
-      </div>
+      
     </aside>
 
     <!-- ПРАВАЯ КОЛОНКА -->
     <main class="ap-main">
+        <div class="ap-search1">
+    <input type="text" placeholder="Search..." />
+    <button aria-label="Search">
+      <img src="/images/search.png" alt="" />
+    </button>
+  </div>
       <header class="ap-head">
         <h2>All Vendors</h2>
 
         <div class="view">
-          <img class="vend-view__img" src="../images/grid.png" alt=""></span><span>Grid</span>
-          <img class="vend-view__img" src="../images/grid.png" alt=""></span><span class="muted">List</span>
+          
         </div>
 
         <div class="sort">
-          <span class="muted">Best Rated</span><i></i>
-          <ul class="sort-menu">
-            <li class="active">Best Rated</li>
-            <li>Best Rated</li>
-            <li>Price: Low → High</li>
-            <li>Price: High → Low</li>
-          </ul>
+           <details class="cselect">
+    <summary class="cselect__btn">
+      <span class="cselect__label">Best Rated</span>
+      <img class="cselect__chev" src="../images/StrelkaVniz.png" alt="">
+    </summary>
+
+    <ul class="cselect__menu">
+      <li class="cselect__opt is-active"><button type="button">Best Rated</button></li>
+      <li class="cselect__opt"><button type="button">A</button></li>
+      <li class="cselect__opt"><button type="button">B</button></li>
+    </ul>
+  </details>
         </div>
       </header>
 
       <!-- GRID -->
       <div class="cards">
         <!-- Промо карточка -->
-        <article class="card card--promo">
-          <div class="card__image">
-            <img src="/images/sonic.png" alt="Product image">
+        <article class="vendor-card">
+        <div class="vendor-cover">
+          <img src="../images/sonic.png" alt="">
+        </div>
+
+        <div class="vendor-body">
+          <div class="vendor-row">
+            <span class="vendor-name">SocialMediaGang</span>
+            <span class="v-stats">
+              <span class="v-pos">18</span>
+              <span class="v-neu">1</span>
+              <span class="v-neg">4</span>
+            </span>
           </div>
-          <div class="card__top">
-            <span class="seller">SocialMediaGang</span>
-            <span class="chip">188 10 40</span>
+
+          <div class="vendor-sub">
+            <span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span>
           </div>
-          <h3 class="card__title">Telegram Premium</h3>
-          <div class="badges">
-            <span class="badge">Category</span>
+
+          <div class="vendor-chips">
+            <span class="chip">Category</span>
+            <span class="chip">Category</span>
           </div>
-          <div class="card__foot">
-            <span class="price">39.99 $</span>
-            <span class="stock muted">995+ in stock</span>
+        </div>
+      </article>
+      <article class="vendor-card">
+        <div class="vendor-cover">
+          <img src="../images/sonic.png" alt="">
+        </div>
+
+        <div class="vendor-body">
+          <div class="vendor-row">
+            <span class="vendor-name">SocialMediaGang</span>
+            <span class="v-stats">
+              <span class="v-pos">18</span>
+              <span class="v-neu">1</span>
+              <span class="v-neg">4</span>
+            </span>
           </div>
-        </article>
 
-        <!-- Обычные карточки (скопируй/дублируй при необходимости) -->
-        <article class="card">
-          <div class="card__image"><img src="/images/sonic.png" alt=""></div>
-          <div class="card__top"><span class="seller">SocialMediaGang</span><span class="chip">188 10 40</span></div>
-          <h3 class="card__title">Telegram Premium</h3>
-          <div class="badges"><span class="badge">Category</span></div>
-          <div class="card__foot"><span class="price">39.99 $</span><span class="stock muted">995+ in stock</span></div>
-        </article>
+          <div class="vendor-sub">
+            <span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span>
+          </div>
 
-        <article class="card">
-          <div class="card__image"><img src="/images/sonic.png" alt=""></div>
-          <div class="card__top"><span class="seller">SocialMediaGang</span><span class="chip">188 10 40</span></div>
-          <h3 class="card__title">Telegram Premium</h3>
-          <div class="badges"><span class="badge">Category</span></div>
-          <div class="card__foot"><span class="price">39.99 $</span><span class="stock muted">995+ in stock</span></div>
-        </article>
+          <div class="vendor-chips">
+            <span class="chip">Category</span>
+            <span class="chip">Category</span>
+          </div>
+        </div>
+      </article>
+      <article class="vendor-card">
+        <div class="vendor-cover">
+          <img src="../images/sonic.png" alt="">
+        </div>
 
-        <article class="card">
-          <div class="card__image"><img src="/images/sonic.png" alt=""></div>
-          <div class="card__top"><span class="seller">SocialMediaGang</span><span class="chip">188 10 40</span></div>
-          <h3 class="card__title">Telegram Premium</h3>
-          <div class="badges"><span class="badge">Category</span></div>
-          <div class="card__foot"><span class="price">39.99 $</span><span class="stock muted">995+ in stock</span></div>
-        </article>
+        <div class="vendor-body">
+          <div class="vendor-row">
+            <span class="vendor-name">SocialMediaGang</span>
+            <span class="v-stats">
+              <span class="v-pos">18</span>
+              <span class="v-neu">1</span>
+              <span class="v-neg">4</span>
+            </span>
+          </div>
 
-        <!-- ещё рядов для примера -->
-        <article class="card">
-          <div class="card__image"><img src="/images/sonic.png" alt=""></div>
-          <div class="card__top"><span class="seller">SocialMediaGang</span><span class="chip">188 10 40</span></div>
-          <h3 class="card__title">Telegram Premium</h3>
-          <div class="badges"><span class="badge">Category</span></div>
-          <div class="card__foot"><span class="price">39.99 $</span><span class="stock muted">995+ in stock</span></div>
-        </article>
+          <div class="vendor-sub">
+            <span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span>
+          </div>
 
-        <article class="card">
-          <div class="card__image"><img src="/images/sonic.png" alt=""></div>
-          <div class="card__top"><span class="seller">SocialMediaGang</span><span class="chip">188 10 40</span></div>
-          <h3 class="card__title">Telegram Premium</h3>
-          <div class="badges"><span class="badge">Category</span></div>
-          <div class="card__foot"><span class="price">39.99 $</span><span class="stock muted">995+ in stock</span></div>
-        </article>
+          <div class="vendor-chips">
+            <span class="chip">Category</span>
+            <span class="chip">Category</span>
+          </div>
+        </div>
+      </article>
+      <article class="vendor-card">
+        <div class="vendor-cover">
+          <img src="../images/sonic.png" alt="">
+        </div>
 
-        <article class="card">
-          <div class="card__image"><img src="/images/sonic.png" alt=""></div>
-          <div class="card__top"><span class="seller">SocialMediaGang</span><span class="chip">188 10 40</span></div>
-          <h3 class="card__title">Telegram Premium</h3>
-          <div class="badges"><span class="badge">Category</span></div>
-          <div class="card__foot"><span class="price">39.99 $</span><span class="stock muted">995+ in stock</span></div>
-        </article>
+        <div class="vendor-body">
+          <div class="vendor-row">
+            <span class="vendor-name">SocialMediaGang</span>
+            <span class="v-stats">
+              <span class="v-pos">18</span>
+              <span class="v-neu">1</span>
+              <span class="v-neg">4</span>
+            </span>
+          </div>
 
-        <article class="card">
-          <div class="card__image"><img src="/images/sonic.png" alt=""></div>
-          <div class="card__top"><span class="seller">SocialMediaGang</span><span class="chip">188 10 40</span></div>
-          <h3 class="card__title">Telegram Premium</h3>
-          <div class="badges"><span class="badge">Category</span></div>
-          <div class="card__foot"><span class="price">39.99 $</span><span class="stock muted">995+ in stock</span></div>
-        </article>
+          <div class="vendor-sub">
+            <span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span>
+          </div>
+
+          <div class="vendor-chips">
+            <span class="chip">Category</span>
+            <span class="chip">Category</span>
+          </div>
+        </div>
+      </article>
+      <article class="vendor-card">
+        <div class="vendor-cover">
+          <img src="../images/sonic.png" alt="">
+        </div>
+
+        <div class="vendor-body">
+          <div class="vendor-row">
+            <span class="vendor-name">SocialMediaGang</span>
+            <span class="v-stats">
+              <span class="v-pos">18</span>
+              <span class="v-neu">1</span>
+              <span class="v-neg">4</span>
+            </span>
+          </div>
+
+          <div class="vendor-sub">
+            <span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span>
+          </div>
+
+          <div class="vendor-chips">
+            <span class="chip">Category</span>
+            <span class="chip">Category</span>
+          </div>
+        </div>
+      </article>
+      <article class="vendor-card">
+        <div class="vendor-cover">
+          <img src="../images/sonic.png" alt="">
+        </div>
+
+        <div class="vendor-body">
+          <div class="vendor-row">
+            <span class="vendor-name">SocialMediaGang</span>
+            <span class="v-stats">
+              <span class="v-pos">18</span>
+              <span class="v-neu">1</span>
+              <span class="v-neg">4</span>
+            </span>
+          </div>
+
+          <div class="vendor-sub">
+            <span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span>
+          </div>
+
+          <div class="vendor-chips">
+            <span class="chip">Category</span>
+            <span class="chip">Category</span>
+          </div>
+        </div>
+      </article>
+      <article class="vendor-card">
+        <div class="vendor-cover">
+          <img src="../images/sonic.png" alt="">
+        </div>
+
+        <div class="vendor-body">
+          <div class="vendor-row">
+            <span class="vendor-name">SocialMediaGang</span>
+            <span class="v-stats">
+              <span class="v-pos">18</span>
+              <span class="v-neu">1</span>
+              <span class="v-neg">4</span>
+            </span>
+          </div>
+
+          <div class="vendor-sub">
+            <span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span>
+          </div>
+
+          <div class="vendor-chips">
+            <span class="chip">Category</span>
+            <span class="chip">Category</span>
+          </div>
+        </div>
+      </article>
+      <article class="vendor-card">
+        <div class="vendor-cover">
+          <img src="../images/sonic.png" alt="">
+        </div>
+
+        <div class="vendor-body">
+          <div class="vendor-row">
+            <span class="vendor-name">SocialMediaGang</span>
+            <span class="v-stats">
+              <span class="v-pos">18</span>
+              <span class="v-neu">1</span>
+              <span class="v-neg">4</span>
+            </span>
+          </div>
+
+          <div class="vendor-sub">
+            <span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span>
+          </div>
+
+          <div class="vendor-chips">
+            <span class="chip">Category</span>
+            <span class="chip">Category</span>
+          </div>
+        </div>
+      </article>
+      <article class="vendor-card">
+        <div class="vendor-cover">
+          <img src="../images/sonic.png" alt="">
+        </div>
+
+        <div class="vendor-body">
+          <div class="vendor-row">
+            <span class="vendor-name">SocialMediaGang</span>
+            <span class="v-stats">
+              <span class="v-pos">18</span>
+              <span class="v-neu">1</span>
+              <span class="v-neg">4</span>
+            </span>
+          </div>
+
+          <div class="vendor-sub">
+            <span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span>
+          </div>
+
+          <div class="vendor-chips">
+            <span class="chip">Category</span>
+            <span class="chip">Category</span>
+          </div>
+        </div>
+      </article>
+      <article class="vendor-card">
+        <div class="vendor-cover">
+          <img src="../images/sonic.png" alt="">
+        </div>
+
+        <div class="vendor-body">
+          <div class="vendor-row">
+            <span class="vendor-name">SocialMediaGang</span>
+            <span class="v-stats">
+              <span class="v-pos">18</span>
+              <span class="v-neu">1</span>
+              <span class="v-neg">4</span>
+            </span>
+          </div>
+
+          <div class="vendor-sub">
+            <span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span>
+          </div>
+
+          <div class="vendor-chips">
+            <span class="chip">Category</span>
+            <span class="chip">Category</span>
+          </div>
+        </div>
+      </article>
+      <article class="vendor-card">
+        <div class="vendor-cover">
+          <img src="../images/sonic.png" alt="">
+        </div>
+
+        <div class="vendor-body">
+          <div class="vendor-row">
+            <span class="vendor-name">SocialMediaGang</span>
+            <span class="v-stats">
+              <span class="v-pos">18</span>
+              <span class="v-neu">1</span>
+              <span class="v-neg">4</span>
+            </span>
+          </div>
+
+          <div class="vendor-sub">
+            <span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span>
+          </div>
+
+          <div class="vendor-chips">
+            <span class="chip">Category</span>
+            <span class="chip">Category</span>
+          </div>
+        </div>
+      </article>
+      <article class="vendor-card">
+        <div class="vendor-cover">
+          <img src="../images/sonic.png" alt="">
+        </div>
+
+        <div class="vendor-body">
+          <div class="vendor-row">
+            <span class="vendor-name">SocialMediaGang</span>
+            <span class="v-stats">
+              <span class="v-pos">18</span>
+              <span class="v-neu">1</span>
+              <span class="v-neg">4</span>
+            </span>
+          </div>
+
+          <div class="vendor-sub">
+            <span>1090 listings</span><span class="dot">•</span><span>10000+ sells</span>
+          </div>
+
+          <div class="vendor-chips">
+            <span class="chip">Category</span>
+            <span class="chip">Category</span>
+          </div>
+        </div>
+      </article>
+      
 
         <!-- при необходимости добавляй ещё карточек -->
       </div>
 
       <!-- Пагинация -->
       <nav class="pagination" aria-label="Pagination">
-        <button class="page-btn prev" aria-label="Previous page"><span></span></button>
+        <button class="page-btn prev" aria-label="Previous page"> <img src="../images/StrelkaVlevo.png" alt="Prev"></button>
         <a class="page is-active" href="#">1</a>
         <a class="page" href="#">2</a>
         <a class="page" href="#">3</a>
         <a class="page" href="#">4</a>
         <span class="page dots">…</span>
         <a class="page" href="#">187</a>
-        <button class="page-btn next" aria-label="Next page"><span></span></button>
+        <button class="page-btn next" aria-label="Next page"><img src="../images/StrelkaVpravo.png" alt="Next"></button>
       </nav>
     </main>
   </div>

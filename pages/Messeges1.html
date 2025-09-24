@@ -35,7 +35,7 @@
 
 <div class="cat">
   <!-- клик по всей плашке открывает/закрывает -->
-  <label for="catToggle" class="btn btn-categories">
+  <label for="catToggle" class="btnCat btn-categories">
     <span class="grid-ico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
     <span>Categories</span>
   </label>
@@ -258,7 +258,6 @@
 
 
 
-
   <section class="messages" role="main">
   <h1 class="msg-title">Messages</h1>
 
@@ -266,9 +265,9 @@
     <!-- Левый список диалогов -->
     <aside class="msg-list card">
       <div class="msg-search">
-        <input class="msg-search__input" type="text" placeholder="Search by username..." />
+        <input class="msg-search__input" type="text" placeholder="Search by username..." style="width: 312px; height: 40px;"/>
         <button class="msg-search__btn" type="button" aria-label="Search">
-          <span class="ico-magnify" aria-hidden="true"></span>
+          <img style="width: 24px; height: 24px;"src="../images/search.png" alt="" />
         </button>
       </div>
 
@@ -309,10 +308,11 @@
     </aside>
 
     <!-- Правая колонка чата (пустой стейт) -->
-    <main class="msg-chat card">
+    <main class="msg-chat card" style="padding: 0px;">
       <div class="chat-head">
         <div class="chat-head__inner">
-          <p class="chat-placeholder">
+          <p class="chat-placeholder" style="    display: flex;
+    justify-content: space-around;">
             Select a conversation from the left or start a new one by searching for a user
           </p>
         </div>

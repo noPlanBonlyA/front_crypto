@@ -35,7 +35,7 @@
 
 <div class="cat">
   <!-- клик по всей плашке открывает/закрывает -->
-  <label for="catToggle" class="btn btn-categories">
+  <label for="catToggle" class="btnCat btn-categories">
     <span class="grid-ico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
     <span>Categories</span>
   </label>
@@ -263,14 +263,14 @@
   </a>
 
   <!-- Title row: title + tags + close -->
-  <div class="st-titlebar">
+  <div class="st-titlebar" style="width:780px">
     <h1 class="st-title">Support Ticket #be713560</h1>
 
-    <div class="st-title-actions">
+    <div class="st-title-actions" style="margin-bottom: 10px;">
       <span class="st-tag st-tag--primary">Ticket Subject</span>
       <span class="st-tag">Unanswered</span>
-      <button class="st-btn-ghost" type="button">
-        <span class="st-dots" aria-hidden="true"></span>
+      <button class="st-btn-ghost"  type="button" style="width: 159px; margin-top:4px;height: 40px; margin-left: 384px;">
+        <img src="../images/trash.png" style="width: 20px; height: 20px; margin-left:5px;" alt="" class="st-btn-ico" />
         <span>Close Ticket</span>
       </button>
     </div>
@@ -281,14 +281,14 @@
     <!-- левая колонка -->
     <main class="st-main">
       <!-- мета + описание -->
-      <div class="st-card st-meta">
+      <div class="st-card st-meta" style="margin-bottom: 30px ;">
         <div class="st-meta-top">
           <div class="st-meta-left">
             <span class="st-muted">Created by: <b class="st-strong">HelloB</b></span>
             <span class="st-muted">Date: <time>Sep 2, 2025 13:28</time></span>
           </div>
           <div class="st-meta-right">
-            <span class="st-muted">Last Updated: <time>Sep 2, 2025 13:28</time></span>
+            <span class="st-muted">Last Updated: <time style="color: white;">Sep 2, 2025 13:28</time></span>
           </div>
         </div>
 
@@ -340,8 +340,8 @@
 
         <!-- композер -->
         <div class="st-composer">
-          <input class="st-input" type="text" placeholder="Write a message..." />
-          <button class="st-btn" type="button">Send</button>
+          <input class="st-input" type="text" placeholder="Write a message..." style="width: 600px;"/>
+          <button class="st-btn" type="button" style="width: 106px;height: 49px; background: #262630;">Send</button>
         </div>
       </div>
     </main>
@@ -349,7 +349,7 @@
     <!-- правая колонка -->
     <aside class="st-side">
       <p class="st-side-title">Our PGP Public Key</p>
-      <div class="st-card st-pgp">
+      <div class="st-card st-pgp" style="width: 422px;height: 274px;">
 <pre class="st-pgp-text">-----BEGIN PGP PUBLIC KEY BLOCK-----
 mQINBGeeaywBEADHq+NCayH6ZQRPkXdFJ0V4ZXXbXVVVkLF
 fEEDjxD2afaXE2Xtv

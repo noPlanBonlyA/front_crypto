@@ -35,7 +35,7 @@
 
 <div class="cat">
   <!-- клик по всей плашке открывает/закрывает -->
-  <label for="catToggle" class="btn btn-categories">
+  <label for="catToggle" class="btnCat btn-categories">
     <span class="grid-ico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
     <span>Categories</span>
   </label>
@@ -250,25 +250,25 @@
       </div>
     </div>
   </header>
+
 <section class="help">
   <h1 class="h1">Help Center</h1>
   <p class="sub">
-    Try our AI Assistant first, it can help you with most common questions instantly!
+    Try our <span style="color: white;">AI Assistant first</span>, it can help you with most common questions instantly!
     Create a ticket below for personalized support.
   </p>
 
   <div class="help-grid">
     <!-- Левая колонка: Create Ticket -->
     <div class="help-left">
-      <div class="block-title">Create Ticket</div>
-
-      <button type="button" class="btn-ghost" aria-label="Open PGP public key">
+      <div class="block-title" style="    display: flex;
+    justify-content: space-between;"><h2>Create Ticket</h2><button style="margin-top: 20px; background: #111114;"type="button" class="btn-ghost" aria-label="Open PGP public key">
         <!-- можно вставить иконку-ключ -->
-        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" aria-hidden="true">
-          <path d="M9 11V9a5 5 0 10-2 4v2h2v2h2v-4H9zM5 10a3 3 0 110-6 3 3 0 010 6z" fill="#B2B4C4"/>
-        </svg>
+        <img src="../images/key.png" style="width: 12px;height: 20px;" class="pgp-ico">
         <span>Our PGP Public Key</span>
-      </button>
+      </button></div>
+
+      
 
       <label class="label" for="ticket-subj">Ticket Subject</label>
       <input id="ticket-subj" type="text" class="input" placeholder="Subject">

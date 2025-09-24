@@ -35,7 +35,7 @@
 
 <div class="cat">
   <!-- клик по всей плашке открывает/закрывает -->
-  <label for="catToggle" class="btn btn-categories">
+  <label for="catToggle" class="btnCat btn-categories">
     <span class="grid-ico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
     <span>Categories</span>
   </label>
@@ -254,7 +254,7 @@
 
 
 
-  <section class="orderpage">
+  <section class="profilepage container">
   <!-- Back -->
   <a href="/orders" class="op-back">
     <span class="op-back__ico">‹</span>
@@ -270,38 +270,28 @@
     <!-- Левая колонка -->
     <div class="op-left">
       <!-- Карточка заказа -->
-      <article class="oc">
-        <img class="oc-thumb" src="../images/telegram_premium.png" alt="Telegram Premium">
+      <article class="order-card" style="width: 793px;">
+      <img class="order-thumb" src="../images/telegram_premium.png" alt="">
+      <div class="order-main">
+        <div class="order-top">
+          <div class="order-top__left"><span class="badge status pending-buyer">Pending Buyer</span></div>
+          <button class="btn-view">View Order</button>
+        </div>
+        <div class="order-mid">
+          <h3 class="order-title">Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds</h3>
+          <div class="order-spec">
+            <div >Price: <span style="color: white;">5.00 $ / unit</span></div>
+            <div >Quantity: <span style="color: white;">10 units</span></div>
 
-        <div class="oc-main">
-          <div class="oc-top">
-            <div class="oc-top__left">
-              <span class="badge status pending-buyer">Pending Buyer</span>
-            </div>
-            <button class="btn-view">View Order</button>
-          </div>
-
-          <div class="oc-body">
-            <h3 class="oc-title">
-              Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds
-            </h3>
-
-            <div class="oc-spec">
-              <div class="row">
-                <span>Price: 5.00 $ / unit</span>
-                <span>Quantity: 10 units</span>
-              </div>
-              <div>Delivery Method: Instant Delivery (0.01 $)</div>
-              <div>Order Date: 17.08.2025 | 10:48</div>
-            </div>
-          </div>
-
-          <div class="oc-right">
-            <div class="oc-sum">0.00014115 BTC / 16.54$</div>
-            <div class="oc-id">Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
           </div>
         </div>
-      </article>
+        <div class="order-right">
+         <div class="order-sum" style="display: flex;"><div style="margin-right: 233px; font-size: 14px;
+    color: #767676;">Delivery Method: <span style="color: white;">Instant Delivery (0.01 $)</span></div>0.00014115 LTC / 16.54$</div>
+          <div class="order-id" style="display:flex;"> <div style="margin-right: 155px;">Order Date:<span style="color: white;"> 17.08.2025 | 10:48</span></div>Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
+        </div>
+      </div>
+    </article>
 
       <!-- Чат -->
       <h2 class="op-subtitle">Order chat</h2>
@@ -365,9 +355,7 @@
                 <span class="time">23:15 25.08.2025</span>
               </div>
               <p class="text">
-                MessageMessageMessageMessageMessageMessageMessageMessageMessageMessage
-                MessageMessageMessageMessageMessageMessageMessageMessageMessageMessage
-                MessageMessageMessageMessageMessageMessageMessageMessage
+                MessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessage
               </p>
             </div>
           </li>
@@ -376,16 +364,16 @@
         <!-- input row -->
         <form class="chat-input-row">
           <input class="chat-input" placeholder="Write a message..." />
-          <button class="btn btn-ghost" type="submit">Send</button>
+          <button class="btn btn-ghost" style="width: 106px; height:48px;" type="submit">Send</button>
         </form>
       </section>
     </div>
 
     <!-- Правая колонка -->
-    <aside class="op-right">
+    <aside class="op-right" >
       <!-- Order Completed + рейтинг -->
-      <div class="right-card completed-card" id="order-feedback">
-        <h4 class="rc-title-lg">Order Completed!</h4>
+      <div class="right-card completed-card" id="order-feedback". style="height: 214px;">
+        <h3 class="rc-title">Order Completed!</h3>
         <p class="rc-text">
           Please leave feedback for this order. Your feedback helps other buyers make informed decisions
         </p>
@@ -398,10 +386,11 @@
       </div>
 
       <!-- Статус: Shipped -->
+       <h2 class="op-subtitle">Status information</h2>
       <div class="right-card shipped">
         <span class="badge status shipped">Shipped</span>
         <div class="rc-block">
-          <h4 class="rc-title">Your digital item has been shipped</h4>
+          <h3 class="rc-title">Your digital item has been shipped</h3>
           <ul class="rc-ul">
             <li>Auto finalization will occur in 1 day</li>
             <li>Check the chat for your digital item/instructions</li>
@@ -413,8 +402,8 @@
       <!-- Escrow -->
       <div class="right-card escrow">
         <div class="rc-row">
-          <span class="dot"></span>
-          <h4 class="rc-title">Escrow Protection active for this order!</h4>
+          <img src="../images/dot.png" alt="" style="width: 8px;height: 8px; margin-bottom: 5px;" class="rc-ico">
+          <h3 class="rc-title">Escrow Protection active for this order!</h3>
         </div>
         <ul class="rc-ul">
           <li>1-day escrow period for digital items</li>

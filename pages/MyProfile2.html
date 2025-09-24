@@ -35,7 +35,7 @@
 
 <div class="cat">
   <!-- клик по всей плашке открывает/закрывает -->
-  <label for="catToggle" class="btn btn-categories">
+  <label for="catToggle" class="btnCat btn-categories">
     <span class="grid-ico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
     <span>Categories</span>
   </label>
@@ -260,7 +260,7 @@
   <section class="profilepage container">
   <div class="pp-grid">
     <!-- ЛЕВОЕ МЕНЮ -->
-    <aside class="pp-menu card">
+    <aside class="pp-menu card" style="height: 320px; padding: 0px; border-radius: 0px;">
       <ul class="pp-menu__list">
         <li><a class="pp-link" href="./MyProfile.html"><img src="../images/profileImg.png" alt=""> <span>Profile</span></a></li>
         <li class="is-active"><a class="pp-link" href="./MyOrder1.html"><img src="../images/orderImg.png" alt=""> <span>Orders</span></a></li>
@@ -274,31 +274,31 @@
     <!-- ПРАВАЯ КОЛОНКА -->
     <div class="pp-main">
       <!-- шапка профиля -->
-      <section class="pp-head card">
+      <section class="pp-head card" style="background: none;">
         <div class="pp-user">
           <img class="pp-ava" src="../images/profileAvatar.png" alt="">
           <div class="pp-info">
             <div class="pp-row">
               <h1 class="pp-name">Username</h1>
-              <span class="badge badge-green">Buyer</span>
+              <span class="badge2 badge-green2">Buyer</span>
               <span class="pp-score">
   <span class="sc-positive">18</span>
   <span class="sc-neutral">10</span>
   <span class="sc-negative">4</span>
 </span>
-            </div>
+            <div class="pp-last" style="margin-left: 400px;">Last activity: 26 Aug, 2025</div></div>
             <div class="pp-sub">Member since 26 Aug, 2025 • 12 Purchases</div>
-            <button class="btn-ghost small">Write Messege</button>
+            <button class="btn-ghost small" style="width: 160px;">Edit Profile</button>
           </div>
         </div>
-        <div class="pp-last">Last activity: 26 Aug, 2025</div>
+        
       </section>
 
       <!-- отзывы -->
-      <section class="pp-feedback card">
+      <section class="pp-feedback card" style="background: none;">
         <div class="pf-head">
           <h2 class="pf-title">Recent Feedback</h2>
-          <a class="btn-chip" href="./MyProfileFeedback.html">View All</a>
+          <a class="btn-chip" href="./MyProfileFeedback.html" style="margin-left: 20px;">Write Messege</a>
         </div>
 
         <ul class="pf-list">

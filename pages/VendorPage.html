@@ -337,188 +337,176 @@
     </div>
   </div>
 
-  <div class="vend-sep"></div>
+  
+  <div class="ap-wrap">
+    <!-- ЛЕВАЯ КОЛОНКА -->
+    <aside class="ap-side">
+      <nav class="ap-cats">
+        <div class="ap-cg">
+          <div class="ap-cg__head"><span>Category1</span><img class="chev" src="../images/StrelkaVverh.png" alt=""></div>
+          <ul class="ap-cg__list">
+            <li>Subcategory1</li>
+            <li>Subcategory2</li>
+            <li>Subcategory3</li>
+            <li>Subcategory4</li>
+            <li>Subcategory5</li>
+          </ul>
+        </div>
+        <div class="ap-cg"><div class="ap-cg__head"><span>Category2</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></div></div>
 
-  <div class="vend-body">
-    <!-- Left rail: categories + filters -->
-    <aside class="vend-left">
-      <nav class="vend-cats">
-        <h3 class="vend-cats__title">
-          Category1
-          <span class="vend-cats__caret" aria-hidden="true"></span>
-        </h3>
-        <ul class="vend-cats__list">
-          <li>Subcategory1</li>
-          <li>Subcategory2</li>
-          <li>Subcategory3</li>
-          <li>Subcategory4</li>
-          <li>Subcategory5</li>
-        </ul>
-
-        <h3 class="vend-cats__title mt-24">
-          Category2
-          <span class="vend-cats__caret" aria-hidden="true"></span>
-        </h3>
       </nav>
 
-      <div class="vend-hr"></div>
+      <hr class="ap-sep" />
 
-      <form class="vend-filters">
-        <div class="vend-filter">
-          <div class="vend-filter__label">Type</div>
-          <label class="vend-radio">
-            <input type="radio" name="type" checked>
-            <span>All Types</span>
-          </label>
-          <label class="vend-radio">
-            <input type="radio" name="type">
-            <span>Physical</span>
-          </label>
-          <label class="vend-radio">
-            <input type="radio" name="type">
-            <span>Digital</span>
-          </label>
+      <!-- Фильтры -->
+      <div class="ap-filters">
+        <div class="f-block">
+          <div class="f-title">Type</div>
+          <label class="radio"><input type="radio" name="type" checked><span>All Types</span></label>
+          <label class="radio"><input type="radio" name="type"><span>Physical</span></label>
+          <label class="radio"><input type="radio" name="type"><span>Digital</span></label>
         </div>
 
-        <div class="vend-filter">
-          <div class="vend-filter__label">Price</div>
-          <div class="vend-row">
-            <div class="vend-input"><span class="muted">from</span><span class="muted">$</span></div>
-            <div class="vend-input"><span class="muted">to</span><span class="muted">$</span></div>
-          </div>
-        </div>
+        <div class="f-block">
 
-        <div class="vend-filter">
-          <div class="vend-filter__label">Amount</div>
-          <div class="vend-select">
-            <span>All</span>
-            <span class="vend-select__caret" aria-hidden="true"></span>
-          </div>
-          <div class="vend-row">
-            <div class="vend-input"><span class="muted">from</span></div>
-            <div class="vend-input"><span class="muted">to</span></div>
-          </div>
-        </div>
 
-        <button class="vend-btn vend-btn--accent" type="button">Find offers</button>
-      </form>
-    </aside>
-
-    <!-- Main: header row + list -->
-    <main class="vend-main">
-      <div class="vend-listhead">
-  <h3 class="vend-title">Listings</h3>
-
-  <div class="vend-view">
-    <img class="vend-view__img" src="../images/grid.png" alt="">
-    <span class="muted">Grid</span>
-    <img class="vend-view__img" src="../images/list.png" alt="">
-    <span>List</span>
-  </div>
-
-  <!-- добавлено меню сортировки -->
-  <div class="vend-sort" role="button" tabindex="0" aria-expanded="false">
-    <span class="muted vend-sort__label">Recently Uploaded</span>
-    <span class="vend-select__caret" aria-hidden="true"></span>
-
-    <ul class="vend-sort__menu" role="listbox" aria-hidden="true">
-      <li class="active">Recently Uploaded</li>
-      <li>Recently Updated</li>
-      <li>Price: Low → High</li>
-      <li>Price: High → Low</li>
-    </ul>
-  </div>
+  
 </div>
 
 
-      <ul class="vend-cards">
-        <!-- card -->
-        <li class="vend-cardlist">
-          <img class="vend-cardlist__img" src="../images/telegram_premium.png" alt="">
-          <div class="vend-cardlist__body">
-            <div class="vend-cardlist__top">
-              <p class="vend-cardlist__title">
-                Telegram Premium Instant gift 12 months Telegram Premium Instant gift 12 months
-                Telegram Premium Instant gift 12 months
-              </p>
-              <div class="vend-badges">
-                <span class="vend-badge">Digital Goods</span>
-                <span class="vend-badge">12 sold</span>
-              </div>
-            </div>
-            <div class="vend-cardlist__btm">
-              <span class="vend-price">39.99 $</span>
-              <button class="vend-btn vend-btn--ghost sm">View Product</button>
-            </div>
+        <div class="f-block">
+          <div class="f-title">Price</div>
+          <div class="row2">
+            <div class="field"><span class="muted">from</span><span class="suffix">$</span></div>
+            <div class="field"><span class="muted">to</span><span class="suffix">$</span></div>
           </div>
-        </li>
+        </div>
 
-        <!-- Дублируй <li> для остальных карточек -->
-        <li class="vend-cardlist">
-          <img class="vend-cardlist__img" src="../images/telegram_premium.png" alt="">
-          <div class="vend-cardlist__body">
-            <div class="vend-cardlist__top">
-              <p class="vend-cardlist__title">Telegram Premium Instant gift 12 months …</p>
-              <div class="vend-badges">
-                <span class="vend-badge">Digital Goods</span>
-                <span class="vend-badge">12 sold</span>
-              </div>
-            </div>
-            <div class="vend-cardlist__btm">
-              <span class="vend-price">39.99 $</span>
-              <button class="vend-btn vend-btn--ghost sm">View Product</button>
-            </div>
+        <div class="f-block">
+          <div class="f-title">Amount</div>
+          <div class="select"><span>All</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></div>
+          <div class="row2">
+            <div class="field"><span class="muted">from</span></div>
+            <div class="field"><span class="muted">to</span></div>
           </div>
-        </li>
+        </div>
 
-        <li class="vend-cardlist">
-          <img class="vend-cardlist__img" src="../images/telegram_premium.png" alt="">
-          <div class="vend-cardlist__body">
-            <div class="vend-cardlist__top">
-              <p class="vend-cardlist__title">Telegram Premium Instant gift 12 months …</p>
-              <div class="vend-badges">
-                <span class="vend-badge">Digital Goods</span>
-                <span class="vend-badge">12 sold</span>
-              </div>
-            </div>
-            <div class="vend-cardlist__btm">
-              <span class="vend-price">39.99 $</span>
-              <button class="vend-btn vend-btn--ghost sm">View Product</button>
-            </div>
-          </div>
-        </li>
+        <button class="btn btn--primary full">Find offers</button>
+      </div>
+    </aside>
 
-        <li class="vend-cardlist">
-          <img class="vend-cardlist__img" src="../images/telegram_premium.png" alt="">
-          <div class="vend-cardlist__body">
-            <div class="vend-cardlist__top">
-              <p class="vend-cardlist__title">Telegram Premium Instant gift 12 months …</p>
-              <div class="vend-badges">
-                <span class="vend-badge">Digital Goods</span>
-                <span class="vend-badge">12 sold</span>
-              </div>
-            </div>
-            <div class="vend-cardlist__btm">
-              <span class="vend-price">39.99 $</span>
-              <button class="vend-btn vend-btn--ghost sm">View Product</button>
-            </div>
-          </div>
-        </li>
-      </ul>
+    <!-- ПРАВАЯ КОЛОНКА -->
+    <main class="ap-main">
+        <div class="ap-search1">
+    <input type="text" placeholder="Search..." />
+    <button aria-label="Search">
+      <img src="/images/search.png" alt="" />
+    </button>
+  </div>
+      <header class="ap-head">
+        
+        <h2>All Products</h2>
 
-      <!-- Pagination -->
-      <nav class="vend-pages" aria-label="Pagination">
-        <button class="vend-page vend-page--arrow" aria-label="Prev"></button>
-        <button class="vend-page is-active">1</button>
-        <button class="vend-page">2</button>
-        <button class="vend-page">3</button>
-        <button class="vend-page">4</button>
-        <span class="vend-ellipsis">…</span>
-        <button class="vend-page">187</button>
-        <button class="vend-page vend-page--arrow next" aria-label="Next"></button>
-      </nav>
+        <div class="view">
+          <img class="vend-view__img" src="../images/grid.png" alt=""></span><span>Grid</span>
+          <img class="vend-view__img" src="../images/list.png" alt=""></span><span>List</span>
+        </div>
+
+       
+         <div class="sort">
+
+  <details class="cselect">
+    <summary class="cselect__btn">
+      <span class="cselect__label">Recently Uploaded</span>
+      <img class="cselect__chev" src="../images/StrelkaVniz.png" alt="">
+    </summary>
+
+    <ul class="cselect__menu">
+      <li class="cselect__opt is-active"><button type="button">Recently Uploaded</button></li>
+      <li class="cselect__opt"><button type="button">A</button></li>
+      <li class="cselect__opt"><button type="button">B</button></li>
+    </ul>
+  </details>
+
+</div>
+        
+      </header>
+
+      <!-- GRID -->
+      <div class="cards">
+        <!-- Промо карточка -->
+       <article class="product-card">
+        <div class="product-card__media">
+          <img src="../images/telegram_premium.png" alt="Telegram Premium" class="product-card__media-img">
+        </div>
+        <div class="product-card__meta">
+          <span class="vendor">SocialMediaGang</span>
+          <span class="stats-badge">
+            <span class="stats-badge__pos">190</span>
+            <span class="stats-badge__neu">7</span>
+            <span class="stats-badge__neg">28</span>
+          </span>
+        </div>
+        <p class="product-card__title">Telegram Premium Instant gift 12 months</p>
+        <div class="product-card__chips"><span class="chip">Category</span></div>
+        <div class="product-card__footer"><span class="price">39.99 $</span><span class="stock">995 in stock</span></div>
+      </article>
+
+
+        <!-- Обычные карточки (скопируй/дублируй при необходимости) -->
+        <article class="product-card">
+        <div class="product-card__media">
+          <img src="../images/telegram_premium.png" alt="Telegram Premium" class="product-card__media-img">
+        </div>
+        <div class="product-card__meta">
+          <span class="vendor">SocialMediaGang</span>
+          <span class="stats-badge">
+            <span class="stats-badge__pos">190</span>
+            <span class="stats-badge__neu">7</span>
+            <span class="stats-badge__neg">28</span>
+          </span>
+        </div>
+        <p class="product-card__title">Telegram Premium Instant gift 12 months</p>
+        <div class="product-card__chips"><span class="chip">Category</span></div>
+        <div class="product-card__footer"><span class="price">39.99 $</span><span class="stock">995 in stock</span></div>
+      </article>
+
+        <article class="product-card">
+        <div class="product-card__media">
+          <img src="../images/telegram_premium.png" alt="Telegram Premium" class="product-card__media-img">
+        </div>
+        <div class="product-card__meta">
+          <span class="vendor">SocialMediaGang</span>
+          <span class="stats-badge">
+            <span class="stats-badge__pos">190</span>
+            <span class="stats-badge__neu">7</span>
+            <span class="stats-badge__neg">28</span>
+          </span>
+        </div>
+        <p class="product-card__title">Telegram Premium Instant gift 12 months</p>
+        <div class="product-card__chips"><span class="chip">Category</span></div>
+        <div class="product-card__footer"><span class="price">39.99 $</span><span class="stock">995 in stock</span></div>
+      </article>
+      <article class="product-card">
+        <div class="product-card__media">
+          <img src="../images/telegram_premium.png" alt="Telegram Premium" class="product-card__media-img">
+        </div>
+        <div class="product-card__meta">
+          <span class="vendor">SocialMediaGang</span>
+          <span class="stats-badge">
+            <span class="stats-badge__pos">190</span>
+            <span class="stats-badge__neu">7</span>
+            <span class="stats-badge__neg">28</span>
+          </span>
+        </div>
+        <p class="product-card__title">Telegram Premium Instant gift 12 months</p>
+        <div class="product-card__chips"><span class="chip">Category</span></div>
+        <div class="product-card__footer"><span class="price">39.99 $</span><span class="stock">995 in stock</span></div>
+      </article>
+      
     </main>
   </div>
+
 </section>
 
 

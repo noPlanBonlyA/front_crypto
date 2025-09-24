@@ -35,7 +35,7 @@
 
 <div class="cat">
   <!-- клик по всей плашке открывает/закрывает -->
-  <label for="catToggle" class="btn btn-categories">
+  <label for="catToggle" class="btnCat btn-categories">
     <span class="grid-ico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
     <span>Categories</span>
   </label>
@@ -252,19 +252,28 @@
   </header>
 
 
-<section class="jabber-page container">
-  <div class="jabber-wrap">
+
+
+
+
+
+  <section class="profilepage container">
+  <div class="pp-grid">
     <!-- ЛЕВОЕ МЕНЮ -->
-    <aside class="left-menu card">
-      <a class="menu-item" href="./MyProfile.html"><img class="mi-ico" src="../images/profileImg.png" alt=""><span>Profile</span></a>
-      <a class="menu-item" href="./MyOrder1.html"><img class="mi-ico" src="../images/orderImg.png" alt=""><span>Orders</span></a>
-      <a class="menu-item" href="./Wallet.html"><img class="mi-ico" src="../images/walletImg.png" alt=""><span>Wallet</span></a>
-      <a class="menu-item" href="./Settings.html"><img class="mi-ico" src="../images/settingsIMG.png" alt=""><span>Settings</span></a>
-      <a class="menu-item is-active" href="./Notif.html"><img class="mi-ico" src="../images/motifIMG.png" alt=""><span>Jabber Notifications</span></a>
-      <a class="menu-item" href="./Afilate.html"><img class="mi-ico" src="../images/afilateIMG.png" alt=""><span>Affiliate System</span></a>
+    <aside class="pp-menu card" style="height: 320px; padding: 0px; border-radius: 0px;">
+      <ul class="pp-menu__list">
+        <li><a class="pp-link" href="./MyProfile.html"><img src="../images/profileImg.png" alt=""> <span>Profile</span></a></li>
+        <li class="is-active"><a class="pp-link" href="./MyOrder1.html"><img src="../images/orderImg.png" alt=""> <span>Orders</span></a></li>
+        <li><a class="pp-link" href="./Wallet.html"><img src="../images/walletImg.png" alt=""> <span>Wallet</span></a></li>
+        <li><a class="pp-link" href="./Settings.html"><img src="../images/settingsIMG.png" alt=""> <span>Settings</span></a></li>
+        <li><a class="pp-link" href="./Notif.html"><img src="../images/motifIMG.png" alt=""> <span>Jabber Notifications</span></a></li>
+        <li><a class="pp-link" href="./Afilate.html"><img src="../images/afilateIMG.png" alt=""> <span>Affiliate System</span></a></li>
+      </ul>
     </aside>
 
-    <!-- КОНТЕНТ -->
+    <!-- ПРАВАЯ КОЛОНКА -->
+    
+    <!-- ПРАВАЯ ЧАСТЬ -->
     <main class="jabber-main">
       <h1 class="page-title">Jabber notifications</h1>
       <p class="jabber-note">
@@ -283,13 +292,10 @@
         plaintext communication is forbidden.
       </p>
 
-      <button class="btn-primary jabber-cta">Start connecting</button>
+      <button class="btn-primary jabber-cta" style="width: 356px;">Start connecting</button>
     </main>
   </div>
 </section>
-
-
-
 
 
 <!-- чекбокс-свитч для мобильного меню -->

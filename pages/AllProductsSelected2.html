@@ -307,37 +307,29 @@
 
 
 
-<section class="all-products">
+<section class="best-products">
 
   <!-- Поиск -->
-  <div class="ap-search">
-    <input type="text" placeholder="Search..." />
-    <button aria-label="Search">
-      <img src="/images/search.png" alt="" />
-    </button>
-  </div>
+  
 
-  <div class="ap-wrap">
+  <div class="container ap-wrap">
     <!-- ЛЕВАЯ КОЛОНКА -->
     <aside class="ap-side">
       <nav class="ap-cats">
-        <h3>Categories</h3>
-
         <div class="ap-cg">
-          <div class="ap-cg__head"><span>Category1</span><i></i></div>
+          <div class="ap-cg__head"><span>Category1</span><img class="chev" src="../images/StrelkaVverh.png" alt=""></div>
           <ul class="ap-cg__list">
-            <li class="on">Subcategory1</li>
+            <li>Subcategory1</li>
             <li>Subcategory2</li>
             <li>Subcategory3</li>
             <li>Subcategory4</li>
             <li>Subcategory5</li>
           </ul>
         </div>
-
-        <div class="ap-cg"><div class="ap-cg__head"><span>Category2</span><i></i></div></div>
-        <div class="ap-cg"><div class="ap-cg__head"><span>Category3</span><i></i></div></div>
-        <div class="ap-cg"><div class="ap-cg__head"><span>Category4</span><i></i></div></div>
-        <div class="ap-cg"><div class="ap-cg__head"><span>Category5</span><i></i></div></div>
+        <div class="ap-cg"><div class="ap-cg__head"><span>Category2</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></div></div>
+        <div class="ap-cg"><div class="ap-cg__head"><span>Category3</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></div></div>
+        <div class="ap-cg"><div class="ap-cg__head"><span>Category4</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></div></div>
+        <div class="ap-cg"><div class="ap-cg__head"><span>Category5</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></div></div>
       </nav>
 
       <hr class="ap-sep" />
@@ -352,9 +344,28 @@
         </div>
 
         <div class="f-block">
-          <div class="f-title">Destination</div>
-          <div class="select"><span>Worldwide</span><i></i></div>
-        </div>
+  <div class="f-title">Destination</div>
+
+  <details class="cselect">
+    <summary class="cselect__btn">
+      <span class="cselect__label">Worldwide</span>
+      <img class="cselect__chev" src="../images/StrelkaVniz.png" alt="">
+    </summary>
+
+    <ul class="cselect__menu">
+      <li class="cselect__opt is-active"><button type="button">Worldwide</button></li>
+      <li class="cselect__opt"><button type="button">Russia</button></li>
+      <li class="cselect__opt"><button type="button">Germany</button></li>
+      <li class="cselect__opt"><button type="button">United Kingdom</button></li>
+      <li class="cselect__opt"><button type="button">France</button></li>
+      <li class="cselect__opt"><button type="button">Italy</button></li>
+      <li class="cselect__opt"><button type="button">Spain</button></li>
+      <li class="cselect__opt"><button type="button">Ukraine</button></li>
+      <li class="cselect__opt"><button type="button">Romania</button></li>
+    </ul>
+  </details>
+</div>
+
 
         <div class="f-block">
           <div class="f-title">Price</div>
@@ -366,7 +377,7 @@
 
         <div class="f-block">
           <div class="f-title">Amount</div>
-          <div class="select"><span>All</span><i></i></div>
+          <div class="select"><span>All</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></div>
           <div class="row2">
             <div class="field"><span class="muted">from</span></div>
             <div class="field"><span class="muted">to</span></div>
@@ -379,26 +390,39 @@
 
     <!-- ПРАВАЯ КОЛОНКА -->
     <main class="ap-main">
+        <div class="ap-search1">
+    <input type="text" placeholder="Search..." />
+    <button aria-label="Search">
+      <img src="/images/search.png" alt="" />
+    </button>
+  </div>
       <header class="ap-head">
+        
         <h2>All Products</h2>
 
         <div class="view">
-            <img class="vend-view__img" src="../images/grid.png" alt="">
-    </span><span class="muted">Grid</span>
-          <img class="vend-view__img" src="../images/list.png" alt="">
-         </span><span>List</span>
+          <img class="vend-view__img" src="../images/grid.png" alt=""></span><span>Grid</span>
+          <img class="vend-view__img" src="../images/list.png" alt=""></span><span>List</span>
         </div>
 
-        <div class="sort">
-          <span class="muted">Recently Uploaded</span><i></i>
-          <!-- без JS: меню на :hover -->
-          <ul class="sort-menu">
-            <li class="active">Recently Uploaded</li>
-            <li>Recently Updated</li>
-            <li>Price: Low → High</li>
-            <li>Price: High → Low</li>
-          </ul>
-        </div>
+       
+         <div class="sort">
+
+  <details class="cselect">
+    <summary class="cselect__btn">
+      <span class="cselect__label">Recently Uploaded</span>
+      <img class="cselect__chev" src="../images/StrelkaVniz.png" alt="">
+    </summary>
+
+    <ul class="cselect__menu">
+      <li class="cselect__opt is-active"><button type="button">Recently Uploaded</button></li>
+      <li class="cselect__opt"><button type="button">A</button></li>
+      <li class="cselect__opt"><button type="button">B</button></li>
+    </ul>
+  </details>
+
+</div>
+        
       </header>
 
       <!-- LIST ITEMS -->
@@ -406,12 +430,12 @@
         <img class="listcard__img" src="/images/telegram_premium.png" alt="Product image" />
         <div class="listcard__body">
           <div class="row meta">
-            <span class="seller">SocialMediaGang (45)</span>
-            <span class="chip">
-              <span class="g">18</span><span class="sep">/</span>
-              <span class="s">1</span><span class="sep">/</span>
-              <span class="r">4</span>
-            </span>
+            <span class="seller">SocialMediaGang (45)      <span class="stats-badge">
+            <span class="stats-badge__pos">190</span>
+            <span class="stats-badge__neu">7</span>
+            <span class="stats-badge__neg">28</span>
+          </span></span>
+            
           </div>
 
           <h3 class="title">
@@ -434,12 +458,12 @@
         <img class="listcard__img" src="/images/telegram_premium.png" alt="Product image" />
         <div class="listcard__body">
           <div class="row meta">
-            <span class="seller">SocialMediaGang (45)</span>
-            <span class="chip">
-              <span class="g">18</span><span class="sep">/</span>
-              <span class="s">1</span><span class="sep">/</span>
-              <span class="r">4</span>
-            </span>
+            <span class="seller">SocialMediaGang (45)      <span class="stats-badge">
+            <span class="stats-badge__pos">190</span>
+            <span class="stats-badge__neu">7</span>
+            <span class="stats-badge__neg">28</span>
+          </span></span>
+            
           </div>
 
           <h3 class="title">
