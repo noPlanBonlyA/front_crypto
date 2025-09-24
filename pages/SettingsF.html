@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awazon Market</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styleIvan.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
@@ -190,43 +190,60 @@
     </div>
   </section>
 
+
+  <div class="wrapper">
+      <nav class="sidebar">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Listings</a></li>
+        <li><a href="#">Advertisement</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Notifications</a></li>
+        <li><a href="#">Conversations</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== Settings ===== -->
+    <section class="card-group" aria-label="Settings">
+      <h2 class="h">Settings</h2>
+
+      <div class="grid-2">
+        <!-- Commission -->
+        <article class="card">
+          <h4 class="card-h">Your Current Commission Rate</h4>
+          <div class="big blue">4.00%</div>
+          <p class="muted">
+            This is the commission rate that applies to all your sales. Commission rates are set by administrators based on various factors including sales volume and account standing.
+          </p>
+        </article>
+
+        <!-- FE status -->
+        <article class="card">
+          <h4 class="card-h">Finalize Early (FE) Status</h4>
+          <div class="big green">You have Finalize Early rights</div>
+          <p class="muted">
+            Warning: Multiple complaints or misuse of FE rights may result in these privileges being revoked by administrators.
+          </p>
+        </article>
+    
+        <!-- Vacation mode -->
+        <article class="card-vacation row">
+          <div class="switch-container">
+            <div class="switch" aria-hidden="true"><span></span></div>
+          </div>
+          <div class="row-col">
+            <div class="card-h">Vacation Mode</div>
+            <div class="muted">Warning: Enabling vacation mode will deactivate all your listings automatically</div>
+          </div>
+        </article>
+        </div>
+    </section>
+  </div>
+  </div>
   
-
-
-  <!-- ===== Settings ===== -->
-  <section class="card-group" aria-label="Settings">
-    <h2 class="h">Settings</h2>
-
-    <div class="grid-2">
-      <!-- Commission -->
-      <article class="card">
-        <h4 class="card-h">Your Current Commission Rate</h4>
-        <div class="big blue">4.00%</div>
-        <p class="muted">
-          This is the commission rate that applies to all your sales. Commission rates are set by administrators based on various factors including sales volume and account standing.
-        </p>
-      </article>
-
-      <!-- FE status -->
-      <article class="card">
-        <h4 class="card-h">Finalize Early (FE) Status</h4>
-        <div class="big green">You have Finalize Early rights</div>
-        <p class="muted">
-          Warning: Multiple complaints or misuse of FE rights may result in these privileges being revoked by administrators.
-        </p>
-      </article>
-    </div>
-
-    <!-- Vacation mode -->
-    <article class="card row">
-      <div class="switch" aria-hidden="true"><span></span></div>
-      <div class="row-col">
-        <div class="card-h">Vacation Mode</div>
-        <div class="muted">Warning: Enabling vacation mode will deactivate all your listings automatically</div>
-      </div>
-    </article>
-  </section>
-</div>
+  
 
 
 

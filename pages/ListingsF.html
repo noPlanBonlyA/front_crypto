@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awazon Market</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styleIvan.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
@@ -194,16 +194,28 @@
 
 
 
-  <!-- ====== Advertisement & Settings blocks (no header) ====== -->
 <div class="page-wrap">
+  <!-- Боковое меню -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Listings</a></li>
+      <li><a href="#">Advertisement</a></li>
+      <li><a href="#">Orders</a></li>
+      <li><a href="#">Notifications</a></li>
+      <li><a href="#">Conversations</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Log Out</a></li>
+    </ul>
+  </nav>
 
-  <!-- ===== Advertisement Management ===== -->
+  <!-- Главный контент -->
   <section class="card-group" aria-label="Advertisement Management">
     <h2 class="h">Advertisement Management</h2>
     <p class="sub">Promote your products with our advertising options</p>
 
     <div class="grid-2">
-      <!-- Home Page ADS -->
+      <!-- Первая карточка -->
       <article class="card">
         <header class="card-head">
           <div class="icon dot"></div>
@@ -218,95 +230,108 @@
           <li>5 random products displayed</li>
         </ul>
 
-        <div class="price-row">
-          <div class="price">128.76 $</div>
-
-          <div class="select compact">
-            <div class="coin">
-              <span class="coin-dot"></span>
-              <span>BTC</span>
+        <div class="currency-container">
+          <div class="currency-value">
+            <span class="amount">128.76</span>
+            <span class="currency-symbol">$</span>
+          </div>
+          <div class="price-wrapper">
+            <div class="crypto-info">
+              <span class="crypto-icon">BTC</span>
+              <span class="crypto-value">128.76$ ~ 0.0000197</span>
+              <select class="currency-select">
+                <option>USD</option>
+                <option>EUR</option>
+                <option>BTC</option>
+              </select>
             </div>
-            <div class="rate">128.76$ ~ 0.0000197</div>
-            <span class="chev">▾</span>
           </div>
         </div>
 
-        <label class="field">
-          <span class="label">Select Product</span>
-          <div class="input sel">
-            <span>Choose a product...</span>
-            <span class="chev">▾</span>
-          </div>
-        </label>
+        <div class="form-group">
+          <label for="product">Select Product</label>
+          <select id="product" class="custom-select">
+            <option>Choose a product...</option>
+            <option>Product 1</option>
+            <option>Product 2</option>
+            <option>Product 3</option>
+          </select>
+        </div>
 
-        <label class="field">
-          <span class="label">Pay with</span>
-          <div class="select">
-            <div class="coin">
-              <span class="coin-dot"></span><span>Bitcoin</span>
-            </div>
-            <div class="rate">0.0000197 BTC</div>
-            <span class="chev">▾</span>
-          </div>
-        </label>
-
-        <button class="btn primary">Purchase</button>
+        <div class="form-group">
+          <label for="payment">Pay with</label>
+          <select id="payment" class="custom-select">
+            <option value="btc">
+              <img src="../images/btc_logo.png" alt="Bitcoin" class="icon"> Bitcoin
+            </option>
+            <option value="eth">
+              <img src="eth-icon.png" alt="Ethereum" class="icon"> Ethereum
+            </option>
+          </select>
+        </div>
       </article>
 
-      <!-- Search ADS -->
+      <!-- Вторая карточка -->
       <article class="card">
         <header class="card-head">
-          <div class="icon magnify"></div>
-          <div class="card-title">Search ADS</div>
+          <div class="icon dot"></div>
+          <div class="card-title">Home Page ADS</div>
           <span class="pill">7 days duration</span>
         </header>
 
         <ul class="meta-list">
-          <li>Appears at top of search results</li>
-          <li>High conversion potential</li>
-          <li>Tagged as [Advertisement]</li>
-          <li>Category-specific targeting</li>
+          <li>Featured on homepage</li>
+          <li>High visibility</li>
+          <li>Automatic rotation</li>
+          <li>5 random products displayed</li>
         </ul>
 
-        <div class="price-row">
-          <div class="price">50.00 $</div>
-
-          <div class="select compact">
-            <div class="coin">
-              <span class="coin-dot"></span>
-              <span>BTC</span>
+        <div class="currency-container">
+          <div class="currency-value">
+            <span class="amount">128.76</span>
+            <span class="currency-symbol">$</span>
+          </div>
+          <div class="price-wrapper">
+            <div class="crypto-info">
+              <span class="crypto-icon">BTC</span>
+              <span class="crypto-value">128.76$ ~ 0.0000197</span>
+              <select class="currency-select">
+                <option>USD</option>
+                <option>EUR</option>
+                <option>BTC</option>
+              </select>
             </div>
-            <div class="rate">50.00$ ~ 0.0000197</div>
-            <span class="chev">▾</span>
           </div>
         </div>
 
-        <label class="field">
-          <span class="label">Select Product</span>
-          <div class="input sel">
-            <span>Choose a product...</span>
-            <span class="chev">▾</span>
-          </div>
-        </label>
+        <div class="form-group">
+          <label for="product">Select Product</label>
+          <select id="product" class="custom-select">
+            <option>Choose a product...</option>
+            <option>Product 1</option>
+            <option>Product 2</option>
+            <option>Product 3</option>
+          </select>
+        </div>
 
-        <label class="field">
-          <span class="label">Pay with</span>
-          <div class="select">
-            <div class="coin">
-              <span class="coin-dot"></span><span>Bitcoin</span>
-            </div>
-            <div class="rate">0.0000197 BTC</div>
-            <span class="chev">▾</span>
-          </div>
-        </label>
-
-        <button class="btn primary">Purchase</button>
+        <div class="form-group">
+          <label for="payment">Pay with</label>
+          <select id="payment" class="custom-select">
+            <option value="btc">
+              <img src="../images/btc_logo.png" alt="Bitcoin" class="icon"> Bitcoin
+            </option>
+            <option value="eth">
+              <img src="eth-icon.png" alt="Ethereum" class="icon"> Ethereum
+            </option>
+          </select>
+        </div>
       </article>
     </div>
-
-    <h3 class="h mt">Active Advertisements</h3>
   </section>
+</div>
 
+
+      <!-- Search ADS -->
 
 
 

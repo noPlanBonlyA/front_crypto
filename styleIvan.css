@@ -1802,10 +1802,15 @@ html,body{
   white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
 }
 
-.pill{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:4px 8px; border-radius:4px; font-size:10px; line-height:1;
-  color:#F4F4F4;
+.pill {
+  background-color: #424E8B; /* Цвет фона кнопки */
+  color: #ffffff; /* Цвет текста */
+  font-size: 14px; /* Размер шрифта */
+  padding: 4px 16px; /* Отступы по вертикали и горизонтали */
+  border-radius: 20px; /* Округлые углы, чтобы сделать форму пилюли */
+  border: none; /* Убираем границу */
+  cursor: pointer; /* Курсор в виде руки при наведении */
+  transition: background-color 0.3s ease; /* Плавное изменение фона */
 }
 .pill--role{ background:#424E8B; }
 .pill--buyer{ background:#428B5E; }
@@ -5099,7 +5104,7 @@ ALL PRODUCTS
   gap:10px;
 }
 .card{
-  background:var(--bg);
+  background:var(--card);
   border-radius:8px;
   padding:16px;
   display:flex; flex-direction:column; gap:8px;
@@ -5114,7 +5119,7 @@ ALL PRODUCTS
 .badges{ display:flex; gap:8px; }
 .badge{ font-size:12px; color:#B2B4C4; background:#1C1C21; padding:4px 10px; border-radius:4px; }
 .card__foot{ display:flex; align-items:flex-end; justify-content:space-between; gap:16px; }
-.price{ font-size:16px; }
+.price{ font-size:px; }
 .stock{ font-size:12px; }
 
 /* пагинация */
@@ -5510,7 +5515,7 @@ ALL PRODUCTS
   gap: 6px;
 
   padding: 6px 14px;
-  height: 32px;
+  height: 40px;
   background: #424E8B;
   border-radius: 6px;
 
@@ -6099,6 +6104,7 @@ ALL PRODUCTS
 
 
 
+/* Listings */
 /* ===== Base ===== */
 :root{
   --bg:#0b0b0d;
@@ -6115,7 +6121,7 @@ ALL PRODUCTS
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:14px/1.4 "SF Pro Display",system-ui,-apple-system,Segoe UI,Roboto,Arial}
-.page-wrap{max-width:1060px;margin:0 auto;padding:24px}
+.page-wrap{max-width:1250px;margin:0 auto;padding:24px; display: flex;}
 
 /* headings */
 .h{font-weight:500;font-size:24px;line-height:1;margin:0 0 8px}
@@ -6123,11 +6129,75 @@ body{margin:0;background:var(--bg);color:var(--text);font:14px/1.4 "SF Pro Displ
 .sub{color:var(--muted);margin:0 0 20px}
 
 /* layout */
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width: 1200px; margin: 0 auto;}
 .card-group{margin:16px 0 32px}
 .card1{background:var(--card);border-radius:6px;padding:24px}
-.row{display:flex;gap:16px;align-items:center}
+.row{grid-column: span 2;}
 .row-col{display:flex;flex-direction:column;gap:8px}
+.card-vacation{
+    background:var(--card);
+    border-radius:8px;
+    padding:16px;
+    display:flex; flex-direction:row; gap:16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.currency-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.currency-value {
+  display: flex;
+  align-items: center;
+}
+
+.amount {
+  font-size: 28px;
+  color: white;
+}
+
+.currency-symbol {
+  font-size: 28px;
+  color: white;
+  margin-left: 5px;
+}
+
+.crypto-info {
+  display: flex;
+  align-items: center;
+}
+
+.crypto-icon {
+  background-color: #f39c12;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.crypto-value {
+  color: white;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.currency-select {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.currency-select option {
+  background-color: #333;
+  color: white;
+}
 
 /* pieces */
 .card-head{display:flex;align-items:center;gap:16px;margin-bottom:16px}
@@ -6170,6 +6240,115 @@ body{margin:0;background:var(--bg);color:var(--text);font:14px/1.4 "SF Pro Displ
 
 .switch{width:36px;height:18px;background:#262630;border-radius:32px;position:relative}
 .switch span{position:absolute;left:2px;top:2px;width:14px;height:14px;border-radius:50%;background:#767676}
+.switch-container{
+    position: relative;
+    top: 5px;
+}
+h4 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.wrapper {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: 4em;
+  max-width: 1270px;
+}
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar ul {
+  list-style-type: none;
+}
+.sidebar ul li {
+  margin-bottom: 2em;
+}
+.sidebar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+/* Листинги */
+.price-wrapper {
+    padding: 3px;
+    border: 1px solid var(--line);
+}
+
+.form-group {
+  margin: 20px 0;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.custom-select {
+  background-color: var(--card);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: normal;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.custom-select option {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.custom-select:focus {
+  outline: none;
+  border: 1px solid #4CAF50;
+}
+
+/* Стилизация иконки внутри выпадающего меню */
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Стилизация стрелочки */
+.custom-select::after {
+  content: '▼';
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
 
 /* ===== Mobile (≤480px) ===== */
 @media (max-width:480px){
@@ -6683,3 +6862,57 @@ body{margin:0;background:var(--bg);color:var(--text);
   .ap-search1 input{ height: 42px; }
   .ap-search1 button{ width: 40px; height: 40px; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*fsafasfsafasfsakfbdfgkjldsalfnsdkjafnasdjnfkjsadbfklsdabnfkljsdabjkhbg iodsabngkldsjabgfk dsjbaigkjdsbalkg jbasdkljgbasd kljbgas*/
+
+
+
+
+
+
+
+
+
