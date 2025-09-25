@@ -272,10 +272,36 @@
     </aside>
 
     <!-- ПРАВАЯ КОЛОНКА -->
-    
+ 
     <!-- ПРАВАЯ ЧАСТЬ -->
     <main class="wallet-main" style="width: 1000px;">
+           <div style="    display: flex
+;
+    width: 100%;
+    justify-content: space-between;">
+<h2 style="font-size: 24px">WithDrawls</h2>
+<button style="
+width: 140px;
+height: 34px;
+border-radius: 6px;
+border: 0px solid #2A2A37;
+background: #111114;
+font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 100%;
+/* identical to box height, or 14px */
+
+color: #B2B4C4;
+
+
+
+">Deposit</button>
+
+    </div>
       <div class="withd-grid">
+        
         <!-- форма -->
         <form class="withd-form card" autocomplete="off">
           <label class="f-label">Currency</label>
@@ -317,40 +343,43 @@
         </form>
 
         <!-- доступный баланс -->
-        <aside class="balance card" style="height: 250px;">
-          <h4 class="bal-head">Available balance</h4>
+         <div>
+          <label class="f-label" style="margin-bottom: 3px; font-size: 14px;">Available balance</label>
+        <aside class="balance card" style="height: 188px;     border-radius: 6px;">
+         
 
           <ul class="sum-coins">
           <li class="coin">
             <div class="left">
-              <img class="icon" style="width: 25px;" src="../images/btc_logo.png" alt="">
+              <img class="icon" style="width: 20px; height: 20px;" src="../images/btc_logo.png" alt="">
               <span>BTC</span>
             </div>
             <span class="val">0.00000197</span>
           </li>
           <li class="coin">
             <div class="left">
-              <img class="icon" style="width: 25px;" src="../images/litecoin_logo.png" alt="">
+              <img class="icon" style="width: 20px; height: 20px;" src="../images/litecoin_logo.png" alt="">
               <span>LTC</span>
             </div>
             <span class="val">2.54122001</span>
           </li>
           <li class="coin">
             <div class="left">
-              <img class="icon" style="width: 25px;" src="../images/monero_logo.png" alt="">
+              <img class="icon" style="width: 20px; height: 20px;" src="../images/monero_logo.png" alt="">
               <span>XMR</span>
             </div>
             <span class="val">0.00005419</span>
           </li>
           <li class="coin">
             <div class="left">
-              <img class="icon" style="width: 25px;" src="../images/btc_cash_logo.png" alt="">
+              <img class="icon" style="width: 20px; height: 20px;" src="../images/btc_cash_logo.png" alt="">
               <span>BCH</span>
             </div>
             <span class="val">0.000012511</span>
           </li>
         </ul>
         </aside>
+    </div>
       </div>
       <!-- ИСТОРИЯ ДЕПОЗИТОВ -->
       <div class="dh-head">
