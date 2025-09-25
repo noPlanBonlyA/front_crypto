@@ -27,7 +27,7 @@
 
     <!-- Back кнопка -->
     <a href="../index.html" class="back-btn">
-      <span class="back-icon" aria-hidden="true"></span>
+     <img src="../images/VlevoHeader.png" style="width: 7px; height: 9px;" alt="arrow left">
       Back to Market
     </a>
 
@@ -95,6 +95,7 @@
               <a class="pm-link" href="./MyOrder1.html">
                 <img class="pm-ico" src="../images/orderImg.png" alt="">
                 <span>Orders</span>
+                
               </a>
             </li>
             <li>
@@ -190,112 +191,173 @@
     </div>
   </section>
 
-  
 
-<!-- ===== BOTTOM BLOCK: Confirm order + countdown ===== -->
-<section class="vendor-dark order-page order-bottom">
-  <div class="op-wrap">
-    <a class="op-back" href="#"><span class="op-back-ico"></span>Back to Orders</a>
-    <h2 class="op-title">Order Details</h2>
 
-    <div class="op-grid">
-      <!-- Left column (same structure) -->
-      <div class="op-left">
-        <article class="op-card op-order">
-          <img class="op-thumb" src="/images/avatar.png" alt="">
-          <div class="op-order-body">
-            <div class="op-row op-row-top">
-              <div class="op-badges">
-                <span class="op-status op-status-warn">Pending Buyer</span>
-              </div>
-              <button class="op-pill">View Order</button>
-            </div>
 
-            <div class="op-row op-row-main">
-              <div class="op-meta">
-                <div class="op-name">
-                  Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds
-                </div>
+  <section class="profilepage container">
+  <!-- Back -->
+  <a href="/orders" class="op-back">
+    <span class="op-back__ico">‹</span>
+    Back to Orders
+  </a>
 
-                <div class="op-spec">
-                  <span>Price: 5.00 $ / unit</span>
-                  <span>Quantity: 10 units</span>
-                </div>
-                <div class="op-line">Delivery Method: Instant Delivery (0.01 $)</div>
-                <div class="op-line">Order Date: 17.08.2025 | 10:48</div>
-              </div>
+  <!-- Заголовок -->
+  <div class="op-head">
+    <h1 class="op-title">Order Details</h1>
+  </div>
 
-              <div class="op-amount">
-                <div>0.00014115 BTC / 16.54$</div>
-                <div class="op-id">Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
-              </div>
-            </div>
+  <div class="op-grid">
+    <!-- Левая колонка -->
+    <div class="op-left">
+      <!-- Карточка заказа -->
+      <article class="order-card" style="width: 793px;">
+      <img class="order-thumb" src="../images/telegram_premium.png" alt="">
+      <div class="order-main">
+        <div class="order-top">
+          <div class="order-top__left"><span class="badge status pending-buyer">Pending Buyer</span></div>
+          <button class="btn-view">View Order</button>
+        </div>
+        <div class="order-mid">
+          <h3 class="order-title">Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds</h3>
+          <div class="order-spec">
+            <div >Price: <span style="color: white;">5.00 $ / unit</span></div>
+            <div >Quantity: <span style="color: white;">10 units</span></div>
+
           </div>
-        </article>
-
-        <h3 class="op-subtitle">Order chat</h3>
-        <article class="op-card op-chat">
-          <div class="op-chat-scroll">
-            <!-- repeat chat samples as needed -->
-            <div class="msg">
-              <div class="avatar"></div>
-              <div class="msg-body">
-                <div class="msg-head">
-                  <span class="user">username</span>
-                  <span class="time">23:15 25.08.2025</span>
-                </div>
-                <div class="text">Message</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="op-chat-write">
-            <input class="op-input" placeholder="Write a message..." />
-            <button class="op-btn">Send</button>
-          </div>
-        </article>
+        </div>
+        <div class="order-right">
+         <div class="order-sum" style="display: flex;"><div style="margin-right: 233px; font-size: 14px;
+    color: #767676;">Delivery Method: <span style="color: white;">Instant Delivery (0.01 $)</span></div>0.00014115 LTC / 16.54$</div>
+          <div class="order-id" style="display:flex;"> <div style="margin-right: 155px;">Order Date:<span style="color: white;"> 17.08.2025 | 10:48</span></div>Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
+        </div>
       </div>
+    </article>
 
-      <!-- Right column (countdown + actions) -->
-      <aside class="op-right">
-        <article class="op-card op-count">
+      <!-- Чат -->
+      <h2 class="op-subtitle">Order chat</h2>
+
+      <section class="card chat-card">
+        <ul class="chat-list">
+          <!-- msg 1 -->
+          <li class="msg">
+            <span class="avatar"></span>
+            <div class="msg-body">
+              <div class="msg-meta">
+                <span class="user">username</span>
+                <span class="time">23:15 25.08.2025</span>
+              </div>
+              <p class="text">Message</p>
+            </div>
+          </li>
+
+          <!-- msg 2 -->
+          <li class="msg">
+            <span class="avatar"></span>
+            <div class="msg-body">
+              <div class="msg-meta">
+                <span class="user">username</span>
+                <span class="time">23:15 25.08.2025</span>
+              </div>
+              <p class="text">Message</p>
+            </div>
+          </li>
+
+          <!-- msg 3 -->
+          <li class="msg">
+            <span class="avatar"></span>
+            <div class="msg-body">
+              <div class="msg-meta">
+                <span class="user">username</span>
+                <span class="time">23:15 25.08.2025</span>
+              </div>
+              <p class="text">Message</p>
+            </div>
+          </li>
+
+          <!-- msg 4 -->
+          <li class="msg">
+            <span class="avatar"></span>
+            <div class="msg-body">
+              <div class="msg-meta">
+                <span class="user">username</span>
+                <span class="time">23:15 25.08.2025</span>
+              </div>
+              <p class="text">Message</p>
+            </div>
+          </li>
+
+          <!-- длинное последнее сообщение (много строк) -->
+          <li class="msg">
+            <span class="avatar"></span>
+            <div class="msg-body">
+              <div class="msg-meta">
+                <span class="user">username</span>
+                <span class="time">23:15 25.08.2025</span>
+              </div>
+              <p class="text">
+                MessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessageMessage
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- input row -->
+        <form class="chat-input-row">
+          <input class="chat-input" placeholder="Write a message..." />
+          <button class="btn btn-ghost" style="width: 106px; height:48px;" type="submit">Send</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Правая колонка -->
+    <aside class="op-right">
+      <!-- Order Completed + рейтинг -->
+          <article class="op-card op-count" style="height: 214px;">
           <div class="count-head">
-            <span class="clock"></span>
+            <img src="../images/clock.png" alt="" style="width: 24px; height: 24px;" >
             <div>
               <div class="op-info-title">You have 1 day to confirm order</div>
-              <div class="op-info-muted">Time remaining: 0 days, 21 hours, 19 minutes, 54 seconds</div>
+              <div class="op-info-muted">Time remaining:<span style="color: white;"> 0 days, 21 hours, 19 minutes, 54 seconds</span></div>
             </div>
           </div>
           <button class="act block act-positive">Confirm Order</button>
-          <button class="act block act-neutral-ghost">Cancel order &amp; Refund funds</button>
+          <button class="act block act-neutral-ghost">Cancel order & Refund funds</button>
         </article>
 
-        <!-- Buyer -->
-        <article class="op-card op-buyer">
+      <!-- Статус: Shipped -->
+       
+
+      <article class="op-card op-buyer">
           <div class="buyer-head">
-            <div class="buyer-ava"></div>
+            <div class="buyer-ava"><img src="../images/avatar2.png" alt="Buyer Avatar" class="avatar"></div>
             <div class="buyer-meta">
               <div class="buyer-row">
                 <span class="buyer-name">Buyer_Username123</span>
-                <span class="buyer-score">18/1/4</span>
-                <span class="buyer-tag">Buyer</span>
+                <span class="v-stats">
+              <span class="v-pos">18</span>
+              <span class="v-neu">1</span>
+              <span class="v-neg">4</span>
+            </span>
+                <span class="buyer-tag" style="background-color: #424E8B; width: 59px;height: 28px;">Buyer</span>
               </div>
               <div class="buyer-sub">Member since June 25, 2024</div>
             </div>
           </div>
-          <button class="op-pill wide">View PGP Public Key</button>
+          <button class="op-pill wide" style="width: 397px;height: 40px;">View PGP Public Key</button>
         </article>
 
-        <!-- Escrow (short) -->
-        <article class="op-card op-escrow op-escrow-short">
-          <div class="op-escrow-head"><span class="dot"></span>Escrow Protection active for this order!</div>
-        </article>
-      </aside>
-    </div>
+       
+
+      <!-- Escrow -->
+      <div class="right-card escrow">
+        <div class="rc-row">
+          <img src="../images/dot.png" alt="" style="width: 8px;height: 8px; margin-bottom: 5px;" class="rc-ico">
+          <h3 class="rc-title">Escrow Protection active for this order!</h3>
+        </div>
+      </div>
+    </aside>
   </div>
 </section>
-
-
 
 
 

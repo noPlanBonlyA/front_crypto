@@ -27,7 +27,7 @@
 
     <!-- Back кнопка -->
     <a href="../index.html" class="back-btn">
-      <span class="back-icon" aria-hidden="true"></span>
+     <img src="../images/VlevoHeader.png" style="width: 7px; height: 9px;" alt="arrow left">
       Back to Market
     </a>
 
@@ -95,6 +95,7 @@
               <a class="pm-link" href="./MyOrder1.html">
                 <img class="pm-ico" src="../images/orderImg.png" alt="">
                 <span>Orders</span>
+                
               </a>
             </li>
             <li>
@@ -193,6 +194,231 @@
 
 
 
+
+<!-- Listings (only bottom block) -->
+<section class="vendor-listings">
+  <div class="vl-container">
+
+    <!-- Left menu -->
+    <aside class="vl-sidebar">
+      
+      <nav class="sidebar">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Listings</a></li>
+        <li><a href="#">Advertisement</a></li>
+        <li><a href="#">Orders<img src="../images/1.png" style="width: 22px;height: 20px; margin-left: 7px;"></a></li>
+        <li><a href="#">Notifications<img src="../images/1.png" style="width: 22px;height: 20px; margin-left: 7px;"></a></li>
+        <li><a href="#">Conversations</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </nav>
+    </aside>
+
+    <!-- Main -->
+    <section class="create-listing">
+  <div class="cl-wrap">
+
+    <h2 class="cl-title">Create Listing</h2>
+
+    <!-- Toggle: Physical / Digital -->
+    <div class="cl-toggle" style="width: 1016px;">
+      <button class="cl-toggle-btn" type="button">
+        <img src="../images/box.png" alt="" class="cl-toggle-ico" style="width: 20px; height: 20px;"/>
+        Physical Product
+      </button>
+      <button class="cl-toggle-btn is-active"  type="button">
+        <img src="../images/world.png" alt="" class="cl-toggle-ico" style="width: 20px; height: 20px;" />
+        Digital Product
+      </button>
+    </div>
+
+    <!-- Form grid -->
+    <div class="cl-grid" style="width: 1016px;">
+      <!-- Left column -->
+      <div class="cl-left">
+        <label class="cl-label">Product Name</label>
+        <input class="cl-input" type="text" placeholder="">
+
+        <label class="cl-label">Description</label>
+        <textarea class="cl-textarea" rows="8"></textarea>
+
+        <label class="cl-label">Terms &amp; Conditions</label>
+        <textarea class="cl-textarea" rows="9"></textarea>
+      </div>
+
+      <!-- Right column -->
+      <aside class="cl-right">
+
+        <div class="cl-field">
+          <label class="cl-label">Category</label>
+          <button class="cl-select"><span>Category</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
+        </div>
+
+        <div class="cl-field">
+          <label class="cl-label">Subcategory</label>
+          <button class="cl-select"><span>Category</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
+        </div>
+
+        <div class="cl-field cl-price">
+          <div>
+            <label class="cl-label">Price</label>
+            <input class="cl-input" type="text">
+          </div>
+          <div>
+            <label class="cl-label">Currency</label>
+            <button class="cl-select"><span>KMF</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
+          </div>
+        </div>
+
+        <div class="cl-field cl-price">
+          <div>
+            <label class="cl-label">Stock</label>
+            <input class="cl-input" type="text">
+          </div>
+          <div>
+            <label class="cl-label"> </label>
+            <button class="cl-select" style="margin-top:34px"><span>Item (units)</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
+          </div>
+        </div>
+
+        <div class="cl-field">
+          <label class="cl-label">Escrow Type</label>
+          <button class="cl-select"><span>Escrow</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
+        </div>
+
+        <div class="cl-field cl-files">
+          <label class="cl-label">Select Main Image</label>
+          <div class="cl-file-row">
+            <input class="cl-input" type="text" value="imagename.jpg">
+            <button class="cl-btn-sm">Browse</button>
+          </div>
+
+          <label class="cl-label mt-16">Select Extra Images</label>
+          <div class="cl-file-row">
+            <input class="cl-input" type="text" value="">
+            <button class="cl-btn-sm">Browse</button>
+          </div>
+          <p class="cl-hint">You can select up to 2 additional images</p>
+        </div>
+
+      </aside>
+    </div>
+
+
+
+<div class="cl-auto"><div class="cl-auto-right" style="width: 570px;">
+        <p class="cl-auto-head">When enabled, the auto-dispatch system will:</p>
+        <ul class="cl-auto-list">
+          <li>Automatically send digital items to buyers immediately after payment</li>
+          <li>Send each line from the "Auto Dispatch Notes" as a separate message</li>
+          <li>Each line should contain one digital item (key, code, or download link)</li>
+          <li>Items will be sent in the order they are listed</li>
+        </ul>
+        <p class="cl-auto-head">Important: Enter each digital item on a new line. Once an item is sent, it will be removed from the list.</p>
+      </div>
+      
+
+      <div class="cl-auto-left"><div class="cl-field">
+          <label class="cl-label">Auto Dispatch</label>
+          <button class="cl-select"><span>Yes</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
+        </div>
+        <label class="cl-label">Enter one item per line. Each order will consume one line.</label>
+        <textarea class="cl-textarea" rows="6"></textarea>
+      </div>
+      
+    </div>
+
+
+
+    
+    <!-- Shipping -->
+    <h3 class="cl-subtitle">Shipping</h3>
+    <div class="cl-ship-grid">
+      <div class="cl-ship-left">
+        <label class="cl-label">Origin Country</label>
+        <button class="cl-select"><span>Category</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
+
+        <label class="cl-label mt-16">Ships To</label>
+        <div class="cl-multiselect">
+          <div class="cl-ms-col">
+            <span>Worldwide</span>
+            <span>Europe</span>
+            <span>Oceania</span>
+            <span>Africa</span>
+            <span>Africa</span>
+            <span>Africa</span>
+          </div>
+          <div class="cl-ms-sep"></div>
+        </div>
+        <p class="cl-hint">Hold CTRL/CMD to select multiple countries</p>
+      </div>
+
+      <div class="cl-ship-right">
+        <div class="cl-ship-head">
+          <span>Shipping Methods</span>
+          <span>Price</span>
+          <span>Currency</span>
+        </div>
+
+        <!-- 5 rows -->
+        <div class="cl-ship-rows">
+          <div class="cl-ship-row">
+            <input class="cl-input" placeholder="Method Name">
+            <input class="cl-input" placeholder="">
+            <button class="cl-select"><span>KMF</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
+          </div>
+          <div class="cl-ship-row">
+            <input class="cl-input" placeholder="Method Name">
+            <input class="cl-input" placeholder="">
+            <button class="cl-select"><span>KMF</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
+          </div>
+          <div class="cl-ship-row">
+            <input class="cl-input" placeholder="Method Name">
+            <input class="cl-input" placeholder="">
+            <button class="cl-select"><span>KMF</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
+          </div>
+          <div class="cl-ship-row">
+            <input class="cl-input" placeholder="Method Name">
+            <input class="cl-input" placeholder="">
+            <button class="cl-select"><span>KMF</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
+          </div>
+          <div class="cl-ship-row">
+            <input class="cl-input" placeholder="Method Name">
+            <input class="cl-input" placeholder="">
+            <button class="cl-select"><span>KMF</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Automated message -->
+    <div class="cl-auto" style="gap: 30px;"><div class="cl-auto-right">
+        <p class="cl-auto-head">Use automated message to show information after purchase. It should include:</p>
+        <ul class="cl-auto-list">
+          <li>Required address format</li>
+          <li>Any specific shipping instructions</li>
+          <li>Expected processing time</li>
+        </ul>
+      </div>
+      <div class="cl-auto-left">
+        <label class="cl-label">Automated Message</label>
+        <textarea class="cl-textarea" rows="6"></textarea>
+      </div>
+      
+    </div>
+
+    <!-- Submit -->
+    <button class="cl-submit" type="button">Create Listing</button>
+
+  </div>
+</section>
+  </div>
+</section>
+
+
+
 <!-- чекбокс-свитч для мобильного меню -->
 
 
@@ -203,7 +429,7 @@
     <div class="mnav-head">
       <a class="mnav-logo" href="../index.html"><img src="../images/main_logo.png" alt="awazon market"></a>
       <label for="navToggle" class="mnav-close" aria-label="Close menu"><span></span><span></span></label>
-    </div>
+    </div> 
 
     <!-- ИКОНКИ ДЕЙСТВИЙ -->
     <div class="mnav-actions mnav-actions--row">

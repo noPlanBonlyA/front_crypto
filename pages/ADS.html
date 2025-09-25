@@ -27,7 +27,7 @@
 
     <!-- Back кнопка -->
     <a href="../index.html" class="back-btn">
-      <span class="back-icon" aria-hidden="true"></span>
+     <img src="../images/VlevoHeader.png" style="width: 7px; height: 9px;" alt="arrow left">
       Back to Market
     </a>
 
@@ -95,6 +95,7 @@
               <a class="pm-link" href="./MyOrder1.html">
                 <img class="pm-ico" src="../images/orderImg.png" alt="">
                 <span>Orders</span>
+                
               </a>
             </li>
             <li>
@@ -190,187 +191,228 @@
     </div>
   </section>
 
-  
 
 
 
 
 
 
+  <section class="profilepage container">
+  <div class="pp-grid">
+    <!-- ЛЕВОЕ МЕНЮ -->
+    <aside class="pp-menu card" style="height: 320px; padding: 0px; border-radius: 0px;">
+      <ul class="pp-menu__list">
+        <li><a class="pp-link" href="./MyProfile.html"><img src="../images/profileImg.png" alt=""> <span>Profile</span></a></li>
+        <li class="is-active"><a class="pp-link" href="./MyOrder1.html"><img src="../images/orderImg.png" alt=""> <span>Orders</span></a></li>
+        <li><a class="pp-link" href="./Wallet.html"><img src="../images/walletImg.png" alt=""> <span>Wallet</span></a></li>
+        <li><a class="pp-link" href="./Settings.html"><img src="../images/settingsIMG.png" alt=""> <span>Settings</span></a></li>
+        <li><a class="pp-link" href="./Notif.html"><img src="../images/motifIMG.png" alt=""> <span>Jabber Notifications</span></a></li>
+        <li><a class="pp-link" href="./Afilate.html"><img src="../images/afilateIMG.png" alt=""> <span>Affiliate System</span></a></li>
+      </ul>
+    </aside>
 
-  <section class="vendor-dark create-listing">
-  <div class="cl-wrap">
-    <h2 class="cl-title">Create Listing</h2>
+    <!-- ПРАВАЯ КОЛОНКА -->
+    
+    <!-- ПРАВАЯ ЧАСТЬ -->
+    <main class="wallet-main" style="width: 1000px;">
+        <h1 class="orders-title">My orders</h1>
+        <div class="vd-cards">
+      <div class="vd-card">
+        <div class="vd-card__num">15</div>
+        <div class="vd-card__label">Total Orders</div>
+      </div>
+      <div class="vd-card">
+        <div class="vd-card__num">0</div>
+        <div class="vd-card__label">Pending Orders</div>
+      </div>
+      <div class="vd-card vd-card--accent">
+        <div class="vd-card__num">2</div>
+        <div class="vd-card__label">Completed Orders</div>
+      </div>
+      <div class="vd-card">
+        <div class="vd-card__num">1</div>
+        <div class="vd-card__label">Refunded & Canceled</div>
+      </div>
 
-    <!-- Toggle -->
-    <div class="cl-toggle">
-      <button class="cl-toggle-btn is-active">
-        <span class="cl-ico">+</span> Physical Product
-      </button>
-      <button class="cl-toggle-btn cl-outline">
-        <span class="cl-ico">+</span> Digital Product
-      </button>
+    </div>
+    <div style="width: 420px;">
+         <div class="msg-search1">
+        <input class="msg-search1__input" type="text" placeholder="Search by username..." style="width: 420px; height: 40px;"/>
+        <button class="msg-search1__btn" type="button" aria-label="Search">
+          <img style="width: 24px; height: 24px;"src="../images/search.png" alt="" />
+        </button>
     </div>
 
-    <!-- Top grid -->
-    <div class="cl-grid">
-      <!-- left -->
-      <div class="cl-left">
-        <label class="cl-label" for="name">Product Name</label>
-        <input class="cl-input" id="name" type="text" placeholder=""/>
-
-        <label class="cl-label" for="desc">Description</label>
-        <textarea class="cl-input cl-textarea-lg" id="desc"></textarea>
-
-        <label class="cl-label" for="terms">Terms &amp; Conditions</label>
-        <textarea class="cl-input cl-textarea-xl" id="terms"></textarea>
-      </div>
-
-      <!-- right -->
-      <div class="cl-right">
-        <div class="cl-field">
-          <label class="cl-label">Category</label>
-          <div class="cl-select"><span>Category</span></div>
-        </div>
-
-        <div class="cl-field">
-          <label class="cl-label">Subcategory</label>
-          <div class="cl-select"><span>Category</span></div>
-        </div>
-
-        <div class="cl-field cl-price">
-          <div>
-            <label class="cl-label">Price</label>
-            <input class="cl-input" type="text" />
-          </div>
-          <div>
-            <label class="cl-label">Currency</label>
-            <div class="cl-select"><span>KMF</span></div>
-          </div>
-        </div>
-
-        <div class="cl-field cl-price">
-          <div>
-            <label class="cl-label">Stock</label>
-            <input class="cl-input" type="text" />
-          </div>
-          <div>
-            <label class="cl-label">Item (units)</label>
-            <div class="cl-select"><span>Item (units)</span></div>
-          </div>
-        </div>
-
-        <div class="cl-field">
-          <label class="cl-label">Escrow Type</label>
-          <div class="cl-select"><span>Escrow</span></div>
-        </div>
-
-        <div class="cl-files">
-          <label class="cl-label">Select Main Image</label>
-          <div class="cl-file-row">
-            <input class="cl-input" type="text" value="imagename.jpg" />
-            <button class="cl-btn-sm">Browse</button>
-          </div>
-
-          <label class="cl-label">Select Extra Images</label>
-          <div class="cl-file-row">
-            <input class="cl-input" type="text" placeholder=""/>
-            <button class="cl-btn-sm">Browse</button>
-          </div>
-          <p class="cl-help">You can select up to 2 additional images</p>
-        </div>
-      </div>
+    
+     <section class="orders-body2">
+        
+   
+          
+      <nav class="orders-tabs">
+        <a class="ot-link is-underline" href="#">All</a>
+        <a class="ot-link" href="#">Pending</a>
+        <a class="ot-link" href="#">Shipped</a>
+        <a class="ot-link" href="#">Disputed</a>
+        <a class="ot-link" href="#">Completed</a>
+        <a class="ot-link" href="#">Cancelled</a>
+      </nav><button class="cl-select" style=" margin-left:200px;width:224px;background-color: #101012; border-color: #1C1C21;"><span style="width: 224px;">10 per page</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
+        <button class="cl-btn-sm" style="width:100px;background-color: #424E8B;">Browse</button>
     </div>
 
-    <!-- Auto dispatch info + input -->
-    <div class="cl-grid cl-gap-24">
-      <div class="cl-info">
-        <h4 class="cl-info-title">When enabled, the auto-dispatch system will:</h4>
-        <ul class="cl-info-list">
-          <li>Automatically send digital items to buyers immediately after payment</li>
-          <li>Send each line from the “Auto Dispatch Notes” as a separate message</li>
-          <li>Each line should contain one digital item (key, code, or download link)</li>
-          <li>Items will be sent in the order they are listed</li>
-        </ul>
-        <p class="cl-info-strong">
-          Important: Enter each digital item on a new line. Once an item is sent, it will be removed from the list.
-        </p>
-      </div>
-
-      <div>
-        <label class="cl-label">Auto Dispatch</label>
-        <div class="cl-select mb8"><span>Yes</span></div>
-        <p class="cl-help mb8">Enter one item per line. Each order will consume one line.</p>
-        <textarea class="cl-input cl-textarea-md" placeholder="Auto Dispatch Notes"></textarea>
-      </div>
-    </div>
-
-    <!-- Shipping -->
-    <h3 class="cl-subtitle">Shipping</h3>
-    <div class="cl-ship-grid">
-      <div class="cl-ship-left">
-        <label class="cl-label">Origin Country</label>
-        <div class="cl-select"><span>Category</span></div>
-
-        <label class="cl-label mt16">Ships To</label>
-        <div class="cl-multiselect"></div>
-        <p class="cl-help">Hold CTRL/CMD to select multiple countries</p>
-      </div>
-
-      <div class="cl-ship-right">
-        <div class="cl-ship-head">
-          <span>Shipping Methods</span><span>Price</span><span>Currency</span>
+    <!-- Карточка заказа -->
+     <article class="order-card">
+      <img class="order-thumb" src="../images/telegram_premium.png" alt="">
+      <div class="order-main">
+        <div class="order-top">
+          <div class="order-top__left"><span class="badge status pending-buyer">Pending Buyer</span></div>
+          <button class="btn-view">View Order</button>
         </div>
-
-        <div class="cl-ship-rows">
-          <div class="cl-ship-row">
-            <input class="cl-input" value="Instant Delivery" />
-            <input class="cl-input cl-w96" value="0.01" />
-            <div class="cl-select cl-w136"><span>KMF</span></div>
-          </div>
-
-          <div class="cl-ship-row">
-            <input class="cl-input" placeholder="Method Name" />
-            <input class="cl-input cl-w96" placeholder="" />
-            <div class="cl-select cl-w136"><span>KMF</span></div>
-          </div>
-
-          <div class="cl-ship-row">
-            <input class="cl-input" placeholder="Method Name" />
-            <input class="cl-input cl-w96" placeholder="" />
-            <div class="cl-select cl-w136"><span>KMF</span></div>
-          </div>
-
-          <div class="cl-ship-row">
-            <input class="cl-input" placeholder="Method Name" />
-            <input class="cl-input cl-w96" placeholder="" />
-            <div class="cl-select cl-w136"><span>KMF</span></div>
+        <div class="order-mid">
+          <h3 class="order-title">Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds</h3>
+          <div class="order-spec">
+            <div >Price: 5.00 $ / unit</div>
+            <div >Quantity: 10 units</div>
+            <div>Delivery Method: Instant Delivery (0.01 $)</div>
+            <div>Order Date: 17.08.2025 | 10:48</div>
           </div>
         </div>
+        <div class="order-right">
+         <div class="order-sum">0.00014115 LTC / 16.54$</div>
+          <div class="order-id" style="display:flex;"><div class="order-timer" style="margin-right: 242px;">Time remaining: 1 day 23 hours 53 minutes</div>Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
+        </div>
       </div>
-    </div>
+    </article>
 
-    <!-- Automated message -->
-    <div class="cl-auto">
-      <div class="cl-auto-card">
-        <div class="cl-info-title">Use automated message to show information after purchase. It should include:</div>
-        <ul class="cl-info-list">
-          <li>Delivery method details</li>
-          <li>Expected processing time</li>
-          <li>Any specific instructions for digital delivery</li>
-        </ul>
+    <!-- 2. Pending Vendor -->
+    <article class="order-card">
+      <img class="order-thumb" src="../images/telegram_premium.png" alt="">
+      <div class="order-main">
+        <div class="order-top">
+          <div class="order-top__left"><span class="badge status pending-vendor">Pending Vendor</span></div>
+          <button class="btn-view">View Order</button>
+        </div>
+        <div class="order-mid">
+          <h3 class="order-title">Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds</h3>
+          <div class="order-spec">
+            <div >Price: 5.00 $ / unit</div>
+            <div >Quantity: 10 units</div>
+            <div>Delivery Method: Instant Delivery (0.01 $)</div>
+            <div>Order Date: 17.08.2025 | 10:48</div>
+          </div>
+          
+        </div>
+        
+        <div class="order-right">
+            
+          <div class="order-sum">0.00014115 LTC / 16.54$</div>
+          <div class="order-id" style="display:flex;"><div class="order-timer" style="margin-right: 242px;">Time remaining: 1 day 23 hours 53 minutes</div>Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
+        </div>
       </div>
+    </article>
 
-      <div class="cl-auto-right">
-        <label class="cl-label">Automated Message</label>
-        <textarea class="cl-input cl-textarea-md"></textarea>
+    <!-- 3. Shipped -->
+    <article class="order-card">
+      <img class="order-thumb" src="../images/telegram_premium.png" alt="">
+      <div class="order-main">
+        <div class="order-top">
+          <div class="order-top__left"><span class="badge status shipped">Shipped</span></div>
+          <button class="btn-view">View Order</button>
+        </div>
+        <div class="order-mid">
+          <h3 class="order-title">Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds</h3>
+          <div class="order-spec">
+            <div >Price: 5.00 $ / unit</div>
+            <div >Quantity: 10 units</div>
+            <div>Delivery Method: Instant Delivery (0.01 $)</div>
+            <div>Order Date: 17.08.2025 | 10:48</div>
+          </div>
+        </div>
+        <div class="order-right">
+         <div class="order-sum">0.00014115 LTC / 16.54$</div>
+          <div class="order-id" style="display:flex;"><div class="order-timer" style="margin-right: 242px;">Time remaining: 1 day 23 hours 53 minutes</div>Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
+        
+        </div>
       </div>
-    </div>
+    </article>
 
-    <!-- Submit -->
-    <div class="cl-submit">Create Listing</div>
+    <!-- 4. Disputed -->
+    <article class="order-card">
+      <img class="order-thumb" src="../images/telegram_premium.png" alt="">
+      <div class="order-main">
+        <div class="order-top">
+          <div class="order-top__left"><span class="badge status disputed">Disputed</span></div>
+          <button class="btn-view">View Order</button>
+        </div>
+        <div class="order-mid">
+          <h3 class="order-title">Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds</h3>
+          <div class="order-spec">
+            <div >Price: 5.00 $ / unit</div>
+            <div >Quantity: 10 units</div>
+            <div>Delivery Method: Instant Delivery (0.01 $)</div>
+            <div>Order Date: 17.08.2025 | 10:48</div>
+          </div>
+        </div>
+        <div class="order-right">
+          <div class="order-sum">0.00014115 BTC / 16.54$</div>
+          <div class="order-id">Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. Cancelled -->
+    <article class="order-card">
+      <img class="order-thumb" src="../images/telegram_premium.png" alt="">
+      <div class="order-main">
+        <div class="order-top">
+          <div class="order-top__left"><span class="badge status cancelled">Cancelled</span></div>
+          <button class="btn-view">View Order</button>
+        </div>
+        <div class="order-mid">
+          <h3 class="order-title">Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds</h3>
+          <div class="order-spec">
+            <div >Price: 5.00 $ / unit</div>
+            <div >Quantity: 10 units</div>
+            <div>Delivery Method: Instant Delivery (0.01 $)</div>
+            <div>Order Date: 17.08.2025 | 10:48</div>
+          </div>
+        </div>
+        <div class="order-right">
+          <div class="order-sum">0.00014115 BTC / 16.54$</div>
+          <div class="order-id">Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. Completed -->
+    <article class="order-card">
+      <img class="order-thumb" src="../images/telegram_premium.png" alt="">
+      <div class="order-main">
+        <div class="order-top">
+          <div class="order-top__left"><span class="badge status completed">Completed</span></div>
+          <button class="btn-view">View Order</button>
+        </div>
+        <div class="order-mid">
+          <h3 class="order-title">Telegram Premium Gift 12 Months | High Quality Instant Delivery | No refunds</h3>
+          <div class="order-spec">
+            <div >Price: 5.00 $ / unit</div>
+            <div >Quantity: 10 units</div>
+            <div>Delivery Method: Instant Delivery (0.01 $)</div>
+            <div>Order Date: 17.08.2025 | 10:48</div>
+          </div>
+        </div>
+        <div class="order-right">
+          <div class="order-sum">0.00014115 BTC / 16.54$</div>
+          <div class="order-id">Order ID: 56d50e0e-7e7c-11f0-823e-bc2411fb2e0e</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- дублируй .order-card для остальных записей -->
+  </section>
+    </main>
   </div>
 </section>
+
 
 <!-- чекбокс-свитч для мобильного меню -->
 

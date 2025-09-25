@@ -27,7 +27,7 @@
 
     <!-- Back кнопка -->
     <a href="../index.html" class="back-btn">
-      <span class="back-icon" aria-hidden="true"></span>
+     <img src="../images/VlevoHeader.png" style="width: 7px; height: 9px;" alt="arrow left">
       Back to Market
     </a>
 
@@ -95,6 +95,7 @@
               <a class="pm-link" href="./MyOrder1.html">
                 <img class="pm-ico" src="../images/orderImg.png" alt="">
                 <span>Orders</span>
+                
               </a>
             </li>
             <li>
@@ -190,130 +191,139 @@
     </div>
   </section>
 
-  
 
-  
+  <div class="wrapper">
+      <nav class="sidebar">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Listings</a></li>
+        <li><a href="#">Advertisement</a></li>
+        <li><a href="#">Orders<img src="../images/1.png" style="width: 22px;height: 20px; margin-left: 7px;"></a></li>
+        <li><a href="#">Notifications<img src="../images/1.png" style="width: 22px;height: 20px; margin-left: 7px;"></a></li>
+        <li><a href="#">Conversations</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </nav>
 
- <h1 class="h">Conversations</h1>
+    <!-- ===== Settings ===== -->
+   <div class="dm-layout" style="height: 360px;">
+    <!-- ЛЕВАЯ КОЛОНКА: список диалогов -->
+    <aside class="dm-list card">
+      <div class="dm-search">
+        <input class="dm-search__input" placeholder="Search by username..." />
+        <button class="dm-search__btn" type="button" aria-label="Search" style="background-color: #262630;">
+          <span class="dm-ico-magnify" aria-hidden="true"></span>
+        </button>
+      </div>
 
-    <section class="convos">
-      <!-- LEFT: conversations list -->
-      <aside class="list">
-        <div class="search">
-          <input class="search__input" placeholder="Search by username..." />
-          <button class="search__btn" aria-label="Search">
-            <span class="ico ico-search"></span>
-          </button>
-        </div>
-
-        <ul class="threads">
-          <li class="thread">
-            <span class="ava"></span>
-            <div class="thread__meta">
-              <div class="thread__top">
-                <span class="username muted">username</span>
-                <time class="time muted">Today</time>
-              </div>
-              <div class="last">Last Message</div>
+      <ul class="dm-threads">
+        <li class="dm-thread">
+          <div class="dm-ava" aria-hidden="true"></div>
+          <div class="dm-thread__main">
+            <div class="dm-thread__left">
+              <span class="dm-uname dm-muted">username</span>
+              <span class="dm-preview">Last Message</span>
             </div>
-          </li>
-
-          <li class="thread">
-            <span class="ava"></span>
-            <div class="thread__meta">
-              <div class="thread__top">
-                <span class="username muted">username</span>
-                <time class="time muted">07.05.2025</time>
-              </div>
-              <div class="last muted">You: Last Message</div>
-            </div>
-          </li>
-
-          <li class="thread">
-            <span class="ava"></span>
-            <div class="thread__meta">
-              <div class="thread__top">
-                <span class="username muted">username</span>
-                <time class="time muted">07.05.2025</time>
-              </div>
-              <div class="last">Last Message</div>
-            </div>
-          </li>
-        </ul>
-      </aside>
-
-      <!-- RIGHT: chat pane -->
-      <section class="chat">
-        <header class="chat__head">
-          <div class="chat__user">
-            <span class="ava"></span>
-            <span class="chat__username">Username</span>
+            <time class="dm-meta dm-muted">Today</time>
           </div>
-          <button class="btn btn-ghost">
-            <span class="ico ico-trash"></span>
-            Delete Conversation
-          </button>
-        </header>
+        </li>
 
-        <div class="rule"></div>
-
-        <div class="chat__scroll">
-          <article class="msg">
-            <span class="ava"></span>
-            <div class="msg__wrap">
-              <div class="msg__meta">
-                <span class="muted">username</span>
-                <time class="muted">23:15 25.08.2025</time>
-              </div>
-              <div class="msg__text">Message</div>
+        <li class="dm-thread">
+          <div class="dm-ava"></div>
+          <div class="dm-thread__main">
+            <div class="dm-thread__left">
+              <span class="dm-uname dm-muted">username</span>
+              <span class="dm-preview dm-muted">You: Last Message</span>
             </div>
-          </article>
+            <time class="dm-meta dm-muted">07.05.2025</time>
+          </div>
+        </li>
 
-          <article class="msg">
-            <span class="ava"></span>
-            <div class="msg__wrap">
-              <div class="msg__meta">
-                <span class="muted">username</span>
-                <time class="muted">23:15 25.08.2025</time>
-              </div>
-              <div class="msg__text">Message</div>
+        <li class="dm-thread">
+          <div class="dm-ava"></div>
+          <div class="dm-thread__main">
+            <div class="dm-thread__left">
+              <span class="dm-uname dm-muted">username</span>
+              <span class="dm-preview">Last Message</span>
             </div>
-          </article>
+            <time class="dm-meta dm-muted">07.05.2025</time>
+          </div>
+        </li>
+      </ul>
+    </aside>
 
-          <article class="msg">
-            <span class="ava"></span>
-            <div class="msg__wrap">
-              <div class="msg__meta">
-                <span class="muted">username</span>
-                <time class="muted">23:15 25.08.2025</time>
-              </div>
-              <div class="msg__text">Message</div>
-            </div>
-          </article>
-
-          <article class="msg">
-            <span class="ava"></span>
-            <div class="msg__wrap">
-              <div class="msg__meta">
-                <span class="muted">username</span>
-                <time class="muted">23:15 25.08.2025</time>
-              </div>
-              <div class="msg__text">
-                MessageMessageMessageMessageMessageMessageMessageMessageMessage
-                MessageMessageMessageMessageMessageMessageMessageMessageMessage
-              </div>
-            </div>
-          </article>
+    <!-- ПРАВАЯ КОЛОНКА: открытый диалог -->
+    <main class="dm-chat card" style="padding: 0px;">
+      <!-- Хед диалога -->
+      <div class="dm-chat-head">
+        <div class="dm-chat-head__left">
+          <div class="dm-ava"></div>
+          <div class="dm-tt">Username</div>
         </div>
 
-        <div class="rule"></div>
+        <button class="dm-btn-ghost" type="button" style="background-color: #262630;">
+          
+          <img src="../images/trash.png" alt="" style="width: 16px; height: 16px;">
+          Delete Conversation
+        </button>
+      </div>
+      <div class="dm-divider"></div>
 
-        <form class="composer" onsubmit="return false;">
-          <input class="composer__input" placeholder="Write a message..." />
-          <button class="btn">Send</button>
-        </form>
-      </section>
-    </section>
+      <!-- Лента сообщений -->
+      <div class="dm-feed">
+        <!-- message row -->
+        <div class="dm-row">
+          <div class="dm-ava"></div>
+          <div class="dm-row__main">
+            <div class="dm-row__meta">
+              <span class="dm-row__name dm-muted">username</span>
+              <time class="dm-meta dm-muted">23:15 25.08.2025</time>
+            </div>
+            <div class="dm-row__text">Message</div>
+          </div>
+        </div>
+
+        <div class="dm-row">
+          <div class="dm-ava"></div>
+          <div class="dm-row__main">
+            <div class="dm-row__meta">
+              <span class="dm-row__name dm-muted">username</span>
+              <time class="dm-meta dm-muted">23:15 25.08.2025</time>
+            </div>
+            <div class="dm-row__text">Message</div>
+          </div>
+        </div>
+
+        <div class="dm-row">
+          <div class="dm-ava"></div>
+          <div class="dm-row__main">
+            <div class="dm-row__meta">
+              <span class="dm-row__name dm-muted">username</span>
+              <time class="dm-meta dm-muted">23:15 25.08.2025</time>
+            </div>
+            <div class="dm-row__text">
+              MessageMessageMessageMessageMessageMessageMessageMessageMessage
+              MessageMessageMessageMessageMessageMessageMessageMessageMessage
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dm-divider" style="    margin-top: 190px;"></div>
+
+      <!-- Композер -->
+      <form class="dm-composer" onsubmit="return false;">
+        <input class="dm-input" placeholder="Write a message..." />
+        <button class="dm-btn" type="submit" style="width: 108px; height: 48px; background-color: #262630;">Send</button>
+      </form>
+    </main>
+  </div>
+  </div>
+  </div>
+  
+  
+
 
 
 

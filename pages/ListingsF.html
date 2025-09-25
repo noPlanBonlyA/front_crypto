@@ -27,7 +27,7 @@
 
     <!-- Back кнопка -->
     <a href="../index.html" class="back-btn">
-      <span class="back-icon" aria-hidden="true"></span>
+     <img src="../images/VlevoHeader.png" style="width: 7px; height: 9px;" alt="arrow left">
       Back to Market
     </a>
 
@@ -95,6 +95,7 @@
               <a class="pm-link" href="./MyOrder1.html">
                 <img class="pm-ico" src="../images/orderImg.png" alt="">
                 <span>Orders</span>
+                
               </a>
             </li>
             <li>
@@ -218,7 +219,7 @@
       <!-- Первая карточка -->
       <article class="card">
         <header class="card-head">
-          <div class="icon dot"></div>
+          <img src="../images/house.png" style="width: 20px;height: 20px;">
           <div class="card-title">Home Page ADS</div>
           <span class="pill2">7 days duration</span>
         </header>
@@ -230,51 +231,69 @@
           <li>5 random products displayed</li>
         </ul>
 
-        <div class="currency-container">
-          <div class="currency-value">
-            <span class="amount">128.76</span>
-            <span class="currency-symbol">$</span>
-          </div>
-          <div class="price-wrapper">
-            <div class="crypto-info">
-              <span class="crypto-icon">BTC</span>
-              <span class="crypto-value">128.76$ ~ 0.0000197</span>
-              <select class="currency-select">
-                <option>USD</option>
-                <option>EUR</option>
-                <option>BTC</option>
-              </select>
-            </div>
-          </div>
-        </div>
+        <div class="pv-priceRow" style="gap:15px">
+        <div class="pv-price" style="font-size: 25px;">39.99 $</div>
+
+        <div class="price-dropdown">
+  <input type="checkbox" id="toggleDropdown4" class="dropdown-toggle" >
+  <label for="toggleDropdown4" class="dropdown-btn" style="height: 40px;">
+    <div class="icon-container">
+      <img class="icon" src="../images/btc_logo.png" alt="">
+      <span style="font-size: 14px;">BTC</span>
+    </div>
+    <span class="span2" style="    margin-left: 60px;
+    font-size: 14px;">39.99$~0.0000197 BTC</span>
+    <img class="chevron" src="../images/chev_down.png" alt="">
+  </label>
+  
+  <div class="dropdown-content">
+    <ul>
+      <li><img class="icon" src="../images/btc_logo.png" alt=""><a class = "help2">BTC</a> 0.00000197</li>
+      <li><img class="icon" src="../images/litecoin_logo.png" alt=""><a class = "help2">LTC</a> 2.54122001</li>
+      <li><img class="icon" src="../images/monero_logo.png" alt=""><a class = "help2">XMR</a> 0.00005419</li>
+      <li><img class="icon" src="../images/btc_cash_logo.png" alt=""><a class = "help2">BCH</a> 0.000012511</li>
+    </ul>
+  </div>
+</div>
+      </div>
 
         <div class="form-group">
-          <label for="product">Select Product</label>
-          <select id="product" class="custom-select">
-            <option>Choose a product...</option>
-            <option>Product 1</option>
-            <option>Product 2</option>
-            <option>Product 3</option>
-          </select>
+           <label for="product">Select Product</label>
+          <button class="cl-select" style="background-color: #101012; width: 430px;height: 40px; border: 1px solid #1C1C21;"><span>Choose Product</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
+        
         </div>
 
         <div class="form-group">
           <label for="payment">Pay with</label>
-          <select id="payment" class="custom-select">
-            <option value="btc">
-              <img src="../images/btc_logo.png" alt="Bitcoin" class="icon"> Bitcoin
-            </option>
-            <option value="eth">
-              <img src="eth-icon.png" alt="Ethereum" class="icon"> Ethereum
-            </option>
-          </select>
+          <div class="pv-priceRow">
+        <div class="price-dropdown">
+  <input type="checkbox" id="toggleDropdown2" class="dropdown-toggle">
+  <label for="toggleDropdown2" class="dropdown-btn" style="width: 435px;">
+    <div class="icon-container">
+      <img class="icon" src="../images/btc_logo.png" alt="">
+      <span>Bitcoin</span>
+    </div>
+    <span class="span2" style="margin-left: 190px;">0.0000197 BTC</span>
+    <img class="chevron" src="../images/chev_down.png" alt="">
+  </label>
+  
+  <div class="dropdown-content">
+    <ul>
+      <li><img class="icon" src="../images/btc_logo.png" alt=""><a class = "help2" style="    margin-right: 250px;">BTC</a> 0.00000197</li>
+      <li><img class="icon" src="../images/litecoin_logo.png" alt=""><a class = "help2" style="    margin-right: 250px;">LTC</a> 2.54122001</li>
+      <li><img class="icon" src="../images/monero_logo.png" alt=""><a class = "help2" style="    margin-right: 250px;">XMR</a> 0.00005419</li>
+      <li><img class="icon" src="../images/btc_cash_logo.png" alt=""><a class = "help2" style="    margin-right: 250px;">BCH</a> 0.000012511</li>
+    </ul>
+  </div>
+</div>
+      </div>
         </div>
       </article>
 
       <!-- Вторая карточка -->
       <article class="card">
         <header class="card-head">
-          <div class="icon dot"></div>
+          <img src="../images/big_search.png" style="width: 20px;height: 20px;">
           <div class="card-title">Home Page ADS</div>
           <span class="pill2">7 days duration</span>
         </header>
@@ -286,44 +305,60 @@
           <li>5 random products displayed</li>
         </ul>
 
-        <div class="currency-container">
-          <div class="currency-value">
-            <span class="amount">128.76</span>
-            <span class="currency-symbol">$</span>
-          </div>
-          <div class="price-wrapper">
-            <div class="crypto-info">
-              <span class="crypto-icon">BTC</span>
-              <span class="crypto-value">128.76$ ~ 0.0000197</span>
-              <select class="currency-select">
-                <option>USD</option>
-                <option>EUR</option>
-                <option>BTC</option>
-              </select>
-            </div>
-          </div>
-        </div>
+       <div class="pv-priceRow" style="gap:15px">
+        <div class="pv-price" style="font-size: 25px;">39.99 $</div>
 
-        <div class="form-group">
-          <label for="product">Select Product</label>
-          <select id="product" class="custom-select">
-            <option>Choose a product...</option>
-            <option>Product 1</option>
-            <option>Product 2</option>
-            <option>Product 3</option>
-          </select>
+        <div class="price-dropdown">
+  <input type="checkbox" id="toggleDropdown3" class="dropdown-toggle" >
+  <label for="toggleDropdown3" class="dropdown-btn" style="height: 40px;">
+    <div class="icon-container">
+      <img class="icon" src="../images/btc_logo.png" alt="">
+      <span style="font-size: 14px;">BTC</span>
+    </div>
+    <span class="span2" style="    margin-left: 60px;
+    font-size: 14px;">39.99$~0.0000197 BTC</span>
+    <img class="chevron" src="../images/chev_down.png" alt="">
+  </label>
+  
+  <div class="dropdown-content">
+    <ul>
+      <li><img class="icon" src="../images/btc_logo.png" alt=""><a class = "help2">BTC</a> 0.00000197</li>
+      <li><img class="icon" src="../images/litecoin_logo.png" alt=""><a class = "help2">LTC</a> 2.54122001</li>
+      <li><img class="icon" src="../images/monero_logo.png" alt=""><a class = "help2">XMR</a> 0.00005419</li>
+      <li><img class="icon" src="../images/btc_cash_logo.png" alt=""><a class = "help2">BCH</a> 0.000012511</li>
+    </ul>
+  </div>
+</div>
+      </div>
+        <div class="form-group" >
+            <label for="product">Select Product</label>
+          <button class="cl-select" style="background-color: #101012; width: 430px;height: 40px; border: 1px solid #1C1C21;"><span>Choose Product</span><img class="chev" src="../images/StrelkaVniz.png" alt=""></button>
         </div>
 
         <div class="form-group">
           <label for="payment">Pay with</label>
-          <select id="payment" class="custom-select">
-            <option value="btc">
-              <img src="../images/btc_logo.png" alt="Bitcoin" class="icon"> Bitcoin
-            </option>
-            <option value="eth">
-              <img src="eth-icon.png" alt="Ethereum" class="icon"> Ethereum
-            </option>
-          </select>
+          <div class="pv-priceRow">
+        <div class="price-dropdown">
+  <input type="checkbox" id="toggleDropdown" class="dropdown-toggle">
+  <label for="toggleDropdown" class="dropdown-btn" style="width: 435px;">
+    <div class="icon-container">
+      <img class="icon" src="../images/btc_logo.png" alt="">
+      <span>Bitcoin</span>
+    </div>
+    <span class="span2" style="margin-left: 190px;">0.0000197 BTC</span>
+    <img class="chevron" src="../images/chev_down.png" alt="">
+  </label>
+  
+  <div class="dropdown-content">
+    <ul>
+      <li><img class="icon" src="../images/btc_logo.png" alt=""><a class = "help2" style="    margin-right: 250px;">BTC</a> 0.00000197</li>
+      <li><img class="icon" src="../images/litecoin_logo.png" alt=""><a class = "help2" style="    margin-right: 250px;">LTC</a> 2.54122001</li>
+      <li><img class="icon" src="../images/monero_logo.png" alt=""><a class = "help2" style="    margin-right: 250px;">XMR</a> 0.00005419</li>
+      <li><img class="icon" src="../images/btc_cash_logo.png" alt=""><a class = "help2" style="    margin-right: 250px;">BCH</a> 0.000012511</li>
+    </ul>
+  </div>
+</div>
+      </div>
         </div>
       </article>
     </div>
