@@ -100,7 +100,7 @@ html,body{
 }
 
 .nav-link{
-    margin-top: 7px;
+    margin-top: -7px;
   color:var(--muted);
   text-decoration:none;
   font-size:16px;
@@ -2747,6 +2747,9 @@ ALL PRODUCTS
     gap: 8px;
   }
 
+
+
+
   .item-price{
     width: 100%;
     justify-content: flex-end;
@@ -2912,6 +2915,12 @@ ALL PRODUCTS
 .rc-text{color:#767676;font:400 16px/1.5 ;margin:0}
 .rc-note{color:#767676;font:400 16px/1 ;margin-top:8px}
 .dot1{width:8px;height:8px;border-radius:50%;background:#1EFF00;display:inline-block;margin-right:8px}
+
+
+
+
+
+
 
 /* ----- адаптив ----- */
 @media (max-width: 1200px){
@@ -6902,12 +6911,46 @@ body{margin:0;background:var(--bg);color:var(--text);
 }
 
 .orders-body2 {
+  
   display: flex;
   gap: 20px;
   padding: 20px;
 }
+.view {
+  display: inline-flex;
+  align-items: center;
+  
+  line-height: 1;
+}
+
+.view__item,
+.view__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+a{
+  color: transparent;                /* без фиолетового visited */
+  outline: none;  
+}
+.view__link {
+  text-decoration: none;         /* без подчёркивания */
+  color: inherit;                /* без фиолетового visited */
+  outline: none;                 /* без фокуса-рамки */
+  -webkit-tap-highlight-color: transparent; /* без вспышки на мобильных */
+}
+
+.view__link:hover,
+.view__link:focus,
+.view__link:active,
+.view__link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Карточка заказа */
 .order-card {
+      margin-bottom: 10px;
   background-color: #101012;
   border-radius: 8px;
   padding: 16px;
@@ -7025,6 +7068,7 @@ body{margin:0;background:var(--bg);color:var(--text);
 
 /* Сумма заказа */
 .order-sum {
+      width: 100%;
   font-size: 16px;
   font-weight: 500;
   color: #D7D7D7;
@@ -7032,6 +7076,10 @@ body{margin:0;background:var(--bg);color:var(--text);
 
 /* ID заказа */
 .order-id {
+      width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   font-size: 14px;
   color: #767676;
 }
@@ -9587,4 +9635,44 @@ img, video { max-width: 100%; height: auto; }
 @media (max-width: 480px){
   /* На очень узких — список меню в одну колонку */
   .wrapper > .sidebar ul{ grid-template-columns: 1fr; }
+}
+
+/* Карточка — контейнер позиционирования */
+.product-card{
+  position: relative;
+  cursor: pointer;
+}
+
+/* Оверлей-ссылка на всю карточку */
+.product-card__link{
+  position: absolute;
+  inset: 0;
+  display: block;
+  z-index: 1;           /* поверх контента карточки */
+  border-radius: inherit;
+}
+
+/* ВАЖНО: НЕ трогаем overlay-ссылку в общем правиле */
+.product-card :is(a, button):not(.product-card__link){
+  position: relative;
+  z-index: 2;           /* если внутри будут свои кнопки/ссылки */
+}
+
+
+.vendor-card{
+  position: relative;
+  cursor: pointer;
+}
+.vendor-card__link{
+  position: absolute;
+  inset: 0;              /* занимает всю карточку */
+  display: block;
+  z-index: 1;            /* выше контента */
+  border-radius: inherit;
+}
+
+/* Внутренние кнопки/ссылки остаются кликабельными поверх оверлея */
+.vendor-card :is(a,button):not(.vendor-card__link){
+  position: relative;
+  z-index: 2;
 }
