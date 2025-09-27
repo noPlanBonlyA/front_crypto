@@ -145,7 +145,7 @@ html,body{
   display:inline-flex; align-items:center; justify-content:center;
 }
 .icon-btn img{
-  width:24px; height:24px;   /* было 22px */
+  width:32px; height:32px;   /* было 22px */
   opacity:.9;
 }
 .icon-btn:hover img{ opacity:1; }
@@ -1296,7 +1296,7 @@ html,body{
   .price{ order:3; }
 
   /* компактные размеры */
-  .avatar{ width:28px; height:28px; }
+  
   .balance-pill{ height:36px; padding:0 10px; }
   .balance-pill .btc-ico{ width:16px; height:16px; }
   .balance-pill span:not(.chevron){ font-size:13px; }
@@ -1330,7 +1330,7 @@ html,body{
   .actions, .username{ display:none !important; } /* экономим место */
 
   /* компактные размеры */
-  .avatar{ width:28px; height:28px; }
+  
   .balance-pill{ height:36px; padding:0 10px; }
   .balance-pill .btc-ico{ width:16px; height:16px; }
   .balance-pill span:not(.chevron){ font-size:13px; }
@@ -1666,7 +1666,9 @@ html,body{
 }
 
 /* немного ужмём шапку дропа (если она у тебя есть) */
-.user .username{ font-size: 14px; }
+.user .username{ 
+  margin-bottom: 5px;
+  font-size: 16px; }
 
 
 /* ====== MOBILE DROPS: avatar / price / categories ====== */
@@ -2644,9 +2646,9 @@ ALL PRODUCTS
 /* select 220×34: без переноса, иконка справа абсолютно */
 .select.small{
   position: relative;
-  width:220px; height:34px;
+  width:210px; height:34px;
   display:flex; align-items:center; justify-content:space-between;
-  padding:10px 36px 10px 16px;   /* место под шеврон */
+  padding:10px 36px 10px 10px;   /* место под шеврон */
   background:#101012; border:1px solid #1C1C21; border-radius:4px;
   color:#D7D7D7; font-size:14px; line-height:14px;
   white-space: nowrap;           /* не переносить */
@@ -2887,7 +2889,7 @@ ALL PRODUCTS
 .chat-list{list-style:none;margin:0;padding:0}
 .msg{display:flex;gap:16px;padding:16px 24px;border-top:1px solid #1C1C21}
 .msg:first-child{border-top:0}
-.avatar{width:40px;height:40px;border-radius:50%;background:#D9D9D9;flex:0 0 40px}
+
 .msg-body{flex:1;min-width:0}
 .msg-meta{display:flex;justify-content:space-between;gap:8px;color:#767676}
 .user{font:400 16px/1 }
@@ -3002,9 +3004,7 @@ ALL PRODUCTS
   display:flex; gap:16px; padding:16px 24px; align-items:flex-start;
   border-bottom:1px solid #1C1C21;
 }
-.avatar{
-  width:40px; height:40px; border-radius:50%; background:#D9D9D9; flex:0 0 40px;
-}
+
 .msg-body{ flex:1; min-width:0 }
 .msg-meta{
   display:flex; justify-content:space-between; gap:8px; align-items:flex-end;
@@ -3140,7 +3140,6 @@ ALL PRODUCTS
   .op-subtitle{ font-size:18px; }
   .chat-card{ overflow:hidden; }
   .msg{ padding:14px 12px; gap:12px; }
-  .avatar{ width:34px; height:34px; }
   .msg-meta{ font-size:13px; }
   .msg .text{ font-size:15px; line-height:1.45; }
 
@@ -3202,16 +3201,16 @@ ALL PRODUCTS
 .pp-ava{ width:114px; height:114px; border-radius:6px; object-fit:cover; }
 .pp-info{ display:flex; flex-direction:column; gap:10px; }
 .pp-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
-.pp-name{ font:500 20px/1 ; color:#fff; margin:0; }
+.pp-name{ font:500 20px/1 Sf; color:#fff; margin:0; }
 .pp-score{ background:#1C1C21; border-radius:4px; padding:4px 8px; font:400 14px/1 ; color:#4FFA82; }
-.pp-sub{ color:#767676; font:400 16px/1 ; }
+.pp-sub{ color:#767676; font:400 16px/1 Sf; }
 .btn-ghost.small{ background:#111114; color:#B2B4C4; border:none; padding:10px 16px; border-radius:4px; font:400 14px/1 ; cursor:pointer; }
-.pp-last{ color:#767676; font:400 16px/1 ; white-space:nowrap; }
+.pp-last{ color:#767676; font:400 16px/1 Sf ; white-space:nowrap; }
 
 /* отзывы */
 .pp-feedback{ padding:16px; }
 .pf-head{ display:flex; align-items:center; justify-content:flex-start; margin-bottom:12px; }
-.pf-title{ font:500 24px/1 ; color:#fff; margin:0; }
+.pf-title{ font:500 24px/1  ; color:#fff; margin:0; }
 .btn-chip{ display:inline-flex; align-items:center; gap:10px; padding:8px 24px; background:#111114; border-radius:4px; color:#B2B4C4; font:400 14px/1 ; text-decoration:none; }
 
 .pf-list{ list-style:none; margin:0; padding:0; }
@@ -4029,7 +4028,7 @@ ALL PRODUCTS
 }
 .aff-kpi .note {
     width: 292px;
-    margin-top: 22px;
+    margin-top: 25px;
     color: var(--muted);
     font: 400 11px / 150% "SF Pro Display", system-ui, sans-serif;
 }
@@ -5143,7 +5142,7 @@ b{
 .card{
   background:#101012;
   border-radius:8px;
-  padding:16px;
+  padding:0px;
   flex-direction:column; gap:8px;
 }
 .card--promo{ border:1px solid rgba(142,142,248,.25); box-shadow:0 0 9px rgba(16,42,126,.3); }
@@ -5996,7 +5995,9 @@ b{
 .order-page .op-wrap{max-width:1050px;margin:0 auto;padding:0 16px 56px}
 .op-back{display:inline-flex;align-items:center;gap:8px;margin:16px 0 4px;color:#B2B4C4;text-decoration:none;font-size:16px}
 .op-back-ico{width:10px;height:10px;border:2px solid #B2B4C4;border-left:0;border-bottom:0;transform:rotate(-135deg);display:inline-block}
-.op-title{margin:0 0 12px}
+.op-title{
+  font:400 24px/1 'SF Pro Display';
+  margin:0 0 12px}
 .op-grid{display:grid;grid-template-columns:1fr 431px;gap:24px}
 .op-left{display:flex;flex-direction:column;gap:16px}
 .op-right{display:flex;flex-direction:column;gap:16px}
@@ -6028,7 +6029,6 @@ b{
 .op-chat-scroll{max-height:450px;overflow:auto;padding-bottom:8px}
 .msg{display:flex;gap:16px;padding:16px 40px 16px 40px}
 .msg+.msg{border-top:1px solid var(--line)}
-.avatar{width:40px;height:40px;border-radius:50%;background:#D9D9D9}
 .msg-body{flex:1}
 .msg-head{display:flex;justify-content:space-between;gap:8px}
 .msg-head .user{color:var(--grey);font-size:16px}
@@ -6051,11 +6051,11 @@ b{
 .op-buyer{padding:16px;display:flex;flex-direction:column;gap:16px}
 .buyer-head{display:flex;gap:16px;align-items:center}
 .buyer-ava{width:40px;height:40px;border-radius:60px;background:#333}
-.buyer-meta{display:flex;flex-direction:column;gap:6px}
+.buyer-meta{display:flex;flex-direction:column;gap:0px}
 .buyer-row{display:flex;align-items:center;gap:12px}
 .buyer-name{font-weight:500;color:#B2B4C4}
 .buyer-score{font-size:14px;color:var(--success)}
-.buyer-tag{background:var(--accent);color:#D7D7D7;border-radius:6px;padding:4px 10px;font:500 12px/1 var(--font)}
+.buyer-tag{background:var(--accent);color:#D7D7D7;border-radius:6px;padding:0px 7px;font:500 12px/1 var(--font)}
 .buyer-sub{font-size:14px;color:var(--grey)}
 .op-pill.wide{width:100%}
 
@@ -7040,6 +7040,7 @@ a{
 }
 
 .order-title {
+  font:400 18px/1 'SF Pro Display';
   font-size: 18px;
   color: #D7D7D7;
 }
@@ -7114,6 +7115,7 @@ a{
 }
 
 .orders-head h1 {
+  font:400 24px/1 'SF Pro Display';
   color: #FFFFFF;
   font-size: 24px;
   font-weight: 600;

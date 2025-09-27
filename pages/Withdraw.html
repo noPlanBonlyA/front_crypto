@@ -303,16 +303,24 @@ color: #B2B4C4;
       <div class="withd-grid">
         
         <!-- форма -->
-        <form class="withd-form card" autocomplete="off">
-          <label class="f-label">Currency</label>
-          <div class="f-field">
-            <select class="f-input">
-              <option>XMR</option>
-              <option>BTC</option>
-              <option>LTC</option>
-              <option>BCH</option>
-            </select>
-          </div>
+        <form class="cselect" autocomplete="off">
+<label class="f-label">Currency</label>
+          <details class="cselect" style="width: 360px;">
+    <summary class="cselect__btn">
+      <span class="cselect__label">XMR</span>
+      <img class="cselect__chev" src="../images/StrelkaVniz.png" alt="">
+    </summary>
+
+    <ul class="cselect__menu">
+      <li class="cselect__opt is-active"><button type="button">XMR</button></li>
+      <li class="cselect__opt"><button type="button">BTC</button></li>
+      <li class="cselect__opt"><button type="button">LTC</button></li>
+      <li class="cselect__opt"><button type="button">BCH</button></li>
+     
+    </ul>
+  </details>
+          
+          
 
           <label class="f-label">Amount</label>
           <div class="f-field">
