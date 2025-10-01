@@ -222,7 +222,7 @@
   </li>
 
   <li>
-    <a class="pm-link" href="./Notif.html">
+    <a class="pm-link" href="./defNotif.html">
       <img class="pm-ico" src="../images/motifIMG.png" alt="">
       <span>Jabber Notifications</span>
     </a>
@@ -316,9 +316,9 @@
   <img class="pv-vendor__avatar" src="../images/avatar2.png" alt="Seller_Username123 avatar">
   <div class="pv-vendor__meta">
     <div class="pv-vendor__row">
-      <div class="pv-vendor__name">Seller_Username123</div>
+      <a href="./VendorPage.html" class="pv-vendor__name" style="text-decoration: none; color: inherit; cursor: pointer;">Seller_Username123</a>
       <div class="pv-vendor__score">
-        <span>18</span><span>1</span><span>2</span>
+        <span>18</span><span style="color:gray;">/ 1 /</span><span>2</span>
       </div>
 
         </div>
@@ -425,9 +425,12 @@
   </section>
 
   <!-- вкладки под товаром -->
+  <input type="radio" name="pvTab" id="pvTab1" class="pv-tab-input" checked>
+  <input type="radio" name="pvTab" id="pvTab2" class="pv-tab-input">
+  
   <section class="pv-tabs">
-    <button class="pv-tab pv-tab--active">Product Feedback</button>
-    <button class="pv-tab">Terms &amp; Conditions</button>
+    <label for="pvTab1" class="pv-tab pv-tab--active">Product Feedback</label>
+    <label for="pvTab2" class="pv-tab">Terms &amp; Conditions</label>
   </section>
 
   <hr class="pv-sep">
@@ -439,10 +442,10 @@
       <div class="pv-review__avatar"></div>
       <div class="pv-review__body">
         <div class="pv-review__head">
-          <span class="pv-review__user muted">username</span>
+          <a href="./MyProfile.html" class="pv-review__user muted" style="text-decoration: none; color: inherit; cursor: pointer;">username</a>
           <span class="pv-bullet muted">100 units | 10.08.2025</span>
         </div>
-        <div class="pv-review__tag pv-review__tag--pos">+</div>
+        <div class="pv-review__tag pv-review__tag--pos" style="margin-left: 30px;">+</div>
         <p class="pv-review__text">Review example, it might be longer</p>
       </div>
     </article>
@@ -453,10 +456,10 @@
       <div class="pv-review__avatar"></div>
       <div class="pv-review__body">
         <div class="pv-review__head">
-          <span class="pv-review__user muted">username</span>
+          <a href="./MyProfile.html" class="pv-review__user muted" style="text-decoration: none; color: inherit; cursor: pointer;">username</a>
           <span class="pv-bullet muted">100 units | 10.08.2025</span>
         </div>
-        <div class="pv-review__tag pv-review__tag--neutral">•</div>
+        <div class="pv-review__tag pv-review__tag--neutral" style="margin-left:30px">•</div>
         <p class="pv-review__text">Neutral Feedback</p>
       </div>
     </article>
@@ -467,10 +470,10 @@
       <div class="pv-review__avatar"></div>
       <div class="pv-review__body">
         <div class="pv-review__head">
-          <span class="pv-review__user muted">username</span>
+          <a href="./MyProfile.html" class="pv-review__user muted" style="text-decoration: none; color: inherit; cursor: pointer;">username</a>
           <span class="pv-bullet muted">100 units | 10.08.2025</span>
         </div>
-        <div class="pv-review__tag pv-review__tag--neg">−</div>
+        <div class="pv-review__tag pv-review__tag--neg" style="margin-left:30px;">−</div>
         <p class="pv-review__text">Negative Feedback</p>
       </div>
     </article>
@@ -481,10 +484,10 @@
       <div class="pv-review__avatar"></div>
       <div class="pv-review__body">
         <div class="pv-review__head">
-          <span class="pv-review__user muted">username</span>
+          <a href="./MyProfile.html" class="pv-review__user muted" style="text-decoration: none; color: inherit; cursor: pointer;">username</a>
           <span class="pv-bullet muted">100 units | 10.08.2025</span>
         </div>
-        <div class="pv-review__tag pv-review__tag--neg">−</div>
+        <div class="pv-review__tag pv-review__tag--neg" style="margin-left:30px">−</div>
         <p class="pv-review__text">Negative Feedback</p>
       </div>
     </article>
@@ -532,14 +535,6 @@
     </ul>
   </div>
 </nav>
-
-
-
-
-
-
-
-
 
 </body>
 </html>

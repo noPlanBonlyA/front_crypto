@@ -1,25 +1,29 @@
 /* --- SF Pro Display (локально) --- */
 @font-face {
   font-family: "SF Pro Display";
-  src: url("fonts/SFProDisplay-Regular.woff2") format("woff2"),
-       url("fonts/SFProDisplay-Regular.woff") format("woff");
+  src: url("../fonts/San Francisco Pro Display/SF-Pro-Display-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "SF Pro Display";
-  src: url("fonts/SFProDisplay-Medium.woff2") format("woff2"),
-       url("fonts/SFProDisplay-Medium.woff") format("woff");
+  src: url("../fonts/San Francisco Pro Display/SF-Pro-Display-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "SF Pro Display";
-  src: url("fonts/SFProDisplay-Semibold.woff2") format("woff2"),
-       url("fonts/SFProDisplay-Semibold.woff") format("woff");
+  src: url("../fonts/San Francisco Pro Display/SF-Pro-Display-Semibold.otf") format("opentype");
   font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/San Francisco Pro Display/SF-Pro-Display-Bold.otf") format("opentype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -36,6 +40,14 @@
   --grey:#767676;
   --accent:#424E8B;
 }
+
+/* Применяем SF Pro Display ко всем элементам */
+*,
+*::before,
+*::after {
+  font-family: 'SF Pro Display', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
 html,body{
   height:100%;
   background:var(--bg);
@@ -1011,7 +1023,7 @@ html,body{
   background: #15151A; color: #E6E8F2; font-weight: 500;
   margin-bottom: 8px;
 }
-.pm-ico{ width: 18px; height: 18px; border-radius: 50%; object-fit: cover; }
+.pm-ico{ width: 18px; height: 18px; border-radius: 0; object-fit: cover; }
 .pm-base{ opacity: .9; }
 .pm-sum{ margin-left: auto; opacity: .9; }
 .pm-split{ margin: 0 6px; color: #767676; }
@@ -2142,10 +2154,14 @@ ALL PRODUCTS
 .pv-form__cta{grid-column: 3 / 4; height:40px; padding:11px 10px; border-radius:6px}
 
 .pv-tabs{display:flex;gap:24px;margin-top:32px}
+.pv-tab-input{display:none}
 .pv-tab{
-  background:none;border:none;color:#fff;font-size:18px;font-weight:500;cursor:default
+  background:none;border:none;color:var(--muted-2);font-size:18px;font-weight:500;cursor:pointer;transition:color 0.2s ease
 }
-.pv-tab:not(.pv-tab--active){color:var(--muted-2)}
+#pvTab1:checked ~ .pv-tabs label[for="pvTab1"],
+#pvTab2:checked ~ .pv-tabs label[for="pvTab2"]{
+  color:#fff
+}
 .pv-sep{border:0;border-top:1px solid var(--line);margin:16px 0 0}
 
 .pv-reviews{margin-top:16px}
@@ -2205,7 +2221,7 @@ ALL PRODUCTS
 /* две колонки и отступы */
 .pv.pv--narrow .pv-main{
   grid-template-columns: 340px 1fr;  /* было 400px */
-  gap: 24px;                          /* было 40px */
+  gap: 50px;                          /* было 40px */
 }
 
 /* карточка фото чуть меньше */
@@ -2232,7 +2248,7 @@ ALL PRODUCTS
 .pv.pv--narrow .pv-form__cta{height:38px; padding:9px 10px}
 
 /* табы и ревью — меньше вертикали */
-.pv.pv--narrow .pv-tabs{margin-top:24px}
+.pv.pv--narrow .pv-tabs{margin-top:50px}
 .pv.pv--narrow .pv-review__text{margin-top:6px}
 .pv.pv--narrow .pv-line{margin:20px 0}
 .pv.pv--narrow .pv-pager{margin-top:24px}
@@ -2565,9 +2581,11 @@ ALL PRODUCTS
 .vendor{font-size:14px; color:#B2B4C4}
 .item-remove{background:none;border:none;padding:0; line-height:0}
 
-.item-title{margin:0; font-size:18px; font-weight:400; color:#D7D7D7; line-height:1.5; max-width:525px}
+.item-title{margin:0; font-size:18px; font-weight:400; color:#D7D7D7; line-height:1.5; }
 
-.item-bottom{display:flex; align-items:flex-end; justify-content:space-between; gap:16px}
+.item-bottom{
+  margin-top:20px;
+  display:flex; align-items:flex-end; justify-content:space-between; gap:16px}
 .item-controls{display:flex; align-items:center; gap:16px}
 
 /* mini select 220x34 */
