@@ -335,12 +335,12 @@
 
     <!-- ПРАВАЯ КОЛОНКА -->
     <main class="ap-main">
-        <div class="ap-search1">
-    <input type="text" placeholder="Search..." />
-    <button aria-label="Search">
-      <img src="../images/search.png" alt="" />
-    </button>
-  </div>
+       <form class="search-field" id="search" action="/pages/search.html" method="get">
+  <input type="text" class="search-input" name="q" placeholder="Search..." />
+  <button class="search-btn" aria-label="Search" type="submit">
+    <img src="../images/search.png" alt="Search" class="search-icon">
+  </button>
+</form>
       <header class="ap-head">
         <h2>All Vendors</h2>
 

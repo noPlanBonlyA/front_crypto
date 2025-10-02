@@ -3028,7 +3028,7 @@ ALL PRODUCTS
   display:flex; justify-content:space-between; gap:8px; align-items:flex-end;
   color:#767676; font:400 14px/1;
 }
-.msg .text{ margin:0px 0 0; color:#D7D7D7; font:400 16px/1.5; word-break:break-word }
+.msg .text{ margin:0px 0 0; color:#D7D7D7; font:401 15px/1.5 Sf Pro Display; word-break:break-word }
 
 .chat-input-row{
   display:flex; gap:16px; padding:24px; align-items:center;
@@ -3218,12 +3218,12 @@ ALL PRODUCTS
 .pp-user{ display:flex; gap:16px; align-items:center; }
 .pp-ava{ width:114px; height:114px; border-radius:6px; object-fit:cover; }
 .pp-info{ display:flex; flex-direction:column; gap:10px; }
-.pp-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
-.pp-name{ font:500 20px/1 Sf; color:#fff; margin:0; }
+.pp-row{ display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.pp-name{ font:500 20px/1 Sf Pro Display; color:#fff; margin:0; }
 .pp-score{ background:#1C1C21; border-radius:4px; padding:4px 8px; font:400 14px/1 ; color:#4FFA82; }
-.pp-sub{ color:#767676; font:400 16px/1 Sf; }
+.pp-sub{ color:#767676; font:400 16px/1 Sf Pro Display; }
 .btn-ghost.small{ background:#111114; color:#B2B4C4; border:none; padding:10px 16px; border-radius:4px; font:400 14px/1 ; cursor:pointer; }
-.pp-last{ color:#767676; font:400 16px/1 Sf ; white-space:nowrap; }
+.pp-last{ color:#767676; font:400 16px/1 Sf Pro Display; white-space:nowrap; }
 
 /* отзывы */
 .pp-feedback{ padding:16px; }
@@ -3232,8 +3232,10 @@ ALL PRODUCTS
 .btn-chip{ display:inline-flex; align-items:center; gap:10px; padding:8px 24px; background:#111114; border-radius:4px; color:#B2B4C4; font:400 14px/1 ; text-decoration:none; }
 
 .pf-list{ list-style:none; margin:0; padding:0; }
-.pf-item + .pf-item{ border-top:1px solid #1C1C21; }
+.pf-item + .pf-item{  margin-top: 10px;}
 .pf-top{
+  border-top: 1px solid #1C1C21;
+  margin-top: 10px;
   display:flex; align-items:center; justify-content:space-between;
   padding:14px 0 6px;
 }
@@ -5701,7 +5703,7 @@ b{
   background: #101012; border: 1px solid #1C1C21; border-radius: 6px; padding: 16px;
 }
 .vendor-listings .vl-card-media {
-  width: 88px; height: 88px; border-radius: 6px; overflow: hidden; background: #0d0d0f;
+  width: 88px; height: 88px; border-radius: 6px; overflow: hidden; 
   display: flex; align-items: center; justify-content: center;
 }
 .vendor-listings .vl-card-media img { width: 72px; height: auto; display: block; }
@@ -9695,4 +9697,279 @@ img, video { max-width: 100%; height: auto; }
 .vendor-card :is(a,button):not(.vendor-card__link){
   position: relative;
   z-index: 2;
+}
+
+
+/* =====================================================
+   VENDOR PROFILE PAGE — MOBILE ADAPTATION
+   ===================================================== */
+
+/* Планшеты (≤1024px) */
+@media (max-width: 1024px) {
+  .vendor-profile-page {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  /* Профиль: уменьшаем сетку статистики */
+  .vendor-profile-page .card > div > div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    margin-left: 0 !important;
+  }
+  
+  .vendor-profile-page .card > div > div[style*="grid-template-columns: 1fr 1fr"] > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Листинги: 5 колонок -> 3 колонки */
+  .vendor-profile-page div[style*="grid-template-columns: repeat(5, 1fr)"] {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  
+  /* Сохраняем двухколоночную структуру внизу */
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] {
+    gap: 16px !important;
+  }
+}
+
+/* Планшеты средние (≤768px) */
+@media (max-width: 768px) {
+  .vendor-profile-page {
+    padding: 16px !important;
+  }
+  
+  /* Профиль: основной блок */
+  .vendor-profile-page .card:first-child > div {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  
+  /* Аватар */
+  .vendor-profile-page .card:first-child img[style*="width: 114px"] {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  /* Заголовок секции */
+  .vendor-profile-page h2[style*="font-size: 24px"] {
+    font-size: 20px !important;
+  }
+  
+  /* Имя продавца */
+  .vendor-profile-page h1[style*="font-size: 20px"] {
+    font-size: 18px !important;
+  }
+  
+  /* Кнопки профиля */
+  .vendor-profile-page .card:first-child button {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 40px !important;
+  }
+  
+  /* Листинги: 3 -> 2 колонки */
+  .vendor-profile-page div[style*="grid-template-columns: repeat(5, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  
+  /* Карточки продуктов на всю ширину */
+  .vendor-profile-page .product-card {
+    width: 100% !important;
+  }
+  
+  /* Две колонки внизу -> одна колонка */
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+/* Мобильные устройства (≤640px) */
+@media (max-width: 640px) {
+  .vendor-profile-page {
+    padding: 12px !important;
+  }
+  
+  /* Заголовки */
+  .vendor-profile-page h2[style*="font-size: 24px"],
+  .vendor-profile-page h2[style*="font-size: 20px"] {
+    font-size: 18px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  /* Профиль */
+  .vendor-profile-page .card:first-child {
+    padding: 14px !important;
+  }
+  
+  .vendor-profile-page .card:first-child h1 {
+    font-size: 17px !important;
+  }
+  
+  .vendor-profile-page .card:first-child img[style*="width"] {
+    width: 72px !important;
+    height: 72px !important;
+  }
+  
+  /* Бейджи */
+  .vendor-profile-page span[style*="background: #424E8B"][style*="padding: 4px 12px"] {
+    font-size: 11px !important;
+    padding: 4px 10px !important;
+  }
+  
+  .vendor-profile-page span[style*="background: #1C1C21"][style*="padding: 4px 8px"] {
+    font-size: 13px !important;
+  }
+  
+  /* Member since */
+  .vendor-profile-page div[style*="color: #767676"][style*="font-size: 16px"] {
+    font-size: 14px !important;
+  }
+  
+  /* Кнопки */
+  .vendor-profile-page button[style*="height: 34px"] {
+    height: 40px !important;
+    font-size: 13px !important;
+  }
+  
+  /* Статистические боксы */
+  .vendor-profile-page div[style*="background: #101012"][style*="padding: 16px"] {
+    padding: 14px !important;
+  }
+  
+  .vendor-profile-page div[style*="background: #101012"] > div[style*="display: flex"] {
+    font-size: 15px !important;
+  }
+  
+  .vendor-profile-page div[style*="background: #101012"] span[style*="font-size: 16px"] {
+    font-size: 15px !important;
+  }
+  
+  /* Описание */
+  .vendor-profile-page .card:nth-of-type(2) {
+    padding: 14px !important;
+  }
+  
+  .vendor-profile-page .card:nth-of-type(2) div[style*="background: #101012"] {
+    font-size: 15px !important;
+    padding: 12px !important;
+  }
+  
+  /* Листинги заголовок */
+  .vendor-profile-page .card:nth-of-type(3) > div:first-child {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+  
+  .vendor-profile-page .card:nth-of-type(3) a[style*="margin-left: 30px"] {
+    margin-left: 0 !important;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Листинги: 1 колонка */
+  .vendor-profile-page div[style*="grid-template-columns: repeat(5, 1fr)"] {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  
+  /* Карточки продуктов */
+  .vendor-profile-page .product-card__media {
+    height: 200px !important;
+  }
+  
+  .vendor-profile-page .product-card__title {
+    font-size: 15px !important;
+  }
+  
+  /* Another Market Statistics */
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] .card:first-of-type h2 {
+    font-size: 18px !important;
+  }
+  
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] .card:first-of-type > div > div {
+    padding: 14px 16px !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] .card:first-of-type > div > div > span:first-child {
+    flex: 1 1 100%;
+    margin-bottom: 8px;
+  }
+  
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] .card:first-of-type button {
+    margin-right: 8px !important;
+  }
+  
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] .card:first-of-type span[style*="font-size: 16px"] {
+    font-size: 15px !important;
+  }
+  
+  /* Recent Feedback */
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] .card:last-child h2 {
+    font-size: 18px !important;
+  }
+  
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] .card:last-child > div > div > div {
+    padding: 14px 0 !important;
+  }
+  
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] .card:last-child > div > div > div > div:first-child {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] .card:last-child span[style*="font-size: 14px"] {
+    font-size: 13px !important;
+  }
+  
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] .card:last-child p,
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] .card:last-child span[style*="font-size: 16px"] {
+    margin-left:5px;
+    font-size: 15px !important;
+  }
+  
+  /* Фикс иконок +/- */
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] .card:last-child > div > div > div > div:last-child {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+  
+  .vendor-profile-page > div[style*="grid-template-columns: 1fr 1fr"] .card:last-child div[style*="width: 20px"][style*="height: 20px"] {
+    flex-shrink: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* Очень маленькие устройства (≤380px) */
+@media (max-width: 380px) {
+  .vendor-profile-page {
+    padding: 10px !important;
+  }
+  
+  .vendor-profile-page .card {
+    padding: 12px !important;
+  }
+  
+  .vendor-profile-page h2 {
+    font-size: 16px !important;
+  }
+  
+  .vendor-profile-page h1 {
+    font-size: 15px !important;
+  }
+  
+  .vendor-profile-page .product-card__title {
+    font-size: 14px !important;
+  }
+  
+  .vendor-profile-page .product-card__media {
+    height: 180px !important;
+  }
 }

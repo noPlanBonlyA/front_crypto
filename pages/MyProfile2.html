@@ -257,20 +257,8 @@
 
 
 
-  <section class="profilepage container">
-  <div class="pp-grid">
-    <!-- ЛЕВОЕ МЕНЮ -->
-    <aside class="pp-menu card" style="height: 320px; padding: 0px; border-radius: 0px;">
-      <ul class="pp-menu__list">
-        <li><a class="pp-link" href="./MyProfile.html"><img src="../images/profileImg.png" alt=""> <span>Profile</span></a></li>
-        <li class="is-active"><a class="pp-link" href="./MyOrder1.html"><img src="../images/orderImg.png" alt=""> <span>Orders</span></a></li>
-        <li><a class="pp-link" href="./Wallet.html"><img src="../images/walletImg.png" alt=""> <span>Wallet</span></a></li>
-        <li><a class="pp-link" href="./Settings.html"><img src="../images/settingsIMG.png" alt=""> <span>Settings</span></a></li>
-        <li><a class="pp-link" href="./defNotif.html"><img src="../images/motifIMG.png" alt=""> <span>Jabber Notifications</span></a></li>
-        <li><a class="pp-link" href="./Afilate.html"><img src="../images/afilateIMG.png" alt=""> <span>Affiliate System</span></a></li>
-      </ul>
-    </aside>
-
+  <section class="profilepage container" style="max-width: 1248px;">
+  <div class="pp-grid" style="grid-template-columns: 1fr;">
     <!-- ПРАВАЯ КОЛОНКА -->
     <div class="pp-main">
       <!-- шапка профиля -->
@@ -286,9 +274,12 @@
   <span class="sc-neutral">10</span>
   <span class="sc-negative">4</span>
 </span>
-            <div class="pp-last" style="margin-left: 400px;">Last activity: 26 Aug, 2025</div></div>
+            <div class="pp-last" style="margin-left: 711px;">Last activity: 26 Aug, 2025</div></div>
             <div class="pp-sub">Member since 26 Aug, 2025 • 12 Purchases</div>
-            <button class="btn-ghost small" style="width: 160px;">Edit Profile</button>
+            <div style="gap:10px; margin-top: 20px;" >
+            <button class="btn-ghost small" style="width: 160px; height: 34px;">Write Messege</button>
+            <button class="btn-ghost small" style=" margin-left:10px;width: 160px; height: 34px;">PGP Public Key</button>
+            </div>
           </div>
         </div>
         
@@ -296,9 +287,9 @@
 
       <!-- отзывы -->
       <section class="pp-feedback card" style="background: none;">
-        <div class="pf-head">
+        <div class="pf-head" style="margin-top:30px">
           <h2 class="pf-title">Recent Feedback</h2>
-          <a class="btn-chip" href="./MyProfileFeedback.html" style="margin-left: 20px;">Write Messege</a>
+          <a class="btn-chip" href="./MyProfileFeedback.html" style="margin-left: 20px;">View All</a>
         </div>
 
         <ul class="pf-list">
