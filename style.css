@@ -9973,3 +9973,1144 @@ img, video { max-width: 100%; height: auto; }
     height: 180px !important;
   }
 }
+
+/* =========================
+   LOTTERY GAME STYLES
+   ========================= */
+
+/* Lottery Container */
+.lottery-container {
+  position: relative;
+  max-width: 1278px;
+  margin: 0 auto;
+  padding: 80px 24px 160px;
+  min-height: calc(100vh - 200px);
+}
+
+/* Lottery Game Title */
+.lottery-title {
+  position: absolute;
+  width: auto;
+  height: 33px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 144px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #FFFFFF;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Lottery ID */
+.lottery-id {
+  position: absolute;
+  width: auto;
+  height: 19px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 110px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #767676;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Lottery Description */
+.lottery-desc {
+  position: absolute;
+  width: 473px;
+  height: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 193px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  color: #D7D7D7;
+}
+
+/* Current Jackpot Badge */
+.lottery-jackpot-badge {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 24px;
+  gap: 10px;
+  position: absolute;
+  width: 317px;
+  height: 40px;
+  left: 50%;
+  transform: translateX(-158px);
+  top: 267px;
+  background: transparent;
+  border: 1px solid #424E8B;
+  filter: drop-shadow(0px 0px 16px rgba(79, 108, 250, 0.5));
+  border-radius: 32px;
+}
+
+.lottery-jackpot-text {
+  width: auto;
+  height: 18px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #FFFFFF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  white-space: nowrap;
+}
+
+/* Countdown Timer */
+.lottery-timer {
+    margin-left: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  gap: 7px;
+  position: absolute;
+  width: 251px;
+  height: 40px;
+  left: 50%;
+  transform: translateX(20px);
+  top: 267px;
+  border-radius: 6px;
+}
+
+.lottery-timer-icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.lottery-timer-text {
+  width: 226px;
+  height: 21px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #767676;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Prize Circles Container */
+.lottery-prizes {
+  position: absolute;
+  width: 760px;
+  left: 50%;
+  transform: translateX(-380px);
+  top: 363px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Prize Circle */
+.lottery-prize-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: #101012;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.lottery-prize-circle.jackpot {
+  border: 1px solid #424E8B;
+}
+
+.lottery-prize-label {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #D7D7D7;
+}
+
+.lottery-prize-amount {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: #FFFFFF;
+}
+
+.lottery-prize-amount.jackpot-text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+}
+
+/* Prize Indicators (dots) */
+.lottery-indicator {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.lottery-indicator.active {
+  background: #424E8B;
+}
+
+.lottery-indicator.inactive {
+  background: #D9D9D9;
+}
+
+/* 2 Matches indicators */
+.lottery-ind-2m-1 { left: 50%; transform: translateX(-347px); top: 491px; }
+.lottery-ind-2m-2 { left: 50%; transform: translateX(-338px); top: 491px; }
+.lottery-ind-2m-3 { left: 50%; transform: translateX(-329px); top: 491px; }
+.lottery-ind-2m-4 { left: 50%; transform: translateX(-320px); top: 491px; }
+.lottery-ind-2m-5 { left: 50%; transform: translateX(-311px); top: 491px; }
+.lottery-ind-2m-6 { left: 50%; transform: translateX(-302px); top: 491px; }
+
+/* 3 Matches indicators */
+.lottery-ind-3m-1 { left: 50%; transform: translateX(-187px); top: 491px; }
+.lottery-ind-3m-2 { left: 50%; transform: translateX(-178px); top: 491px; }
+.lottery-ind-3m-3 { left: 50%; transform: translateX(-169px); top: 491px; }
+.lottery-ind-3m-4 { left: 50%; transform: translateX(-160px); top: 491px; }
+.lottery-ind-3m-5 { left: 50%; transform: translateX(-151px); top: 491px; }
+.lottery-ind-3m-6 { left: 50%; transform: translateX(-142px); top: 491px; }
+
+/* 4 Matches indicators */
+.lottery-ind-4m-1 { left: 50%; transform: translateX(-26px); top: 491px; }
+.lottery-ind-4m-2 { left: 50%; transform: translateX(-17px); top: 491px; }
+.lottery-ind-4m-3 { left: 50%; transform: translateX(-8px); top: 491px; }
+.lottery-ind-4m-4 { left: 50%; transform: translateX(1px); top: 491px; }
+.lottery-ind-4m-5 { left: 50%; transform: translateX(10px); top: 491px; }
+.lottery-ind-4m-6 { left: 50%; transform: translateX(19px); top: 491px; }
+
+/* 5 Matches indicators */
+.lottery-ind-5m-1 { left: 50%; transform: translateX(134px); top: 491px; }
+.lottery-ind-5m-2 { left: 50%; transform: translateX(143px); top: 491px; }
+.lottery-ind-5m-3 { left: 50%; transform: translateX(152px); top: 491px; }
+.lottery-ind-5m-4 { left: 50%; transform: translateX(161px); top: 491px; }
+.lottery-ind-5m-5 { left: 50%; transform: translateX(170px); top: 491px; }
+.lottery-ind-5m-6 { left: 50%; transform: translateX(179px); top: 491px; }
+
+/* 6 Matches indicators */
+.lottery-ind-6m-1 { left: 50%; transform: translateX(294px); top: 491px; }
+.lottery-ind-6m-2 { left: 50%; transform: translateX(303px); top: 491px; }
+.lottery-ind-6m-3 { left: 50%; transform: translateX(312px); top: 491px; }
+.lottery-ind-6m-4 { left: 50%; transform: translateX(321px); top: 491px; }
+.lottery-ind-6m-5 { left: 50%; transform: translateX(330px); top: 491px; }
+.lottery-ind-6m-6 { left: 50%; transform: translateX(339px); top: 491px; }
+
+/* Number Selection Grid */
+.lottery-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 12px;
+  position: absolute;
+  width: 504px;
+  height: 280px;
+  left: 50%;
+  transform: translateX(-252px);
+  top: 577px;
+  background: #101012;
+  border-radius: 6px;
+}
+
+/* Number Row */
+.lottery-number-row {
+  width: 472px;
+  height: 40px;
+  display: flex;
+  gap: 8px;
+  flex: none;
+}
+
+/* Number Button */
+.lottery-number-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  width: 40px;
+  height: 40px;
+  background: #1C1C21;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  transition: all 0.2s ease;
+}
+
+.lottery-number-btn.selected {
+  background: #262630;
+  border: 1px solid #424E8B;
+}
+
+.lottery-number-btn:hover {
+  background: #262630;
+}
+
+/* Enter Lottery Button */
+.lottery-enter-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+  position: absolute;
+  width: 504px;
+  height: 40px;
+  left: 50%;
+  transform: translateX(-252px);
+  top: 881px;
+  background: #424E8B;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #F4F4F4;
+}
+
+.lottery-enter-btn:hover {
+  filter: brightness(1.1);
+}
+
+.lottery-enter-btn:active {
+  transform: translateX(-252px) translateY(1px);
+}
+
+/* Drawing History Button */
+.lottery-history-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 32px;
+  gap: 10px;
+  position: absolute;
+  width: 171px;
+  height: 35px;
+  right: 24px;
+  top: 144px;
+  background: #111114;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #B2B4C4;
+}
+
+.lottery-history-btn:hover {
+  background: #1C1C21;
+}
+
+/* Participating Message */
+.lottery-participating-msg {
+  position: absolute;
+  width: 310px;
+  height: 21px;
+  left: 50%;
+  transform: translateX(-155px);
+  top: 897px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* Selected Numbers Container */
+.lottery-selected-numbers {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-155px);
+  top: 934px;
+  display: flex;
+  gap: 13px;
+}
+
+/* Selected Number Button */
+.lottery-selected-num {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  width: 40px;
+  height: 40px;
+  background: #262630;
+  border: 1px solid #424E8B;
+  border-radius: 4px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  cursor: default;
+}
+
+/* =========================
+   LOTTERY MOBILE STYLES
+   ========================= */
+
+@media (max-width: 1300px) {
+  .lottery-container {
+    padding: 60px 16px 100px;
+  }
+  
+  .lottery-prizes {
+    width: 600px;
+    transform: translateX(-300px);
+    gap: 30px;
+  }
+  
+  .lottery-prize-circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .lottery-prize-amount {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 980px) {
+  .lottery-container {
+    padding: 40px 16px 80px;
+  }
+  
+  .lottery-id {
+    top: 60px;
+    font-size: 14px;
+  }
+  
+  .lottery-title {
+    top: 90px;
+    font-size: 24px;
+  }
+  
+  .lottery-history-btn {
+    right: 16px;
+    top: 90px;
+    font-size: 14px;
+    padding: 6px 20px;
+    width: auto;
+    height: 32px;
+  }
+  
+  .lottery-desc {
+    width: 90%;
+    max-width: 400px;
+    top: 130px;
+    font-size: 16px;
+  }
+  
+  .lottery-jackpot-badge {
+    width: 280px;
+    transform: translateX(-140px);
+    top: 195px;
+    height: 36px;
+    padding: 8px 16px;
+  }
+  
+  .lottery-jackpot-text {
+    font-size: 16px;
+  }
+  
+  .lottery-timer {
+    margin-left: 0px;
+    width: auto;
+    transform: translateX(-50%);
+    top: 245px;
+  }
+  
+  .lottery-timer-text {
+    font-size: 16px;
+    width: auto;
+  }
+  
+  .lottery-prizes {
+    width: 500px;
+    transform: translateX(-250px);
+    top: 310px;
+    gap: 20px;
+  }
+  
+  .lottery-prize-circle {
+    width: 85px;
+    height: 85px;
+  }
+  
+  .lottery-prize-label {
+    font-size: 11px;
+  }
+  
+  .lottery-prize-amount {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  
+  .lottery-prize-amount.jackpot-text {
+    font-size: 18px;
+  }
+  
+  /* Indicators positioning for tablet */
+  .lottery-ind-2m-1 { left: 50%; transform: translateX(-188px); top: 403px; }
+  .lottery-ind-2m-2 { left: 50%; transform: translateX(-179px); top: 403px; }
+  .lottery-ind-2m-3 { left: 50%; transform: translateX(-170px); top: 403px; }
+  .lottery-ind-2m-4 { left: 50%; transform: translateX(-161px); top: 403px; }
+  .lottery-ind-2m-5 { left: 50%; transform: translateX(-152px); top: 403px; }
+  .lottery-ind-2m-6 { left: 50%; transform: translateX(-143px); top: 403px; }
+  
+  .lottery-ind-3m-1 { left: 50%; transform: translateX(-83px); top: 403px; }
+  .lottery-ind-3m-2 { left: 50%; transform: translateX(-74px); top: 403px; }
+  .lottery-ind-3m-3 { left: 50%; transform: translateX(-65px); top: 403px; }
+  .lottery-ind-3m-4 { left: 50%; transform: translateX(-56px); top: 403px; }
+  .lottery-ind-3m-5 { left: 50%; transform: translateX(-47px); top: 403px; }
+  .lottery-ind-3m-6 { left: 50%; transform: translateX(-38px); top: 403px; }
+  
+  .lottery-ind-4m-1 { left: 50%; transform: translateX(22px); top: 403px; }
+  .lottery-ind-4m-2 { left: 50%; transform: translateX(31px); top: 403px; }
+  .lottery-ind-4m-3 { left: 50%; transform: translateX(40px); top: 403px; }
+  .lottery-ind-4m-4 { left: 50%; transform: translateX(49px); top: 403px; }
+  .lottery-ind-4m-5 { left: 50%; transform: translateX(58px); top: 403px; }
+  .lottery-ind-4m-6 { left: 50%; transform: translateX(67px); top: 403px; }
+  
+  .lottery-ind-5m-1 { left: 50%; transform: translateX(127px); top: 403px; }
+  .lottery-ind-5m-2 { left: 50%; transform: translateX(136px); top: 403px; }
+  .lottery-ind-5m-3 { left: 50%; transform: translateX(145px); top: 403px; }
+  .lottery-ind-5m-4 { left: 50%; transform: translateX(154px); top: 403px; }
+  .lottery-ind-5m-5 { left: 50%; transform: translateX(163px); top: 403px; }
+  .lottery-ind-5m-6 { left: 50%; transform: translateX(172px); top: 403px; }
+  
+  .lottery-ind-6m-1 { left: 50%; transform: translateX(232px); top: 403px; }
+  .lottery-ind-6m-2 { left: 50%; transform: translateX(241px); top: 403px; }
+  .lottery-ind-6m-3 { left: 50%; transform: translateX(250px); top: 403px; }
+  .lottery-ind-6m-4 { left: 50%; transform: translateX(259px); top: 403px; }
+  .lottery-ind-6m-5 { left: 50%; transform: translateX(268px); top: 403px; }
+  .lottery-ind-6m-6 { left: 50%; transform: translateX(277px); top: 403px; }
+  
+  .lottery-grid {
+    width: 450px;
+    transform: translateX(-225px);
+    top: 455px;
+    padding: 14px;
+    gap: 10px;
+  }
+  
+  .lottery-number-row {
+    width: 422px;
+    gap: 7px;
+  }
+  
+  .lottery-number-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+  
+  .lottery-enter-btn {
+    width: 450px;
+    transform: translateX(-225px);
+    top: 755px;
+    font-size: 15px;
+  }
+  
+  .lottery-enter-btn:active {
+    transform: translateX(-225px) translateY(1px);
+  }
+}
+
+@media (max-width: 640px) {
+  .lottery-container {
+    padding: 30px 12px 60px;
+  }
+  
+  .lottery-id {
+    top: 40px;
+    font-size: 13px;
+  }
+  
+  .lottery-title {
+    top: 65px;
+    font-size: 20px;
+  }
+  
+  .lottery-history-btn {
+    position: static;
+    margin: 110px auto 20px;
+    display: flex;
+    font-size: 14px;
+    padding: 8px 24px;
+  }
+  
+  .lottery-desc {
+    width: 95%;
+    max-width: 320px;
+    top: 165px;
+    font-size: 14px;
+    line-height: 130%;
+  }
+  
+  .lottery-jackpot-badge {
+    width: 90%;
+    max-width: 300px;
+    transform: translateX(-50%);
+    top: 230px;
+    height: 36px;
+    padding: 8px 16px;
+  }
+  
+  .lottery-jackpot-text {
+    font-size: 14px;
+    width: auto;
+  }
+  
+  .lottery-timer {
+    width: 90%;
+    max-width: 280px;
+    transform: translateX(-50%);
+    top: 285px;
+    gap: 5px;
+    padding: 8px 0;
+  }
+  
+  .lottery-timer-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .lottery-timer-text {
+    font-size: 13px;
+    width: auto;
+  }
+  
+  .lottery-prizes {
+    width: 100%;
+    max-width: 340px;
+    transform: translateX(-50%);
+    top: 350px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .lottery-prize-circle {
+    width: 62px;
+    height: 62px;
+    gap: 4px;
+  }
+  
+  .lottery-prize-label {
+    font-size: 9px;
+    line-height: 11px;
+  }
+  
+  .lottery-prize-amount {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  
+  .lottery-prize-amount.jackpot-text {
+    font-size: 13px;
+  }
+  
+  /* Hide indicators on mobile for cleaner look */
+  .lottery-indicator {
+    display: none;
+  }
+  
+  .lottery-grid {
+    width: 95%;
+    max-width: 340px;
+    height: auto;
+    transform: translateX(-50%);
+    top: 490px;
+    padding: 12px;
+    gap: 8px;
+  }
+  
+  .lottery-number-row {
+    width: 100%;
+    gap: 5px;
+    justify-content: space-between;
+  }
+  
+  .lottery-number-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+    padding: 6px;
+  }
+  
+  .lottery-enter-btn {
+    width: 95%;
+    max-width: 340px;
+    height: 44px;
+    transform: translateX(-50%);
+    top: 760px;
+    font-size: 15px;
+  }
+  
+  .lottery-enter-btn:active {
+    transform: translateX(-50%) translateY(1px);
+  }
+  
+  .lottery-participating-msg {
+    width: 90%;
+    max-width: 300px;
+    transform: translateX(-50%);
+    top: 760px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  
+  .lottery-selected-numbers {
+    width: 90%;
+    max-width: 300px;
+    transform: translateX(-50%);
+    top: 795px;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .lottery-selected-num {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+    padding: 8px;
+  }
+}
+
+/* =========================
+   LOTTERY HISTORY STYLES
+   ========================= */
+
+/* Lottery History Container */
+.lottery-history-container {
+  position: relative;
+  max-width: 1278px;
+  margin: 0 auto;
+  padding: 80px 24px 160px;
+  min-height: calc(100vh - 200px);
+}
+
+/* Back to Lottery Link */
+.lottery-back-link {
+  position: absolute;
+  left: 0;
+  top: 153px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #B2B4C4;
+  transition: color 0.2s ease;
+}
+
+.lottery-back-link:hover {
+  color: #D7D7D7;
+}
+
+.lottery-back-arrow {
+  width: 16px;
+  height: 16px;
+  transform: rotate(90deg);
+}
+
+/* Lottery History Title */
+.lottery-history-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 144px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* Lottery History Table */
+.lottery-history-table {
+  position: absolute;
+  left: 0;
+  top: 241px;
+  width: 100%;
+}
+
+/* Table Headers */
+.lottery-history-headers {
+  display: grid;
+  grid-template-columns: 123px 132px 316px 296px 312px 99px;
+  margin-bottom: 17px;
+}
+
+.lottery-history-header {
+  margin-left: 30px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #767676;
+}
+
+/* Table Row */
+.lottery-history-row {
+  display: grid;
+  grid-template-columns: 123px 132px 316px 296px 312px 99px;
+  align-items: center;
+  height: 48px;
+  background: #101012;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  padding: 0 31px;
+}
+
+/* Row Text Fields */
+.lottery-row-number {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #D7D7D7;
+}
+
+.lottery-row-date {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #D7D7D7;
+}
+
+.lottery-row-prize {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #D7D7D7;
+}
+
+.lottery-row-winning {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #D7D7D7;
+}
+
+/* Won Numbers Container */
+.lottery-row-won-numbers {
+  display: flex;
+  gap: 8px;
+}
+
+/* Your Tickets Container */
+.lottery-row-tickets {
+  display: flex;
+  gap: 8px;
+}
+
+/* Number Cell */
+.lottery-history-num {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  background: #1C1C21;
+  border-radius: 4px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+/* =========================
+   LOTTERY HISTORY MOBILE STYLES
+   ========================= */
+
+@media (max-width: 1350px) {
+  .lottery-history-headers {
+    grid-template-columns: 100px 110px 260px 240px 260px 80px;
+  }
+  
+  .lottery-history-row {
+    grid-template-columns: 100px 110px 260px 240px 260px 80px;
+    padding: 0 20px;
+  }
+  
+  .lottery-history-num {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    padding: 4px;
+  }
+}
+
+@media (max-width: 980px) {
+  .lottery-history-container {
+    padding: 60px 16px 100px;
+  }
+  
+  .lottery-back-link {
+    top: 80px;
+    font-size: 14px;
+  }
+  
+  .lottery-history-title {
+
+    top: 120px;
+    font-size: 24px;
+  }
+  
+  .lottery-history-table {
+    top: 180px;
+  }
+  
+  .lottery-history-headers {
+    grid-template-columns: 80px 90px 200px 180px 200px 70px;
+    font-size: 12px;
+  }
+  
+  .lottery-history-row {
+    grid-template-columns: 80px 90px 200px 180px 200px 70px;
+    padding: 0 15px;
+    height: 44px;
+  }
+  
+  .lottery-row-number,
+  .lottery-row-date {
+    font-size: 14px;
+  }
+  
+  .lottery-row-prize {
+    font-size: 15px;
+  }
+  
+  .lottery-row-winning {
+    font-size: 14px;
+  }
+  
+  .lottery-row-won-numbers,
+  .lottery-row-tickets {
+    gap: 6px;
+  }
+  
+  .lottery-history-num {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 640px) {
+  .lottery-history-container {
+    padding: 40px 12px 80px;
+  }
+  
+  .lottery-back-link {
+    position: static;
+    margin-bottom: 20px;
+  }
+  
+  .lottery-history-title {
+    margin-left: 200px;
+    position: static;
+    margin-bottom: 30px;
+    font-size: 22px;
+  }
+  
+  .lottery-history-table {
+    position: static;
+  }
+  
+  .lottery-history-headers {
+    display: none;
+  }
+  
+  .lottery-history-row {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .lottery-row-number::before {
+    content: 'Lottery #';
+    color: #767676;
+    margin-right: 8px;
+  }
+  
+  .lottery-row-date::before {
+    content: 'Date: ';
+    color: #767676;
+    margin-right: 8px;
+  }
+  
+  .lottery-row-prize::before {
+    content: 'Prize Pot: ';
+    color: #767676;
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  
+  .lottery-row-winning::before {
+    content: 'Winning: ';
+    color: #767676;
+    margin-right: 8px;
+  }
+  
+  .lottery-row-won-numbers,
+  .lottery-row-tickets {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  
+  .lottery-row-won-numbers::before {
+    content: 'Won Numbers: ';
+    color: #767676;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .lottery-row-tickets::before {
+    content: 'Your Tickets: ';
+    color: #767676;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .lottery-history-num {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .lottery-history-row {
+    padding: 12px;
+  }
+  
+  .lottery-history-num {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 380px) {
+  .lottery-container {
+    padding: 25px 10px 50px;
+  }
+  
+  .lottery-title {
+    font-size: 18px;
+  }
+  
+  .lottery-desc {
+    font-size: 13px;
+  }
+  
+  .lottery-prize-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .lottery-prize-label {
+    font-size: 8px;
+  }
+  
+  .lottery-prize-amount {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  
+  .lottery-prize-amount.jackpot-text {
+    font-size: 12px;
+  }
+  
+  .lottery-number-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  
+  .lottery-enter-btn {
+    font-size: 14px;
+    height: 40px;
+  }
+}

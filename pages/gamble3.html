@@ -256,131 +256,6 @@
 
 
 
-  <section class="dm" role="main" aria-label="Messages">
-  <h1 class="dm-title">Messages</h1>
-
-  <div class="dm-layout" >
-    <!-- ЛЕВАЯ КОЛОНКА: список диалогов -->
-    <aside class="dm-list card" style="padding:24px">
-      <div class="dm-search">
-        <input class="dm-search__input" placeholder="Search by username..." />
-        <button class="dm-search__btn" type="button" aria-label="Search">
-          <span class="dm-ico-magnify" aria-hidden="true"></span>
-        </button>
-      </div>
-
-      <ul class="dm-threads">
-        <li class="dm-thread">
-          <div class="dm-ava" aria-hidden="true"></div>
-          <div class="dm-thread__main">
-            <div class="dm-thread__left">
-              <span class="dm-uname dm-muted">username</span>
-              <span class="dm-preview">Last Message</span>
-            </div>
-            <time class="dm-meta dm-muted">Today</time>
-          </div>
-        </li>
-
-        <li class="dm-thread">
-          <div class="dm-ava"></div>
-          <div class="dm-thread__main">
-            <div class="dm-thread__left">
-              <span class="dm-uname dm-muted">username</span>
-              <span class="dm-preview dm-muted">You: Last Message</span>
-            </div>
-            <time class="dm-meta dm-muted">07.05.2025</time>
-          </div>
-        </li>
-
-        <li class="dm-thread">
-          <div class="dm-ava"></div>
-          <div class="dm-thread__main">
-            <div class="dm-thread__left">
-              <span class="dm-uname dm-muted">username</span>
-              <span class="dm-preview">Last Message</span>
-            </div>
-            <time class="dm-meta dm-muted">07.05.2025</time>
-          </div>
-        </li>
-      </ul>
-    </aside>
-
-    <!-- ПРАВАЯ КОЛОНКА: открытый диалог -->
-    <main class="dm-chat card" style="padding: 0px;">
-      <!-- Хед диалога -->
-      <div class="dm-chat-head">
-        <div class="dm-chat-head__left">
-          <div class="dm-ava"></div>
-          <div class="dm-tt">Username</div>
-        </div>
-
-        <button class="dm-btn-ghost" type="button">
-          
-          <img src="../images/trash.png" alt="" style="width: 16px; height: 16px;">
-          Delete Conversation
-        </button>
-      </div>
-      <div class="dm-divider"></div>
-
-      <!-- Лента сообщений -->
-      <div class="dm-feed">
-        <!-- message row -->
-        <div class="dm-row">
-          <div class="dm-ava"></div>
-          <div class="dm-row__main">
-            <div class="dm-row__meta">
-              <span class="dm-row__name dm-muted">username</span>
-              <time class="dm-meta dm-muted">23:15 25.08.2025</time>
-            </div>
-            <div class="dm-row__text">Message</div>
-          </div>
-        </div>
-
-        <div class="dm-row">
-          <div class="dm-ava"></div>
-          <div class="dm-row__main">
-            <div class="dm-row__meta">
-              <span class="dm-row__name dm-muted">username</span>
-              <time class="dm-meta dm-muted">23:15 25.08.2025</time>
-            </div>
-            <div class="dm-row__text">Message</div>
-          </div>
-        </div>
-
-        <div class="dm-row">
-          <div class="dm-ava"></div>
-          <div class="dm-row__main">
-            <div class="dm-row__meta">
-              <span class="dm-row__name dm-muted">username</span>
-              <time class="dm-meta dm-muted">23:15 25.08.2025</time>
-            </div>
-            <div class="dm-row__text">
-              MessageMessageMessageMessageMessageMessageMessageMessageMessage
-              MessageMessageMessageMessageMessageMessageMessageMessageMessage
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dm-divider" style="    margin-top: 190px;"></div>
-
-      <!-- Композер -->
-      <form class="dm-composer" onsubmit="return false;">
-        <input class="dm-input" placeholder="Write a message..." />
-        <button class="dm-btn" type="submit" style="width: 108px; height: 48px;">Send</button>
-      </form>
-    </main>
-  </div>
-
-  <!-- предупреждение снизу -->
-  <div class="dm-warning card" style="font-size: 14px;">
-    We do not tolerate any external communication shared. If this is the case, you will get immediately banned.
-  </div>
-</section>
-
-<!-- чекбокс-свитч для мобильного меню -->
-
-
 
 <nav class="mobile-nav" aria-label="Main menu">
   <label for="navToggle" class="mobile-nav__backdrop" aria-hidden="true"></label>
@@ -406,13 +281,126 @@
   </div>
 </nav>
 
-
-
-
-
-
-
-
+<!-- Lottery History Content -->
+<div class="lottery-history-container container">
+  <!-- Back to Lottery Link -->
+  <a href="./gamble1.html" class="lottery-back-link">
+   <img src="../images/VlevoHeader.png" style="width: 7px; height: 9px;" alt="arrow left">
+    <span>Back to Lottery</span>
+  </a>
+  
+  <!-- Lottery History Title -->
+  <h1 class="lottery-history-title">Lottery History</h1>
+  
+  <!-- Lottery History Table -->
+  <div class="lottery-history-table">
+    <!-- Table Headers -->
+    <div class="lottery-history-headers">
+      <div class="lottery-history-header">Lottery Number</div>
+      <div class="lottery-history-header">Date</div>
+      <div class="lottery-history-header">Won Numbers</div>
+      <div class="lottery-history-header">Prize Pot</div>
+      <div class="lottery-history-header">Your Tickets</div>
+      <div class="lottery-history-header">Winning</div>
+    </div>
+    
+    <!-- Row 1: 0004 -->
+    <div class="lottery-history-row">
+      <div class="lottery-row-number">0004</div>
+      <div class="lottery-row-date">04.10.2025</div>
+      <div class="lottery-row-won-numbers">
+        <div class="lottery-history-num">1</div>
+        <div class="lottery-history-num">2</div>
+        <div class="lottery-history-num">3</div>
+        <div class="lottery-history-num">4</div>
+        <div class="lottery-history-num">5</div>
+        <div class="lottery-history-num">6</div>
+      </div>
+      <div class="lottery-row-prize">0.92734288 BTC</div>
+      <div class="lottery-row-tickets">
+        <div class="lottery-history-num">1</div>
+        <div class="lottery-history-num">2</div>
+        <div class="lottery-history-num">3</div>
+        <div class="lottery-history-num">4</div>
+        <div class="lottery-history-num">5</div>
+        <div class="lottery-history-num">6</div>
+      </div>
+      <div class="lottery-row-winning">187.15 $</div>
+    </div>
+    
+    <!-- Row 2: 0003 -->
+    <div class="lottery-history-row">
+      <div class="lottery-row-number">0003</div>
+      <div class="lottery-row-date">04.10.2025</div>
+      <div class="lottery-row-won-numbers">
+        <div class="lottery-history-num">1</div>
+        <div class="lottery-history-num">16</div>
+        <div class="lottery-history-num">32</div>
+        <div class="lottery-history-num">36</div>
+        <div class="lottery-history-num">37</div>
+        <div class="lottery-history-num">49</div>
+      </div>
+      <div class="lottery-row-prize">0.92734288 BTC</div>
+      <div class="lottery-row-tickets">
+        <div class="lottery-history-num">1</div>
+        <div class="lottery-history-num">2</div>
+        <div class="lottery-history-num">3</div>
+        <div class="lottery-history-num">4</div>
+        <div class="lottery-history-num">5</div>
+        <div class="lottery-history-num">6</div>
+      </div>
+      <div class="lottery-row-winning">187.15 $</div>
+    </div>
+    
+    <!-- Row 3: 0002 -->
+    <div class="lottery-history-row">
+      <div class="lottery-row-number">0002</div>
+      <div class="lottery-row-date">04.10.2025</div>
+      <div class="lottery-row-won-numbers">
+        <div class="lottery-history-num">1</div>
+        <div class="lottery-history-num">2</div>
+        <div class="lottery-history-num">3</div>
+        <div class="lottery-history-num">4</div>
+        <div class="lottery-history-num">5</div>
+        <div class="lottery-history-num">6</div>
+      </div>
+      <div class="lottery-row-prize">0.92734288 BTC</div>
+      <div class="lottery-row-tickets">
+        <div class="lottery-history-num">1</div>
+        <div class="lottery-history-num">2</div>
+        <div class="lottery-history-num">3</div>
+        <div class="lottery-history-num">4</div>
+        <div class="lottery-history-num">5</div>
+        <div class="lottery-history-num">6</div>
+      </div>
+      <div class="lottery-row-winning">187.15 $</div>
+    </div>
+    
+    <!-- Row 4: 0001 -->
+    <div class="lottery-history-row">
+      <div class="lottery-row-number">0001</div>
+      <div class="lottery-row-date">04.10.2025</div>
+      <div class="lottery-row-won-numbers">
+        <div class="lottery-history-num">1</div>
+        <div class="lottery-history-num">16</div>
+        <div class="lottery-history-num">32</div>
+        <div class="lottery-history-num">36</div>
+        <div class="lottery-history-num">37</div>
+        <div class="lottery-history-num">49</div>
+      </div>
+      <div class="lottery-row-prize">0.92734288 BTC</div>
+      <div class="lottery-row-tickets">
+        <div class="lottery-history-num">1</div>
+        <div class="lottery-history-num">2</div>
+        <div class="lottery-history-num">3</div>
+        <div class="lottery-history-num">4</div>
+        <div class="lottery-history-num">5</div>
+        <div class="lottery-history-num">6</div>
+      </div>
+      <div class="lottery-row-winning">187.15 $</div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

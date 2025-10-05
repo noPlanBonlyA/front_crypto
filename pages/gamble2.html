@@ -256,127 +256,26 @@
 
 
 
-  <section class="dm" role="main" aria-label="Messages">
-  <h1 class="dm-title">Messages</h1>
 
-  <div class="dm-layout" >
-    <!-- ЛЕВАЯ КОЛОНКА: список диалогов -->
-    <aside class="dm-list card" style="padding:24px">
-      <div class="dm-search">
-        <input class="dm-search__input" placeholder="Search by username..." />
-        <button class="dm-search__btn" type="button" aria-label="Search">
-          <span class="dm-ico-magnify" aria-hidden="true"></span>
-        </button>
-      </div>
 
-      <ul class="dm-threads">
-        <li class="dm-thread">
-          <div class="dm-ava" aria-hidden="true"></div>
-          <div class="dm-thread__main">
-            <div class="dm-thread__left">
-              <span class="dm-uname dm-muted">username</span>
-              <span class="dm-preview">Last Message</span>
-            </div>
-            <time class="dm-meta dm-muted">Today</time>
-          </div>
-        </li>
 
-        <li class="dm-thread">
-          <div class="dm-ava"></div>
-          <div class="dm-thread__main">
-            <div class="dm-thread__left">
-              <span class="dm-uname dm-muted">username</span>
-              <span class="dm-preview dm-muted">You: Last Message</span>
-            </div>
-            <time class="dm-meta dm-muted">07.05.2025</time>
-          </div>
-        </li>
 
-        <li class="dm-thread">
-          <div class="dm-ava"></div>
-          <div class="dm-thread__main">
-            <div class="dm-thread__left">
-              <span class="dm-uname dm-muted">username</span>
-              <span class="dm-preview">Last Message</span>
-            </div>
-            <time class="dm-meta dm-muted">07.05.2025</time>
-          </div>
-        </li>
-      </ul>
-    </aside>
 
-    <!-- ПРАВАЯ КОЛОНКА: открытый диалог -->
-    <main class="dm-chat card" style="padding: 0px;">
-      <!-- Хед диалога -->
-      <div class="dm-chat-head">
-        <div class="dm-chat-head__left">
-          <div class="dm-ava"></div>
-          <div class="dm-tt">Username</div>
-        </div>
 
-        <button class="dm-btn-ghost" type="button">
-          
-          <img src="../images/trash.png" alt="" style="width: 16px; height: 16px;">
-          Delete Conversation
-        </button>
-      </div>
-      <div class="dm-divider"></div>
 
-      <!-- Лента сообщений -->
-      <div class="dm-feed">
-        <!-- message row -->
-        <div class="dm-row">
-          <div class="dm-ava"></div>
-          <div class="dm-row__main">
-            <div class="dm-row__meta">
-              <span class="dm-row__name dm-muted">username</span>
-              <time class="dm-meta dm-muted">23:15 25.08.2025</time>
-            </div>
-            <div class="dm-row__text">Message</div>
-          </div>
-        </div>
 
-        <div class="dm-row">
-          <div class="dm-ava"></div>
-          <div class="dm-row__main">
-            <div class="dm-row__meta">
-              <span class="dm-row__name dm-muted">username</span>
-              <time class="dm-meta dm-muted">23:15 25.08.2025</time>
-            </div>
-            <div class="dm-row__text">Message</div>
-          </div>
-        </div>
 
-        <div class="dm-row">
-          <div class="dm-ava"></div>
-          <div class="dm-row__main">
-            <div class="dm-row__meta">
-              <span class="dm-row__name dm-muted">username</span>
-              <time class="dm-meta dm-muted">23:15 25.08.2025</time>
-            </div>
-            <div class="dm-row__text">
-              MessageMessageMessageMessageMessageMessageMessageMessageMessage
-              MessageMessageMessageMessageMessageMessageMessageMessageMessage
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="dm-divider" style="    margin-top: 190px;"></div>
 
-      <!-- Композер -->
-      <form class="dm-composer" onsubmit="return false;">
-        <input class="dm-input" placeholder="Write a message..." />
-        <button class="dm-btn" type="submit" style="width: 108px; height: 48px;">Send</button>
-      </form>
-    </main>
-  </div>
 
-  <!-- предупреждение снизу -->
-  <div class="dm-warning card" style="font-size: 14px;">
-    We do not tolerate any external communication shared. If this is the case, you will get immediately banned.
-  </div>
-</section>
+
+
+
+
+
+
+
+
 
 <!-- чекбокс-свитч для мобильного меню -->
 
@@ -412,7 +311,223 @@
 
 
 
+<!-- Lottery Game Content -->
+<div class="lottery-container container" >
+  <!-- Lottery ID -->
+  <div class="lottery-id">lottery#0001</div>
+  
+  <!-- Lottery Title -->
+  <h1 class="lottery-title">Lottery Game</h1>
+  
+  <!-- Drawing History Button -->
+  <button class="lottery-history-btn" >
+    <span>Drawing History</span>
+  </button>
+  
+  <!-- Description -->
+  <p class="lottery-desc">
+    Choose 6 random numbers and if they match,<br>
+    you will win a prize depending on the number of matching ones.
+  </p>
+  
+  <!-- Current Jackpot Badge -->
+  <div class="lottery-jackpot-badge" style="margin-top:10px">
+    <span class="lottery-jackpot-text">Current Jackpot: 0.92734288 BTC</span>
+  </div>
+  
+  <!-- Countdown Timer -->
+  <div class="lottery-timer" style="     margin-top: 10px;">
+    <img src="../images/clock.png" alt="" class="lottery-timer-icon">
+    <span class="lottery-timer-text">24 days, 16 hours, 59 minutes</span>
+  </div>
+  
+  <!-- Prize Circles -->
+  <div class="lottery-prizes">
+    <!-- 2 Matches -->
+    <div class="lottery-prize-circle">
+      <span class="lottery-prize-label">2 Matches</span>
+      <span class="lottery-prize-amount">10$</span>
+    </div>
+    
+    <!-- 3 Matches -->
+    <div class="lottery-prize-circle">
+      <span class="lottery-prize-label">3 Matches</span>
+      <span class="lottery-prize-amount">50$</span>
+    </div>
+    
+    <!-- 4 Matches -->
+    <div class="lottery-prize-circle">
+      <span class="lottery-prize-label">4 Matches</span>
+      <span class="lottery-prize-amount">100$</span>
+    </div>
+    
+    <!-- 5 Matches -->
+    <div class="lottery-prize-circle">
+      <span class="lottery-prize-label">5 Matches</span>
+      <span class="lottery-prize-amount">999$</span>
+    </div>
+    
+    <!-- 6 Matches (Jackpot) -->
+    <div class="lottery-prize-circle jackpot">
+      <span class="lottery-prize-label">6 Matches</span>
+      <span class="lottery-prize-amount jackpot-text">Jackpot</span>
+    </div>
+  </div>
+  
+  <!-- Prize Indicators for 2 Matches -->
+  <div class="lottery-indicator active lottery-ind-2m-1"></div>
+  <div class="lottery-indicator active lottery-ind-2m-2"></div>
+  <div class="lottery-indicator inactive lottery-ind-2m-3"></div>
+  <div class="lottery-indicator inactive lottery-ind-2m-4"></div>
+  <div class="lottery-indicator inactive lottery-ind-2m-5"></div>
+  <div class="lottery-indicator inactive lottery-ind-2m-6"></div>
+  
+  <!-- Prize Indicators for 3 Matches -->
+  <div class="lottery-indicator active lottery-ind-3m-1"></div>
+  <div class="lottery-indicator active lottery-ind-3m-2"></div>
+  <div class="lottery-indicator active lottery-ind-3m-3"></div>
+  <div class="lottery-indicator inactive lottery-ind-3m-4"></div>
+  <div class="lottery-indicator inactive lottery-ind-3m-5"></div>
+  <div class="lottery-indicator inactive lottery-ind-3m-6"></div>
+  
+  <!-- Prize Indicators for 4 Matches -->
+  <div class="lottery-indicator active lottery-ind-4m-1"></div>
+  <div class="lottery-indicator active lottery-ind-4m-2"></div>
+  <div class="lottery-indicator active lottery-ind-4m-3"></div>
+  <div class="lottery-indicator active lottery-ind-4m-4"></div>
+  <div class="lottery-indicator inactive lottery-ind-4m-5"></div>
+  <div class="lottery-indicator inactive lottery-ind-4m-6"></div>
+  
+  <!-- Prize Indicators for 5 Matches -->
+  <div class="lottery-indicator active lottery-ind-5m-1"></div>
+  <div class="lottery-indicator active lottery-ind-5m-2"></div>
+  <div class="lottery-indicator active lottery-ind-5m-3"></div>
+  <div class="lottery-indicator active lottery-ind-5m-4"></div>
+  <div class="lottery-indicator active lottery-ind-5m-5"></div>
+  <div class="lottery-indicator inactive lottery-ind-5m-6"></div>
+  
+  <!-- Prize Indicators for 6 Matches -->
+  <div class="lottery-indicator active lottery-ind-6m-1"></div>
+  <div class="lottery-indicator active lottery-ind-6m-2"></div>
+  <div class="lottery-indicator active lottery-ind-6m-3"></div>
+  <div class="lottery-indicator active lottery-ind-6m-4"></div>
+  <div class="lottery-indicator active lottery-ind-6m-5"></div>
+  <div class="lottery-indicator active lottery-ind-6m-6"></div>
+  
+  <!-- Number Selection Grid -->
+  <div class="lottery-grid">
+    <!-- Row 1: Numbers 1-10 -->
+    <div class="lottery-number-row">
+      <button class="lottery-number-btn selected">1</button>
+      <button class="lottery-number-btn">2</button>
+      <button class="lottery-number-btn">3</button>
+      <button class="lottery-number-btn">4</button>
+      <button class="lottery-number-btn">5</button>
+      <button class="lottery-number-btn">6</button>
+      <button class="lottery-number-btn">7</button>
+      <button class="lottery-number-btn">8</button>
+      <button class="lottery-number-btn">9</button>
+      <button class="lottery-number-btn">10</button>
+    </div>
+    
+    <!-- Row 2: Numbers 11-20 -->
+    <div class="lottery-number-row">
+      <button class="lottery-number-btn">11</button>
+      <button class="lottery-number-btn">12</button>
+      <button class="lottery-number-btn">13</button>
+      <button class="lottery-number-btn">14</button>
+      <button class="lottery-number-btn">15</button>
+      <button class="lottery-number-btn">16</button>
+      <button class="lottery-number-btn">17</button>
+      <button class="lottery-number-btn">18</button>
+      <button class="lottery-number-btn">19</button>
+      <button class="lottery-number-btn">20</button>
+    </div>
+    
+    <!-- Row 3: Numbers 21-30 -->
+    <div class="lottery-number-row">
+      <button class="lottery-number-btn">21</button>
+      <button class="lottery-number-btn">22</button>
+      <button class="lottery-number-btn">23</button>
+      <button class="lottery-number-btn">24</button>
+      <button class="lottery-number-btn">25</button>
+      <button class="lottery-number-btn">26</button>
+      <button class="lottery-number-btn">27</button>
+      <button class="lottery-number-btn">28</button>
+      <button class="lottery-number-btn">29</button>
+      <button class="lottery-number-btn">30</button>
+    </div>
+    
+    <!-- Row 4: Numbers 31-40 -->
+    <div class="lottery-number-row">
+      <button class="lottery-number-btn">31</button>
+      <button class="lottery-number-btn">32</button>
+      <button class="lottery-number-btn">33</button>
+      <button class="lottery-number-btn">34</button>
+      <button class="lottery-number-btn">35</button>
+      <button class="lottery-number-btn">36</button>
+      <button class="lottery-number-btn">37</button>
+      <button class="lottery-number-btn">38</button>
+      <button class="lottery-number-btn">39</button>
+      <button class="lottery-number-btn">40</button>
+    </div>
+    
+    <!-- Row 5: Numbers 41-50 -->
+    <div class="lottery-number-row">
+      <button class="lottery-number-btn">41</button>
+      <button class="lottery-number-btn">42</button>
+      <button class="lottery-number-btn">43</button>
+      <button class="lottery-number-btn">44</button>
+      <button class="lottery-number-btn">45</button>
+      <button class="lottery-number-btn">46</button>
+      <button class="lottery-number-btn">47</button>
+      <button class="lottery-number-btn">48</button>
+      <button class="lottery-number-btn">49</button>
+      <button class="lottery-number-btn">50</button>
+    </div>
+  </div>
+  
+  <!-- Participating Message -->
+  <div class="lottery-participating-msg">You're already participating in the lottery</div>
+  
+  <!-- Selected Numbers -->
+  <div class="lottery-selected-numbers">
+    <div class="lottery-selected-num">1</div>
+    <div class="lottery-selected-num">3</div>
+    <div class="lottery-selected-num">4</div>
+    <div class="lottery-selected-num">8</div>
+    <div class="lottery-selected-num">45</div>
+    <div class="lottery-selected-num">36</div>
+  </div>
+</div>
 
+
+<div style="height: 50px;">s</div>
+
+
+<nav class="mobile-nav" aria-label="Main menu">
+  <label for="navToggle" class="mobile-nav__backdrop" aria-hidden="true"></label>
+  <div class="mobile-nav__panel" role="dialog">
+    <div class="mnav-head">
+      <a class="mnav-logo" href="../index.html"><img src="../images/main_logo.png" alt="awazon market"></a>
+      <label for="navToggle" class="mnav-close" aria-label="Close menu"><span></span><span></span></label>
+    </div>
+
+    <!-- ИКОНКИ ДЕЙСТВИЙ -->
+    <div class="mnav-actions mnav-actions--row">
+      <a href="./Cart.html" class="mnav-action"><img src="../images/cart.png" alt=""> Cart</a>
+      <a href="./Messeges1.html" class="mnav-action"><img src="../images/mail.png" alt=""> Messages</a>
+      <a href="./Notif.html" class="mnav-action"><img src="../images/bell.png" alt=""> Notifications</a>
+    </div>
+
+    <!-- ССЫЛКИ -->
+    <ul class="mnav-list">
+      <li><a class="mnav-link" href="./VendorPage.html">Vendors</a></li>
+      <li><a class="mnav-link" href="./Support1.html">AI Assistant</a></li>
+      <li><a class="mnav-link" href="./Support2.html">Help Center</a></li>
+    </ul>
+  </div>
+</nav>
 
 </body>
 </html>
